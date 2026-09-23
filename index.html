@@ -106,6 +106,39 @@
     min-height:44px;
   }
 
+  .maintabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    padding:0 20px 20px;
+    flex-wrap:wrap;
+  }
+  .maintab-btn{
+    min-height:48px;
+    padding:0 22px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:var(--bg-elev);
+    color:var(--text-secondary);
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .maintab-btn.active{
+    background:var(--accent);
+    color:#fff;
+    border-color:var(--accent);
+  }
+
+  .heart-pin{
+    width:32px;height:32px;border-radius:50%;
+    background:#ff5c8a;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.35);
+    border:2px solid #fff;
+  }
+
   nav.subnav{
     position:sticky;
     top:0;
@@ -327,11 +360,16 @@
 
 <header class="hero">
   <div class="hero-eyebrow">Алматы · 23 сентября — 14 октября 2026</div>
-  <h1>Справочник проживания</h1>
-  <p>Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.</p>
+  <h1 id="pageTitle">Справочник проживания</h1>
+  <p id="pageSubtitle">Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.</p>
 </header>
 
-<nav class="subnav">
+<div class="maintabs">
+  <button class="maintab-btn active" id="tabBtnStay" onclick="switchMainTab('stay')">🏠 Проживание</button>
+  <button class="maintab-btn" id="tabBtnRestaurants" onclick="switchMainTab('restaurants')">🍽️ Рестораны и кафе</button>
+</div>
+
+<nav class="subnav" id="subnavStay">
   <div class="wrap">
     <a href="#driver">Трансфер</a>
     <a href="#apartment">Квартира</a>
@@ -342,7 +380,7 @@
   </div>
 </nav>
 
-<main class="wrap" style="padding-top:40px;">
+<main class="wrap" id="tabStay" style="padding-top:40px;">
 
   <section id="driver" style="padding-top:0;">
     <h2>Встреча в аэропорту</h2>
@@ -605,6 +643,134 @@
 
 </main>
 
+<main class="wrap" id="tabRestaurants" style="padding-top:40px;display:none;">
+
+  <section id="restaurants-map" style="padding-top:0;">
+    <h2>Карта ресторанов</h2>
+    <p class="section-sub">17 мест из вашего списка — розовые сердечки, кликните на значок за названием и кухней.</p>
+    <div class="card" style="padding:0;overflow:hidden;">
+      <div id="mapview2" style="width:100%;height:420px;"></div>
+    </div>
+    <div class="place-actions" style="margin-top:16px;">
+      <a class="btn primary" id="kmlDownload" download="almaty-restaurants.kml">Скачать KML для Google Мои карты</a>
+    </div>
+    <div class="no-photo-note" style="margin-top:10px;">
+      Настоящую именную коллекцию с розовым сердечком в самих Google Картах может создать только владелец аккаунта (кнопка «Сохранить» → «Новый список» на каждом месте) — я не могу войти в ваш аккаунт Google за вас. Два способа получить её за минуту: 1) откройте скачанный KML-файл выше и импортируйте в <a href="https://mymaps.google.com" target="_blank" rel="noopener">Google Мои карты</a> (Импорт → выбрать файл) — точки появятся со своими описаниями, иконку слоя можно перекрасить в один клик; 2) либо в приложении Google Карты откройте каждое место по ссылке 2ГИС/названию, нажмите «Сохранить» → создайте список «Рестораны Алматы» с иконкой ❤️ (пресет уже есть у Google) — так сердечко будет как в вашем примере.
+    </div>
+  </section>
+
+  <section id="restaurants-list">
+    <h2>Список мест</h2>
+    <p class="section-sub">Кухня и адрес — по данным 2ГИС/официальных сайтов заведений на 23.09.2026.</p>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Auyl</h3><span class="badge">Кочевая / казахская</span></div>
+      <div class="place-addr">ул. Керей-Жанибек хандар, 586, Медеуский р-н · часть отеля Qazaq Auyl, вид на горы</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001067620756" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Astra</h3><span class="badge">Европейская / казахская / русская</span></div>
+      <div class="place-addr">ул. Желтоксан, 12 · ресторан при отеле Astra</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940000895886" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
+      <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001081672623" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Rifugio del Monte</h3><span class="badge">Европейская / средиземноморская</span></div>
+      <div class="place-addr">ул. Керей-Жанибек хандар, 513а · на горнолыжном курорте Шымбулак, винная карта</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001064217225" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
+      <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940000786240" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Akami</h3><span class="badge">Японская / авторская</span></div>
+      <div class="place-addr">ул. Курмангазы, 66 · винная карта, VIP-зал</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001088771538" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>TABLE Bistro</h3><span class="badge">Итальянская (пицца, паста, стейки)</span></div>
+      <div class="place-addr">пр. Абылай хана, 112/116 · летняя терраса</div>
+      <div class="no-photo-note">Под названием «TABLE» на 2ГИС нашлось одно заведение по этому адресу — если имелось в виду другое место с похожим названием, уточните.</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001115184364" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Cafe Alma</h3><span class="badge">Европейская / казахская</span></div>
+      <div class="place-addr">пр. Аль-Фараби, 28 · у Cafe Alma в Алматы несколько филиалов, указан ближайший к центру</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001104884812" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Manana</h3><span class="badge">Грузинская</span></div>
+      <div class="place-addr">пр. Достык, 535 · при отеле Donatello, грузинские вина</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001023442189" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Afisha</h3><span class="badge">Авторская</span></div>
+      <div class="place-addr">ул. Кабанбай батыра, 83 · в стиле парижских брассери, рядом с ГАТОБ</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001030988696" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Огонёк (Ogonek)</h3><span class="badge">Итальянская / европейская / авторская</span></div>
+      <div class="place-addr">ул. Панфилова, 125 (угол Богенбай батыра) · летняя терраса</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001056260786" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая / завтраки 10:00–16:00</span></div>
+      <div class="place-addr">пр. Достык, 109Б</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001079583542" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Haragun</h3><span class="badge">Грузинская, халяль</span></div>
+      <div class="place-addr">Садовый переулок, 2205, мкр Кольсай · панорамный вид, живая музыка по пт-сб</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001074988529" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>La Barca Fish &amp; Wine</h3><span class="badge">Средиземноморская, рыба</span></div>
+      <div class="place-addr">пр. Абылай хана, 145 · винная карта, VIP-зал</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940001683326" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Хороший год</h3><span class="badge">Европейская авторская, паназиатские нотки</span></div>
+      <div class="place-addr">ул. Шевченко, 18 · винный ресторан, 200+ позиций в карте</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001033064012" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Agora</h3><span class="badge">Винный бар / гастро</span></div>
+      <div class="place-addr">ул. Кабанбай батыра, 83 · Agora wine and deli, рядом с Afisha</div>
+      <div class="no-photo-note">Под названием Agora в Алматы несколько заведений (бар при отеле Ramada, коктейль-бар на Аль-Фараби) — указан Agora wine and deli как наиболее вероятное совпадение по локации.</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001050638051" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+    <div class="place-card"><div class="place-body">
+      <div class="place-title"><h3>Queen Mountain Resort</h3><span class="badge">Авторская / казахская, винный</span></div>
+      <div class="place-addr">ул. Керей-Жанибек хандар, 375, Медеуский р-н · горный вид, до 500 мест</div>
+      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001101597359" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
+    </div></div>
+
+  </section>
+
+</main>
+
 <footer>
   Справочник обновлён 23 сентября 2026 · цены и режим работы могут измениться — сверяйтесь по ссылкам выше
 </footer>
@@ -757,6 +923,103 @@
 
   L.marker([43.2339733,76.9354565], {icon:gymIcon}).addTo(map)
     .bindPopup("<b>Workout</b><br>ТРК Forum, просп. Сейфуллина, 617");
+
+  // --- restaurants tab: heart map + KML export ---
+  var heartSvg = '<svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 21s-7.5-4.6-10.2-9.1C.1 9 1 5.6 4 4.3c2.2-1 4.6-.3 6 1.6.4.5.7 1 1 1.6.3-.6.6-1.1 1-1.6 1.4-1.9 3.8-2.6 6-1.6 3 1.3 3.9 4.7 2.2 7.6C19.5 16.4 12 21 12 21z"/></svg>';
+  var heartIcon = L.divIcon({
+    className:"",
+    html:'<div class="heart-pin">'+heartSvg+'</div>',
+    iconSize:[32,32],
+    iconAnchor:[16,30],
+    popupAnchor:[0,-28]
+  });
+
+  var restaurants = [
+    {name:"Auyl", cuisine:"Кочевая / казахская", addr:"ул. Керей-Жанибек хандар, 586, Медеуский р-н", lat:43.162334, lon:77.059799},
+    {name:"Astra", cuisine:"Европейская / казахская / русская", addr:"ул. Желтоксан, 12", lat:43.271993, lon:76.937682},
+    {name:"Fika", cuisine:"Завтраки / авторская", addr:"ул. Кабанбай батыра, 104", lat:43.249776, lon:76.948533},
+    {name:"Rifugio del Monte", cuisine:"Европейская / средиземноморская", addr:"ул. Керей-Жанибек хандар, 513а, Шымбулак", lat:43.126437, lon:77.08005},
+    {name:"Cafeteria", cuisine:"Завтраки / европейская, итальянская", addr:"ул. Байсеитовой, 32", lat:43.244383, lon:76.944884},
+    {name:"Akami", cuisine:"Японская / авторская", addr:"ул. Курмангазы, 66", lat:43.244189, lon:76.942311},
+    {name:"TABLE Bistro", cuisine:"Итальянская (пицца, паста, стейки)", addr:"пр. Абылай хана, 112/116", lat:43.245827, lon:76.942819},
+    {name:"Cafe Alma", cuisine:"Европейская / казахская", addr:"пр. Аль-Фараби, 28", lat:43.227388, lon:76.9494},
+    {name:"Manana", cuisine:"Грузинская", addr:"пр. Достык, 535", lat:43.20379, lon:76.976779},
+    {name:"Afisha", cuisine:"Авторская", addr:"ул. Кабанбай батыра, 83", lat:43.249953, lon:76.945821},
+    {name:"Огонёк (Ogonek)", cuisine:"Итальянская / европейская / авторская", addr:"ул. Панфилова, 125", lat:43.252949, lon:76.94485},
+    {name:"Spiros", cuisine:"Греческая, завтраки 10:00–16:00", addr:"пр. Достык, 109Б", lat:43.222569, lon:76.962524},
+    {name:"Haragun", cuisine:"Грузинская, халяль", addr:"Садовый пер., 2205, мкр Кольсай", lat:43.212716, lon:76.998735},
+    {name:"La Barca Fish & Wine", cuisine:"Средиземноморская, рыба", addr:"пр. Абылай хана, 145", lat:43.243993, lon:76.942533},
+    {name:"Хороший год", cuisine:"Европейская авторская, паназиатские нотки", addr:"ул. Шевченко, 18", lat:43.246916, lon:76.955683},
+    {name:"Agora", cuisine:"Винный бар / гастро", addr:"ул. Кабанбай батыра, 83", lat:43.250058, lon:76.946603},
+    {name:"Queen Mountain Resort", cuisine:"Авторская / казахская, винный", addr:"ул. Керей-Жанибек хандар, 375, Медеуский р-н", lat:43.171772, lon:77.034992}
+  ];
+
+  var map2Initialized = false;
+  var map2;
+  function initRestaurantMap(){
+    if (map2Initialized) return;
+    map2Initialized = true;
+    map2 = L.map("mapview2", { scrollWheelZoom:false }).setView([43.22,76.97], 11);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19,
+      subdomains: "abc"
+    }).addTo(map2);
+    restaurants.forEach(function(r){
+      L.marker([r.lat, r.lon], {icon:heartIcon}).addTo(map2)
+        .bindPopup("<b>"+r.name+"</b><br>"+r.cuisine+"<br>"+r.addr);
+    });
+  }
+
+  function escapeXml(s){
+    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  function buildKml(){
+    var placemarks = restaurants.map(function(r){
+      return '<Placemark><name>'+escapeXml(r.name)+'</name><description>'+escapeXml(r.cuisine+" — "+r.addr)+'</description><Point><coordinates>'+r.lon+','+r.lat+',0</coordinates></Point></Placemark>';
+    }).join("");
+    var kml = '<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Рестораны Алматы</name>'+placemarks+'</Document></kml>';
+    return kml;
+  }
+  var kmlLink = document.getElementById("kmlDownload");
+  if (kmlLink){
+    var blob = new Blob([buildKml()], {type:"application/vnd.google-earth.kml+xml"});
+    kmlLink.href = URL.createObjectURL(blob);
+  }
+
+  function switchMainTab(tab){
+    var stayBtn = document.getElementById("tabBtnStay");
+    var restBtn = document.getElementById("tabBtnRestaurants");
+    var stayMain = document.getElementById("tabStay");
+    var restMain = document.getElementById("tabRestaurants");
+    var subnav = document.getElementById("subnavStay");
+    var title = document.getElementById("pageTitle");
+    var subtitle = document.getElementById("pageSubtitle");
+    if (tab === "restaurants"){
+      stayBtn.classList.remove("active");
+      restBtn.classList.add("active");
+      stayMain.style.display = "none";
+      restMain.style.display = "";
+      subnav.style.display = "none";
+      title.textContent = "Рестораны и кафе";
+      subtitle.textContent = "17 проверенных мест в Алматы — с типом кухни и картой.";
+      initRestaurantMap();
+      setTimeout(function(){ if(map2) map2.invalidateSize(); }, 50);
+      history.replaceState(null, "", "#restaurants");
+    } else {
+      restBtn.classList.remove("active");
+      stayBtn.classList.add("active");
+      restMain.style.display = "none";
+      stayMain.style.display = "";
+      subnav.style.display = "";
+      title.textContent = "Справочник проживания";
+      subtitle.textContent = "Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.";
+      history.replaceState(null, "", "#stay");
+    }
+  }
+  if (location.hash === "#restaurants"){
+    switchMainTab("restaurants");
+  }
 </script>
 
 </body>
