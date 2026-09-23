@@ -655,120 +655,238 @@
       <a class="btn primary" id="kmlDownload" download="almaty-restaurants.kml">Скачать KML для Google Мои карты</a>
     </div>
     <div class="no-photo-note" style="margin-top:10px;">
-      Настоящую именную коллекцию с розовым сердечком в самих Google Картах может создать только владелец аккаунта (кнопка «Сохранить» → «Новый список» на каждом месте) — я не могу войти в ваш аккаунт Google за вас. Два способа получить её за минуту: 1) откройте скачанный KML-файл выше и импортируйте в <a href="https://mymaps.google.com" target="_blank" rel="noopener">Google Мои карты</a> (Импорт → выбрать файл) — точки появятся со своими описаниями, иконку слоя можно перекрасить в один клик; 2) либо в приложении Google Карты откройте каждое место по ссылке 2ГИС/названию, нажмите «Сохранить» → создайте список «Рестораны Алматы» с иконкой ❤️ (пресет уже есть у Google) — так сердечко будет как в вашем примере.
+      Настоящую именную коллекцию с розовым сердечком в самих Google Картах может создать только владелец аккаунта (кнопка «Сохранить» → «Новый список» на каждом месте) — я не могу войти в ваш аккаунт Google за вас. Два способа получить её за минуту: 1) откройте скачанный KML-файл выше и импортируйте в <a href="https://mymaps.google.com" target="_blank" rel="noopener">Google Мои карты</a> (Импорт → выбрать файл) — точки появятся со своими описаниями, иконку слоя можно перекрасить в один клик; 2) либо в приложении Google Карты найдите каждое место по названию (кнопка «Открыть в Google Картах» есть в каждой карточке ниже), нажмите «Сохранить» → создайте список «Рестораны Алматы» с иконкой ❤️ (пресет уже есть у Google) — так сердечко будет как в вашем примере.
     </div>
   </section>
 
   <section id="restaurants-list">
     <h2>Список мест</h2>
-    <p class="section-sub">Кухня и адрес — по данным 2ГИС/официальных сайтов заведений на 23.09.2026.</p>
+    <p class="section-sub">Кухня и адрес — по данным официальных сайтов/агрегаторов заведений на 23.09.2026.</p>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Auyl</h3><span class="badge">Кочевая / казахская</span></div>
-      <div class="place-addr">ул. Керей-Жанибек хандар, 586, Медеуский р-н · часть отеля Qazaq Auyl, вид на горы</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001067620756" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryAuyl">
+        <button data-full="images/rest-auyl-1.jpg"><img src="images/rest-auyl-1.jpg" alt="Зал ресторана в этно-стиле с коврами и подушками" loading="lazy"></button>
+        <button data-full="images/rest-auyl-2.jpg"><img src="images/rest-auyl-2.jpg" alt="Барная стойка с медной отделкой и фруктами" loading="lazy"></button>
+        <button data-full="images/rest-auyl-3.jpg"><img src="images/rest-auyl-3.jpg" alt="Блюдо из баранины на большом блюде со свежими овощами" loading="lazy"></button>
+        <button data-full="images/rest-auyl-4.jpg"><img src="images/rest-auyl-4.jpg" alt="Интерьер с панорамными окнами и видом на горы" loading="lazy"></button>
+        <button data-full="images/rest-auyl-5.jpg"><img src="images/rest-auyl-5.jpg" alt="Терраса ресторана Auyl" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Auyl</h3><span class="badge">Кочевая / казахская</span></div>
+        <div class="place-addr">ул. Керей-Жанибек хандар, 586, Медеуский р-н · часть отеля Qazaq Auyl, вид на горы</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Auyl%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20586%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Astra</h3><span class="badge">Европейская / казахская / русская</span></div>
-      <div class="place-addr">ул. Желтоксан, 12 · ресторан при отеле Astra</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940000895886" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryAstra">
+        <button data-full="images/rest-astra-1.jpg"><img src="images/rest-astra-1.jpg" alt="Здание отеля Astra с вывеской ресторана" loading="lazy"></button>
+        <button data-full="images/rest-astra-2.jpg"><img src="images/rest-astra-2.jpg" alt="Зал ресторана с деревянными панелями и диванами" loading="lazy"></button>
+        <button data-full="images/rest-astra-3.jpg"><img src="images/rest-astra-3.jpg" alt="Завтрак: тарелки с сыром, фруктами и выпечкой" loading="lazy"></button>
+        <button data-full="images/rest-astra-4.jpg"><img src="images/rest-astra-4.jpg" alt="Шведский стол с закусками" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Astra</h3><span class="badge">Европейская / казахская / русская</span></div>
+        <div class="place-addr">ул. Желтоксан, 12 · ресторан при отеле Astra</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Astra%2C%20%D1%83%D0%BB.%20%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%BA%D1%81%D0%B0%D0%BD%2C%2012%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
-      <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001081672623" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryFika">
+        <button data-full="images/rest-fika-1.jpg"><img src="images/rest-fika-1.jpg" alt="Барная стойка с бутылками вина и медной вытяжкой" loading="lazy"></button>
+        <button data-full="images/rest-fika-2.jpg"><img src="images/rest-fika-2.jpg" alt="Столик у окна с бокалом и десертом" loading="lazy"></button>
+        <button data-full="images/rest-fika-3.jpg"><img src="images/rest-fika-3.jpg" alt="Уютный зал кафе с деревянными столами" loading="lazy"></button>
+        <button data-full="images/rest-fika-4.jpg"><img src="images/rest-fika-4.jpg" alt="Светлый зал с фигурными арками и цветной плиткой" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
+        <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Fika%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%20104%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Rifugio del Monte</h3><span class="badge">Европейская / средиземноморская</span></div>
-      <div class="place-addr">ул. Керей-Жанибек хандар, 513а · на горнолыжном курорте Шымбулак, винная карта</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001064217225" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryRifugio">
+        <button data-full="images/rest-rifugio-1.jpg"><img src="images/rest-rifugio-1.jpg" alt="Терраса с видом на заснеженные горы Шымбулака и сервированный стол" loading="lazy"></button>
+        <button data-full="images/rest-rifugio-2.jpg"><img src="images/rest-rifugio-2.jpg" alt="Банкетный зал с картинами и накрытыми столами" loading="lazy"></button>
+        <button data-full="images/rest-rifugio-3.jpg"><img src="images/rest-rifugio-3.jpg" alt="Столик у панорамного окна с видом на снежный склон" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Rifugio del Monte</h3><span class="badge">Европейская / средиземноморская</span></div>
+        <div class="place-addr">ул. Керей-Жанибек хандар, 513а · на горнолыжном курорте Шымбулак, винная карта</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Rifugio%20del%20Monte%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20513%D0%B0%2C%20%D0%A8%D1%8B%D0%BC%D0%B1%D1%83%D0%BB%D0%B0%D0%BA%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
-      <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940000786240" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryCafeteria">
+        <button data-full="images/rest-cafeteria-1.jpg"><img src="images/rest-cafeteria-1.jpg" alt="Панорама кофейни Cafeteria" loading="lazy"></button>
+        <button data-full="images/rest-cafeteria-2.jpg"><img src="images/rest-cafeteria-2.jpg" alt="Фирменная упаковка десертов с ягодным тартом" loading="lazy"></button>
+        <button data-full="images/rest-cafeteria-3.jpg"><img src="images/rest-cafeteria-3.jpg" alt="Коробки навынос с логотипом Cafeteria и тарт с малиной" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
+        <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafeteria%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D0%B9%D1%81%D0%B5%D0%B8%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%2C%2032%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Akami</h3><span class="badge">Японская / авторская</span></div>
-      <div class="place-addr">ул. Курмангазы, 66 · винная карта, VIP-зал</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001088771538" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryAkami">
+        <button data-full="images/rest-akami-1.jpg"><img src="images/rest-akami-1.jpg" alt="Барная зона с высокими стульями и подсветкой" loading="lazy"></button>
+        <button data-full="images/rest-akami-2.jpg"><img src="images/rest-akami-2.jpg" alt="Крупный план барных стульев на фоне красной декоративной стены" loading="lazy"></button>
+        <button data-full="images/rest-akami-3.jpg"><img src="images/rest-akami-3.jpg" alt="Чёрно-белый кадр зала с диванами и сервированными столами" loading="lazy"></button>
+        <button data-full="images/rest-akami-4.jpg"><img src="images/rest-akami-4.jpg" alt="VIP-зал с деревянными панелями и решётчатым декором" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Akami</h3><span class="badge">Японская / авторская</span></div>
+        <div class="place-addr">ул. Курмангазы, 66 · винная карта, VIP-зал</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Akami%2C%20%D1%83%D0%BB.%20%D0%9A%D1%83%D1%80%D0%BC%D0%B0%D0%BD%D0%B3%D0%B0%D0%B7%D1%8B%2C%2066%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>TABLE Bistro</h3><span class="badge">Итальянская (пицца, паста, стейки)</span></div>
-      <div class="place-addr">пр. Абылай хана, 112/116 · летняя терраса</div>
-      <div class="no-photo-note">Под названием «TABLE» на 2ГИС нашлось одно заведение по этому адресу — если имелось в виду другое место с похожим названием, уточните.</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001115184364" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>TABLE Bistro</h3><span class="badge">Итальянская (пицца, паста, стейки)</span></div>
+        <div class="place-addr">пр. Абылай хана, 112/116 · летняя терраса</div>
+        <div class="no-photo-note">Под названием «TABLE» на 2ГИС нашлось одно заведение по этому адресу — если имелось в виду другое место с похожим названием, уточните.</div>
+        <div class="no-photo-note">Реальных фото найти не удалось (открытых нерекламных источников с фото заведения не обнаружено) — посмотреть фото заведения можно в <a href="https://2gis.kz/almaty/firm/70000001115184364" target="_blank" rel="noopener">2ГИС</a>.</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=TABLE%20Bistro%2C%20%D0%BF%D1%80.%20%D0%90%D0%B1%D1%8B%D0%BB%D0%B0%D0%B9%20%D1%85%D0%B0%D0%BD%D0%B0%2C%20112/116%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Cafe Alma</h3><span class="badge">Европейская / казахская</span></div>
-      <div class="place-addr">пр. Аль-Фараби, 28 · у Cafe Alma в Алматы несколько филиалов, указан ближайший к центру</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001104884812" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryCafealma">
+        <button data-full="images/rest-cafealma-1.jpg"><img src="images/rest-cafealma-1.jpg" alt="Сэндвич с сыром и хрустящей корочкой на тарелке" loading="lazy"></button>
+        <button data-full="images/rest-cafealma-2.jpg"><img src="images/rest-cafealma-2.jpg" alt="Блюдо в медной сковороде с зеленью и хрустящим лавашем, чашка кофе" loading="lazy"></button>
+        <button data-full="images/rest-cafealma-3.jpg"><img src="images/rest-cafealma-3.jpg" alt="Завтрак с гренкой, яйцом-глазуньей, салатом и морсом" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Cafe Alma</h3><span class="badge">Европейская / казахская</span></div>
+        <div class="place-addr">пр. Аль-Фараби, 28 · у Cafe Alma в Алматы несколько филиалов, указан ближайший к центру</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Alma%2C%20%D0%BF%D1%80.%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2028%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Manana</h3><span class="badge">Грузинская</span></div>
-      <div class="place-addr">пр. Достык, 535 · при отеле Donatello, грузинские вина</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001023442189" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryManana">
+        <button data-full="images/rest-manana-1.jpg"><img src="images/rest-manana-1.jpg" alt="Зал с банкетным столом и плетёными люстрами" loading="lazy"></button>
+        <button data-full="images/rest-manana-2.jpg"><img src="images/rest-manana-2.jpg" alt="Барная стойка, отделанная ковровым орнаментом" loading="lazy"></button>
+        <button data-full="images/rest-manana-3.jpg"><img src="images/rest-manana-3.jpg" alt="Обеденный зал с зелёными креслами и зеркалом" loading="lazy"></button>
+        <button data-full="images/rest-manana-4.jpg"><img src="images/rest-manana-4.jpg" alt="Полка с винными бутылками и растением" loading="lazy"></button>
+        <button data-full="images/rest-manana-5.jpg"><img src="images/rest-manana-5.jpg" alt="Зал с текстильными панно и скульптурами быков" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Manana</h3><span class="badge">Грузинская</span></div>
+        <div class="place-addr">пр. Достык, 535 · при отеле Donatello, грузинские вина</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Manana%2C%20%D0%BF%D1%80.%20%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%2C%20535%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Afisha</h3><span class="badge">Авторская</span></div>
-      <div class="place-addr">ул. Кабанбай батыра, 83 · в стиле парижских брассери, рядом с ГАТОБ</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001030988696" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryAfisha">
+        <button data-full="images/rest-afisha-1.jpg"><img src="images/rest-afisha-1.jpg" alt="Уютный зал ресторана Afisha с мягким диваном и картинами" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Afisha</h3><span class="badge">Авторская</span></div>
+        <div class="place-addr">ул. Кабанбай батыра, 83 · в стиле парижских брассери, рядом с ГАТОБ</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Afisha%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%2083%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Огонёк (Ogonek)</h3><span class="badge">Итальянская / европейская / авторская</span></div>
-      <div class="place-addr">ул. Панфилова, 125 (угол Богенбай батыра) · летняя терраса</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001056260786" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryOgonek">
+        <button data-full="images/rest-ogonek-1.jpg"><img src="images/rest-ogonek-1.jpg" alt="Зал ресторана Огонёк с деревянными панелями и лаунж-зоной" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Огонёк (Ogonek)</h3><span class="badge">Итальянская / европейская / авторская</span></div>
+        <div class="place-addr">ул. Панфилова, 125 (угол Богенбай батыра) · летняя терраса</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=%D0%9E%D0%B3%D0%BE%D0%BD%D1%91%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9F%D0%B0%D0%BD%D1%84%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0%2C%20125%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая / завтраки 10:00–16:00</span></div>
-      <div class="place-addr">пр. Достык, 109Б</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001079583542" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGallerySpiros">
+        <button data-full="images/rest-spiros-1.jpg"><img src="images/rest-spiros-1.jpg" alt="Стол с греческими блюдами: мидии, рёбра, салаты и вино" loading="lazy"></button>
+        <button data-full="images/rest-spiros-2.jpg"><img src="images/rest-spiros-2.jpg" alt="Ночная терраса с гирляндами и гостями за столиками" loading="lazy"></button>
+        <button data-full="images/rest-spiros-3.jpg"><img src="images/rest-spiros-3.jpg" alt="Фасад здания Spiros вечером" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая / завтраки 10:00–16:00</span></div>
+        <div class="place-addr">пр. Достык, 109Б</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Spiros%2C%20%D0%BF%D1%80.%20%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%2C%20109%D0%91%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Haragun</h3><span class="badge">Грузинская, халяль</span></div>
-      <div class="place-addr">Садовый переулок, 2205, мкр Кольсай · панорамный вид, живая музыка по пт-сб</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001074988529" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryHaragun">
+        <button data-full="images/rest-haragun-1.jpg"><img src="images/rest-haragun-1.jpg" alt="Терраса ресторана с зонтиками и видом на сад" loading="lazy"></button>
+        <button data-full="images/rest-haragun-2.jpg"><img src="images/rest-haragun-2.jpg" alt="Столик с бокалами вина в тёплом вечернем свете" loading="lazy"></button>
+        <button data-full="images/rest-haragun-3.jpg"><img src="images/rest-haragun-3.jpg" alt="Зал ресторана с панорамными окнами и видом на горы" loading="lazy"></button>
+        <button data-full="images/rest-haragun-4.jpg"><img src="images/rest-haragun-4.jpg" alt="Вечерняя терраса с гостями за ужином" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Haragun</h3><span class="badge">Грузинская, халяль</span></div>
+        <div class="place-addr">Садовый переулок, 2205, мкр Кольсай · панорамный вид, живая музыка по пт-сб</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Haragun%2C%20%D0%A1%D0%B0%D0%B4%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%202205%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%B0%D0%B9%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>La Barca Fish &amp; Wine</h3><span class="badge">Средиземноморская, рыба</span></div>
-      <div class="place-addr">пр. Абылай хана, 145 · винная карта, VIP-зал</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/9429940001683326" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryLabarca">
+        <button data-full="images/rest-labarca-1.jpg"><img src="images/rest-labarca-1.jpg" alt="Стол с морепродуктами, мидиями и бокалом вина" loading="lazy"></button>
+        <button data-full="images/rest-labarca-2.jpg"><img src="images/rest-labarca-2.jpg" alt="Свежая рыба на разделочной доске с лимоном и специями" loading="lazy"></button>
+        <button data-full="images/rest-labarca-3.jpg"><img src="images/rest-labarca-3.jpg" alt="Зал ресторана с камином и полосатыми креслами" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>La Barca Fish & Wine</h3><span class="badge">Средиземноморская, рыба</span></div>
+        <div class="place-addr">пр. Абылай хана, 145 · винная карта, VIP-зал</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=La%20Barca%20Fish%20%26%20Wine%2C%20%D0%BF%D1%80.%20%D0%90%D0%B1%D1%8B%D0%BB%D0%B0%D0%B9%20%D1%85%D0%B0%D0%BD%D0%B0%2C%20145%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Хороший год</h3><span class="badge">Европейская авторская, паназиатские нотки</span></div>
-      <div class="place-addr">ул. Шевченко, 18 · винный ресторан, 200+ позиций в карте</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001033064012" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryHoroshiygod">
+        <button data-full="images/rest-horoshiygod-1.jpg"><img src="images/rest-horoshiygod-1.jpg" alt="Крытая терраса ресторана в вечернем освещении" loading="lazy"></button>
+        <button data-full="images/rest-horoshiygod-2.jpg"><img src="images/rest-horoshiygod-2.jpg" alt="Зал ресторана в светлом лофт-стиле с барной стойкой" loading="lazy"></button>
+        <button data-full="images/rest-horoshiygod-3.jpg"><img src="images/rest-horoshiygod-3.jpg" alt="Крытая терраса с накрытыми столами вечером" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Хороший год</h3><span class="badge">Европейская авторская, паназиатские нотки</span></div>
+        <div class="place-addr">ул. Шевченко, 18 · винный ресторан, 200+ позиций в карте</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=%D0%A5%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9%20%D0%B3%D0%BE%D0%B4%2C%20%D1%83%D0%BB.%20%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%2C%2018%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Agora</h3><span class="badge">Винный бар / гастро</span></div>
-      <div class="place-addr">ул. Кабанбай батыра, 83 · Agora wine and deli, рядом с Afisha</div>
-      <div class="no-photo-note">Под названием Agora в Алматы несколько заведений (бар при отеле Ramada, коктейль-бар на Аль-Фараби) — указан Agora wine and deli как наиболее вероятное совпадение по локации.</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001050638051" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryAgora">
+        <button data-full="images/rest-agora-1.jpg"><img src="images/rest-agora-1.jpg" alt="Винный зал Agora wine and deli со стеллажами бутылок и слайсером" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Agora</h3><span class="badge">Винный бар / гастро</span></div>
+        <div class="place-addr">ул. Кабанбай батыра, 83 · Agora wine and deli, рядом с Afisha</div>
+        <div class="no-photo-note">Под названием Agora в Алматы несколько заведений (бар при отеле Ramada, коктейль-бар на Аль-Фараби) — указан Agora wine and deli как наиболее вероятное совпадение по локации.</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Agora%20wine%20and%20deli%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%2083%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
-    <div class="place-card"><div class="place-body">
-      <div class="place-title"><h3>Queen Mountain Resort</h3><span class="badge">Авторская / казахская, винный</span></div>
-      <div class="place-addr">ул. Керей-Жанибек хандар, 375, Медеуский р-н · горный вид, до 500 мест</div>
-      <div class="place-actions"><a class="btn primary" href="https://2gis.kz/almaty/firm/70000001101597359" target="_blank" rel="noopener">2ГИС и маршрут</a></div>
-    </div></div>
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryQueen">
+        <button data-full="images/rest-queen-1.png"><img src="images/rest-queen-1.png" alt="Дневная терраса с плетёной мебелью и видом на сад" loading="lazy"></button>
+        <button data-full="images/rest-queen-2.jpg"><img src="images/rest-queen-2.jpg" alt="Ночная терраса ресторана с гирляндами и обогревателями" loading="lazy"></button>
+        <button data-full="images/rest-queen-3.jpg"><img src="images/rest-queen-3.jpg" alt="Стол с видом на конюшню и сад через ограждение террасы" loading="lazy"></button>
+        <button data-full="images/rest-queen-4.png"><img src="images/rest-queen-4.png" alt="Стейк из лосося с овощами на тарелке с зелёным соусом" loading="lazy"></button>
+        <button data-full="images/rest-queen-5.png"><img src="images/rest-queen-5.png" alt="Пицца с пепперони, страчателлой и острым перцем" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Queen Mountain Resort</h3><span class="badge">Авторская / казахская, винный</span></div>
+        <div class="place-addr">ул. Керей-Жанибек хандар, 375, Медеуский р-н · горный вид, до 500 мест</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Queen%20Mountain%20Resort%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20375%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
 
   </section>
-
 </main>
 
 <footer>
