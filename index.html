@@ -270,6 +270,11 @@
     background:var(--accent-soft);color:var(--accent);white-space:nowrap;
   }
   .place-addr{color:var(--text-secondary);font-size:14px;margin-bottom:14px;}
+  .group-heading{
+    font-size:20px;font-weight:800;letter-spacing:-0.01em;
+    margin:40px 0 14px;
+  }
+  .group-heading:first-of-type{margin-top:8px;}
   .price-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
   .price-table td{padding:8px 0;border-bottom:1px solid var(--border);}
   .price-table td:last-child{text-align:right;font-weight:700;white-space:nowrap;}
@@ -647,7 +652,7 @@
 
   <section id="restaurants-map" style="padding-top:0;">
     <h2>Карта ресторанов</h2>
-    <p class="section-sub">🏠 чёрный значок — квартира ЖК Ortau; розовые сердечки — 13 ресторанов из вашего списка. Клик по значку — название и кухня.</p>
+    <p class="section-sub">🏠 чёрный значок — квартира ЖК Ortau; розовые сердечки — 22 ресторана из вашего списка. Клик по значку — название и кухня.</p>
     <div class="card" style="padding:0;overflow:hidden;">
       <div id="mapview2" style="width:100%;height:420px;"></div>
     </div>
@@ -662,6 +667,108 @@
   <section id="restaurants-list">
     <h2>Список мест</h2>
     <p class="section-sub">Кухня и адрес — по данным официальных сайтов/агрегаторов заведений на 23.09.2026.</p>
+
+    <h3 class="group-heading">☕ Кофейни</h3>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryDailycoffee">
+        <button data-full="images/rest-dailycoffee-1.jpg"><img src="images/rest-dailycoffee-1.jpg" alt="Зал кофейни с книжными стеллажами и диванами" loading="lazy"></button>
+        <button data-full="images/rest-dailycoffee-2.jpg"><img src="images/rest-dailycoffee-2.jpg" alt="Терраса кафе с деревянными столами под навесом из цветов" loading="lazy"></button>
+        <button data-full="images/rest-dailycoffee-3.jpg"><img src="images/rest-dailycoffee-3.jpg" alt="Зона отдыха с креслами у стеклянных дверей и книжной полкой" loading="lazy"></button>
+        <button data-full="images/rest-dailycoffee-4.jpg"><img src="images/rest-dailycoffee-4.jpg" alt="Барная стойка на фоне фрески с цветными домиками" loading="lazy"></button>
+        <button data-full="images/rest-dailycoffee-5.jpg"><img src="images/rest-dailycoffee-5.jpg" alt="Уютный зал кофейни с деревянными стульями и лампами" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Daily Coffee</h3><span class="badge">Кофейня, европейская/паназиатская</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
+        <div class="place-addr">пр. Абылай хана, 147 · завтраки, панорамный вид, настольные игры</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/JA3qdcSgNAxVtaBKA?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryVoronka">
+        <button data-full="images/rest-voronka-1.jpg"><img src="images/rest-voronka-1.jpg" alt="Коллаж кадров кофейни: кофе на столике, терраса, вход" loading="lazy"></button>
+        <button data-full="images/rest-voronka-2.jpg"><img src="images/rest-voronka-2.jpg" alt="Зал кофейни с барной стойкой и диванами" loading="lazy"></button>
+        <button data-full="images/rest-voronka-3.jpg"><img src="images/rest-voronka-3.jpg" alt="Завтрак: яичница-скрэмбл, колбаски, тосты и запечённые томаты" loading="lazy"></button>
+        <button data-full="images/rest-voronka-4.jpg"><img src="images/rest-voronka-4.jpg" alt="Интерьер кофейни: круглый стол и полки с товарами" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Voronka Specialty Coffee</h3><span class="badge">Спешелти кофе</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
+        <div class="place-addr">ул. Желтоксан, 160 · завтраки весь день 08:00–23:00, своя выпечка</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/JkZSD4YudQoJXUWS9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryCollab">
+        <button data-full="images/rest-collab-1.jpg"><img src="images/rest-collab-1.jpg" alt="Летняя терраса кофейни под зелёными зонтами" loading="lazy"></button>
+        <button data-full="images/rest-collab-2.jpg"><img src="images/rest-collab-2.jpg" alt="Зал с красным столом, деревянными стульями и постерами" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Collab</h3><span class="badge">Спешелти кофе</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
+        <div class="place-addr">ул. Панфилова, 203 · завтраки, смузи, свежевыжатые соки</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/WZsYQuxPtTFmRXqF7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <h3 class="group-heading">🍳 Завтраки и кафе-бистро</h3>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryFika">
+        <button data-full="images/rest-fika-1.jpg"><img src="images/rest-fika-1.jpg" alt="Барная стойка с бутылками вина и медной вытяжкой" loading="lazy"></button>
+        <button data-full="images/rest-fika-2.jpg"><img src="images/rest-fika-2.jpg" alt="Столик у окна с бокалом и десертом" loading="lazy"></button>
+        <button data-full="images/rest-fika-3.jpg"><img src="images/rest-fika-3.jpg" alt="Уютный зал кафе с деревянными столами" loading="lazy"></button>
+        <button data-full="images/rest-fika-4.jpg"><img src="images/rest-fika-4.jpg" alt="Светлый зал с фигурными арками и цветной плиткой" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
+        <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Fika%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%20104%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryCafeteria">
+        <button data-full="images/rest-cafeteria-1.jpg"><img src="images/rest-cafeteria-1.jpg" alt="Панорама кофейни Cafeteria" loading="lazy"></button>
+        <button data-full="images/rest-cafeteria-2.jpg"><img src="images/rest-cafeteria-2.jpg" alt="Фирменная упаковка десертов с ягодным тартом" loading="lazy"></button>
+        <button data-full="images/rest-cafeteria-3.jpg"><img src="images/rest-cafeteria-3.jpg" alt="Коробки навынос с логотипом Cafeteria и тарт с малиной" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
+        <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafeteria%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D0%B9%D1%81%D0%B5%D0%B8%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%2C%2032%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryLavka">
+        <button data-full="images/rest-lavka-1.jpg"><img src="images/rest-lavka-1.jpg" alt="Витрина кондитерской с выпечкой, хлебом и десертами" loading="lazy"></button>
+        <button data-full="images/rest-lavka-2.jpg"><img src="images/rest-lavka-2.jpg" alt="Зона с синим бархатным диваном у панорамного окна" loading="lazy"></button>
+        <button data-full="images/rest-lavka-3.jpg"><img src="images/rest-lavka-3.jpg" alt="Стеллаж с бутылками вина, маслом и заготовками" loading="lazy"></button>
+        <button data-full="images/rest-lavka-4.jpg"><img src="images/rest-lavka-4.jpg" alt="Витрина с десертами: чизкейк, тарты с клубникой" loading="lazy"></button>
+        <button data-full="images/rest-lavka-5.jpg"><img src="images/rest-lavka-5.jpg" alt="Стеллаж с банками специй и книгами рядом со столиками" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Lavka by Proshenkov</h3><span class="badge">Бистро шефа Прошенкова</span></div>
+        <div class="place-addr">пр. Аль-Фараби, 15/1 к5в, ЖК Нурлы Тау · завтраки 08:00–16:00</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/jzSS8k73dRdC1S436?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryHosejosper">
+        <button data-full="images/rest-hosejosper-1.jpg"><img src="images/rest-hosejosper-1.jpg" alt="Уличная веранда и вход в ресторан вечером" loading="lazy"></button>
+        <button data-full="images/rest-hosejosper-2.jpg"><img src="images/rest-hosejosper-2.jpg" alt="Зал с бирюзовыми диванами и цветочными креслами" loading="lazy"></button>
+        <button data-full="images/rest-hosejosper-3.jpg"><img src="images/rest-hosejosper-3.jpg" alt="Сервированный стол с десертом на фоне зала" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Хосе и Josper</h3><span class="badge">Стейк-хаус, халяль</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
+        <div class="place-addr">ул. Желтоксан, 162 · завтраки 10:00–13:00, гриль Josper на углях</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/yxeHUymnNyu9dtUM9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <h3 class="group-heading">🍽️ Рестораны</h3>
 
     <div class="place-card">
       <div class="place-photos" id="restGalleryAuyl">
@@ -693,20 +800,6 @@
     </div>
 
     <div class="place-card">
-      <div class="place-photos" id="restGalleryFika">
-        <button data-full="images/rest-fika-1.jpg"><img src="images/rest-fika-1.jpg" alt="Барная стойка с бутылками вина и медной вытяжкой" loading="lazy"></button>
-        <button data-full="images/rest-fika-2.jpg"><img src="images/rest-fika-2.jpg" alt="Столик у окна с бокалом и десертом" loading="lazy"></button>
-        <button data-full="images/rest-fika-3.jpg"><img src="images/rest-fika-3.jpg" alt="Уютный зал кафе с деревянными столами" loading="lazy"></button>
-        <button data-full="images/rest-fika-4.jpg"><img src="images/rest-fika-4.jpg" alt="Светлый зал с фигурными арками и цветной плиткой" loading="lazy"></button>
-      </div>
-      <div class="place-body">
-        <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
-        <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
-        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Fika%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%20104%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
-      </div>
-    </div>
-
-    <div class="place-card">
       <div class="place-photos" id="restGalleryRifugio">
         <button data-full="images/rest-rifugio-1.jpg"><img src="images/rest-rifugio-1.jpg" alt="Терраса с видом на заснеженные горы Шымбулака и сервированный стол" loading="lazy"></button>
         <button data-full="images/rest-rifugio-2.jpg"><img src="images/rest-rifugio-2.jpg" alt="Банкетный зал с картинами и накрытыми столами" loading="lazy"></button>
@@ -716,19 +809,6 @@
         <div class="place-title"><h3>Rifugio del Monte</h3><span class="badge">Европейская / средиземноморская</span></div>
         <div class="place-addr">ул. Керей-Жанибек хандар, 513а · на горнолыжном курорте Шымбулак, винная карта</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Rifugio%20del%20Monte%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20513%D0%B0%2C%20%D0%A8%D1%8B%D0%BC%D0%B1%D1%83%D0%BB%D0%B0%D0%BA%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
-      </div>
-    </div>
-
-    <div class="place-card">
-      <div class="place-photos" id="restGalleryCafeteria">
-        <button data-full="images/rest-cafeteria-1.jpg"><img src="images/rest-cafeteria-1.jpg" alt="Панорама кофейни Cafeteria" loading="lazy"></button>
-        <button data-full="images/rest-cafeteria-2.jpg"><img src="images/rest-cafeteria-2.jpg" alt="Фирменная упаковка десертов с ягодным тартом" loading="lazy"></button>
-        <button data-full="images/rest-cafeteria-3.jpg"><img src="images/rest-cafeteria-3.jpg" alt="Коробки навынос с логотипом Cafeteria и тарт с малиной" loading="lazy"></button>
-      </div>
-      <div class="place-body">
-        <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
-        <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
-        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafeteria%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D0%B9%D1%81%D0%B5%D0%B8%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%2C%2032%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
 
@@ -781,7 +861,7 @@
         <button data-full="images/rest-spiros-3.jpg"><img src="images/rest-spiros-3.jpg" alt="Фасад здания Spiros вечером" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая / завтраки 10:00–16:00</span></div>
+        <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">пр. Достык, 109Б</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Spiros%2C%20%D0%BF%D1%80.%20%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%2C%20109%D0%91%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
@@ -840,6 +920,64 @@
         <div class="place-title"><h3>Queen Mountain Resort</h3><span class="badge">Авторская / казахская, винный</span></div>
         <div class="place-addr">ул. Керей-Жанибек хандар, 375, Медеуский р-н · горный вид, до 500 мест</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Queen%20Mountain%20Resort%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20375%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryDushes">
+        <button data-full="images/rest-dushes-1.jpg"><img src="images/rest-dushes-1.jpg" alt="Летняя терраса ресторана с сервированными столами в белом текстиле" loading="lazy"></button>
+        <button data-full="images/rest-dushes-2.jpg"><img src="images/rest-dushes-2.jpg" alt="Зал ресторана с синими диванами и картиной с тореадором" loading="lazy"></button>
+        <button data-full="images/rest-dushes-3.jpg"><img src="images/rest-dushes-3.jpg" alt="Банкетный зал с длинным сервированным столом и люстрой" loading="lazy"></button>
+        <button data-full="images/rest-dushes-4.jpg"><img src="images/rest-dushes-4.jpg" alt="Зал с барной стойкой, жёлтыми диванами и круглыми столиками" loading="lazy"></button>
+        <button data-full="images/rest-dushes-5.jpg"><img src="images/rest-dushes-5.jpg" alt="Уютный зал в серых тонах с люстрой и книжными полками" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>DUSHES</h3><span class="badge">Европейская / итальянская / французская</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
+        <div class="place-addr">пр. Аль-Фараби, 21/1, ЖК AFD Plaza · живая музыка, летняя терраса</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/Bf7busNDDmNKqZ4c7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryKoreanfood">
+        <button data-full="images/rest-koreanfood-1.jpg"><img src="images/rest-koreanfood-1.jpg" alt="Вывеска и фасад кафе-бакалеи Korean Food Story" loading="lazy"></button>
+        <button data-full="images/rest-koreanfood-2.jpg"><img src="images/rest-koreanfood-2.jpg" alt="Вход в кафе на церемонии открытия" loading="lazy"></button>
+        <button data-full="images/rest-koreanfood-3.jpg"><img src="images/rest-koreanfood-3.jpg" alt="Полки с корейскими продуктами и соусами внутри магазина" loading="lazy"></button>
+        <button data-full="images/rest-koreanfood-4.jpg"><img src="images/rest-koreanfood-4.jpg" alt="Интерьер магазина-кафе с деревянными стеллажами товаров" loading="lazy"></button>
+        <button data-full="images/rest-koreanfood-5.jpg"><img src="images/rest-koreanfood-5.jpg" alt="Зал кафе с полками корейских продуктов на заднем плане" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Korean Food Story</h3><span class="badge">Корейская, кафе-бакалея</span></div>
+        <div class="place-addr">пр. Аль-Фараби, 19 к2Б · лапша wok, кофе с собой</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/CPAWUZZZu5MYKq6w9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryZiyafet">
+        <button data-full="images/rest-ziyafet-1.jpg"><img src="images/rest-ziyafet-1.jpg" alt="Разделочная доска с нарезанным стейком, овощами-гриль и специями" loading="lazy"></button>
+        <button data-full="images/rest-ziyafet-2.jpg"><img src="images/rest-ziyafet-2.jpg" alt="Стейк томагавк на доске с соусом и капустным салатом" loading="lazy"></button>
+        <button data-full="images/rest-ziyafet-3.jpg"><img src="images/rest-ziyafet-3.jpg" alt="Зал ресторана с бархатными креслами и сервированными столами" loading="lazy"></button>
+        <button data-full="images/rest-ziyafet-4.jpg"><img src="images/rest-ziyafet-4.jpg" alt="Стейк на кости на доске крупным планом" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Ziyafet Steak House</h3><span class="badge">Стейк-хаус, европейская/турецкая</span></div>
+        <div class="place-addr">ул. Желтоксан, 172 · мясо на углях, живая музыка</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/iMpQwY6mGuVM3V3N7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryGaucho">
+        <button data-full="images/rest-gaucho-1.jpg"><img src="images/rest-gaucho-1.jpg" alt="Тёплая веранда в зелёных тонах с клетчатыми скатертями и камином" loading="lazy"></button>
+        <button data-full="images/rest-gaucho-2.jpg"><img src="images/rest-gaucho-2.jpg" alt="Тарелка с нарезанным стейком и соусом" loading="lazy"></button>
+        <button data-full="images/rest-gaucho-3.jpg"><img src="images/rest-gaucho-3.jpg" alt="Летняя веранда со столиками под розовыми скатертями" loading="lazy"></button>
+        <button data-full="images/rest-gaucho-4.jpg"><img src="images/rest-gaucho-4.jpg" alt="Веранда с деревянным полом, гирляндами и декоративным камином" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Gaucho Kitchen</h3><span class="badge">Стейк-хаус, аргентинский гриль</span></div>
+        <div class="place-addr">пр. Сейфуллина, 577 · мраморная говядина, открытая кухня</div>
+        <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/Zz1cbcJQszv4zwum9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
 
@@ -1022,7 +1160,16 @@
     {name:"Haragun", cuisine:"Грузинская, халяль", addr:"Садовый пер., 2205, мкр Кольсай", lat:43.212716, lon:76.998735},
     {name:"La Barca Fish & Wine", cuisine:"Средиземноморская, рыба", addr:"пр. Абылай хана, 145", lat:43.243993, lon:76.942533},
     {name:"Хороший год", cuisine:"Европейская авторская, паназиатские нотки", addr:"ул. Шевченко, 18", lat:43.246916, lon:76.955683},
-    {name:"Queen Mountain Resort", cuisine:"Авторская / казахская, винный", addr:"ул. Керей-Жанибек хандар, 375, Медеуский р-н", lat:43.171772, lon:77.034992}
+    {name:"Queen Mountain Resort", cuisine:"Авторская / казахская, винный", addr:"ул. Керей-Жанибек хандар, 375, Медеуский р-н", lat:43.171772, lon:77.034992},
+    {name:"Korean Food Story", cuisine:"Корейская, кафе-бакалея", addr:"пр. Аль-Фараби, 19 к2Б", lat:43.2125045, lon:76.9144293},
+    {name:"Daily Coffee", cuisine:"Кофейня, европейская/паназиатская, завтраки", addr:"пр. Абылай хана, 147", lat:43.2431698, lon:76.9425441},
+    {name:"Хосе и Josper", cuisine:"Стейк-хаус, халяль/европейская, завтраки 10:00–13:00", addr:"ул. Желтоксан, 162", lat:43.2445987, lon:76.9413261},
+    {name:"Voronka Specialty Coffee", cuisine:"Спешелти кофе, завтраки 08:00–23:00", addr:"ул. Желтоксан, 160", lat:43.2451183, lon:76.9412386},
+    {name:"Ziyafet Steak House", cuisine:"Стейк-хаус, европейская/турецкая", addr:"ул. Желтоксан, 172", lat:43.2387463, lon:76.9421261},
+    {name:"Lavka by Proshenkov", cuisine:"Бистро, завтраки 08:00–16:00", addr:"пр. Аль-Фараби, 15/1 к5в, ЖК Нурлы Тау", lat:43.2065797, lon:76.9224992},
+    {name:"DUSHES", cuisine:"Европейская / итальянская / французская, завтраки", addr:"пр. Аль-Фараби, 21/1, ЖК AFD Plaza", lat:43.2198059, lon:76.9216925},
+    {name:"Collab", cuisine:"Кофейня, спешелти кофе, завтраки", addr:"ул. Панфилова, 203", lat:43.2289164, lon:76.9484183},
+    {name:"Gaucho Kitchen", cuisine:"Стейк-хаус, аргентинский гриль", addr:"пр. Сейфуллина, 577", lat:43.2461380, lon:76.9333536}
   ];
 
   var map2Initialized = false;
@@ -1075,7 +1222,7 @@
       restMain.style.display = "";
       subnav.style.display = "none";
       title.textContent = "Рестораны и кафе";
-      subtitle.textContent = "13 проверенных мест в Алматы — с типом кухни и картой.";
+      subtitle.textContent = "22 проверенных места в Алматы — с типом кухни и картой.";
       initRestaurantMap();
       setTimeout(function(){ if(map2) map2.invalidateSize(); }, 50);
       history.replaceState(null, "", "#restaurants");
