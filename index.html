@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Справочник проживания · Алматы</title>
+<meta name="description" content="Всё о проживании в Алматы с 23 сентября по 14 октября: встреча в аэропорту, квартира ЖК Ortau, Wi-Fi, коворкинги и спортзалы рядом.">
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --bg-elev:#ffffff;
+    --text:#1d1d1f;
+    --text-secondary:#6e6e73;
+    --border:#e5e5ea;
+    --accent:#0071e3;
+    --accent-soft:#eaf3ff;
+    --shadow:0 2px 20px rgba(0,0,0,0.06);
+    --radius:20px;
+    --success:#1a7f37;
+    --warn:#b3691a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000000;
+      --bg-elev:#1c1c1e;
+      --text:#f5f5f7;
+      --text-secondary:#98989d;
+      --border:#2c2c2e;
+      --accent:#3fa2ff;
+      --accent-soft:#0e2540;
+      --shadow:0 2px 24px rgba(0,0,0,0.5);
+      --success:#3fbf5f;
+      --warn:#e0a458;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000000;
+    --bg-elev:#1c1c1e;
+    --text:#f5f5f7;
+    --text-secondary:#98989d;
+    --border:#2c2c2e;
+    --accent:#3fa2ff;
+    --accent-soft:#0e2540;
+    --shadow:0 2px 24px rgba(0,0,0,0.5);
+    --success:#3fbf5f;
+    --warn:#e0a458;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    transition:background .3s ease,color .3s ease;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+
+  header.hero{
+    position:relative;
+    padding:64px 20px 40px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero-eyebrow{
+    font-size:14px;
+    font-weight:600;
+    color:var(--accent);
+    letter-spacing:.02em;
+    text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  .hero h1{
+    font-size:clamp(28px,5vw,44px);
+    font-weight:700;
+    margin:0 0 14px;
+    letter-spacing:-0.02em;
+  }
+  .hero p{
+    color:var(--text-secondary);
+    font-size:18px;
+    max-width:560px;
+    margin:0 auto;
+  }
+
+  .theme-toggle{
+    position:fixed;
+    top:16px;
+    right:16px;
+    z-index:50;
+    background:var(--bg-elev);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:10px 16px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--text);
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    min-height:44px;
+  }
+
+  nav.subnav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border);
+  }
+  nav.subnav .wrap{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:12px 20px;
+    scrollbar-width:none;
+  }
+  nav.subnav .wrap::-webkit-scrollbar{display:none;}
+  nav.subnav a{
+    flex:0 0 auto;
+    font-size:14px;
+    font-weight:600;
+    color:var(--text-secondary);
+    padding:10px 16px;
+    border-radius:999px;
+    white-space:nowrap;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+  }
+  nav.subnav a:hover{background:var(--bg-elev);color:var(--text);}
+
+  section{padding:56px 20px;position:relative;}
+  section h2{
+    font-size:clamp(22px,3.5vw,30px);
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0 0 6px;
+  }
+  .section-sub{color:var(--text-secondary);margin:0 0 28px;font-size:16px;}
+
+  .card{
+    background:var(--bg-elev);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:24px;
+    margin-bottom:20px;
+    border:1px solid var(--border);
+  }
+
+  /* driver card */
+  .driver-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  .driver-row{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--border);}
+  .driver-row:last-child{border-bottom:none;}
+  .driver-icon{
+    width:44px;height:44px;border-radius:12px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .driver-label{font-size:13px;color:var(--text-secondary);margin-bottom:2px;}
+  .driver-value{font-size:17px;font-weight:600;}
+  .driver-value a{font-weight:600;}
+
+  /* apartment */
+  .apt-meta{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px;}
+  @media(min-width:640px){.apt-meta{grid-template-columns:1fr 1fr;}}
+  .meta-item{background:var(--bg-elev);border:1px solid var(--border);border-radius:16px;padding:16px 18px;}
+  .meta-item .label{font-size:13px;color:var(--text-secondary);margin-bottom:4px;}
+  .meta-item .value{font-size:16px;font-weight:600;}
+  .meta-item .value a{font-weight:600;}
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+  }
+  @media(max-width:640px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  .gallery button{
+    padding:0;border:none;background:none;cursor:pointer;
+    border-radius:14px;overflow:hidden;aspect-ratio:4/3;
+    min-height:44px;
+  }
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .gallery button:hover img{transform:scale(1.06);}
+
+  /* place cards */
+  .place-card{
+    background:var(--bg-elev);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-bottom:24px;
+    box-shadow:var(--shadow);
+  }
+  .place-photos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+  }
+  .place-photos button{padding:0;border:none;background:none;cursor:pointer;aspect-ratio:4/3;overflow:hidden;min-height:44px;}
+  .place-photos img{width:100%;height:100%;object-fit:cover;}
+  .place-body{padding:22px 24px 26px;}
+  .place-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
+  .place-title h3{font-size:20px;margin:0;font-weight:700;}
+  .badge{
+    font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent);white-space:nowrap;
+  }
+  .place-addr{color:var(--text-secondary);font-size:14px;margin-bottom:14px;}
+  .price-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
+  .price-table td{padding:8px 0;border-bottom:1px solid var(--border);}
+  .price-table td:last-child{text-align:right;font-weight:700;white-space:nowrap;}
+  .price-usd{color:var(--accent);}
+  .price-kzt{color:var(--text-secondary);font-weight:400;font-size:12.5px;display:block;}
+  .place-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:44px;padding:0 18px;border-radius:12px;font-size:14px;font-weight:600;
+    background:var(--accent-soft);color:var(--accent);border:none;cursor:pointer;
+  }
+  .btn.primary{background:var(--accent);color:#fff;}
+  .no-photo-note{
+    background:var(--accent-soft);
+    border-radius:12px;
+    padding:12px 16px;
+    font-size:13.5px;
+    color:var(--text-secondary);
+    margin-top:10px;
+  }
+
+  .sticker-wrap{
+    position:absolute;
+    pointer-events:none;
+    z-index:1;
+  }
+  .sticker-wrap img{width:100%;height:100%;}
+  .sticker-inner{pointer-events:auto;}
+
+  .source-list{font-size:13px;color:var(--text-secondary);}
+  .source-list li{margin-bottom:6px;}
+
+  footer{
+    padding:40px 20px 60px;
+    text-align:center;
+    color:var(--text-secondary);
+    font-size:13px;
+  }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(0,0,0,0.9);
+    display:none;align-items:center;justify-content:center;
+    z-index:100;padding:20px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:min(92vw,900px);max-height:82vh;border-radius:12px;object-fit:contain;}
+  .lightbox-close,.lightbox-prev,.lightbox-next{
+    position:absolute;
+    background:rgba(255,255,255,0.12);
+    color:#fff;border:none;border-radius:50%;
+    width:48px;height:48px;font-size:22px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .lightbox-close{top:20px;right:20px;}
+  .lightbox-prev{left:20px;top:50%;transform:translateY(-50%);}
+  .lightbox-next{right:20px;top:50%;transform:translateY(-50%);}
+  .lightbox-counter{
+    position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+    color:#fff;font-size:13px;background:rgba(255,255,255,0.12);
+    padding:6px 14px;border-radius:999px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌓 Тема</button>
+
+<header class="hero">
+  <div class="hero-eyebrow">Алматы · 23 сентября — 14 октября 2026</div>
+  <h1>Справочник проживания</h1>
+  <p>Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.</p>
+</header>
+
+<nav class="subnav">
+  <div class="wrap">
+    <a href="#driver">Трансфер</a>
+    <a href="#apartment">Квартира</a>
+    <a href="#wifi">Wi-Fi</a>
+    <a href="#coworking">Коворкинги</a>
+    <a href="#gym">Спортзалы</a>
+  </div>
+</nav>
+
+<main class="wrap" style="padding-top:40px;">
+
+  <section id="driver" style="padding-top:0;">
+    <h2>Встреча в аэропорту</h2>
+    <p class="section-sub">Водитель встретит на выходе из зала прилёта с табличкой.</p>
+    <div class="card driver-grid">
+      <div class="driver-row">
+        <div class="driver-icon">🚗</div>
+        <div>
+          <div class="driver-label">Автомобиль</div>
+          <div class="driver-value">Белый BYD Khan · госномер 457 AYG 02</div>
+        </div>
+      </div>
+      <div class="driver-row">
+        <div class="driver-icon">👤</div>
+        <div>
+          <div class="driver-label">Водитель</div>
+          <div class="driver-value">Самат — встретит с табличкой</div>
+        </div>
+      </div>
+      <div class="driver-row">
+        <div class="driver-icon">📞</div>
+        <div>
+          <div class="driver-label">Телефон / WhatsApp</div>
+          <div class="driver-value"><a href="tel:+77051807152">+7 705 180 7152</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apartment">
+    <h2>Квартира · ЖК Ortau</h2>
+    <p class="section-sub">Наурызбай батыра, 127, блок 3 — этаж 3, квартира 152.</p>
+
+    <div class="apt-meta">
+      <div class="meta-item">
+        <div class="label">Адрес</div>
+        <div class="value">ул. Наурызбай батыра, 127, блок 3<br>Алматы</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Этаж / квартира</div>
+        <div class="value">3-й этаж, квартира №152</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Геолокация</div>
+        <div class="value"><a href="https://2gis.kz/almaty/geo/70030077107473333/76.937837,43.236492" target="_blank" rel="noopener">Открыть в 2ГИС ↗</a></div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Доступ на территорию</div>
+        <div class="value">Один подъезд, калитка/дверь — по магнитному ключу (выдаётся при заселении сотрудником)</div>
+      </div>
+    </div>
+
+    <div class="gallery" id="aptGallery">
+      <button data-full="images/apt-building.jpg"><img src="images/apt-building.jpg" alt="Фасад жилого комплекса Ortau" loading="lazy"></button>
+      <button data-full="images/apt-bedroom.jpg"><img src="images/apt-bedroom.jpg" alt="Спальня с двуспальной кроватью" loading="lazy"></button>
+      <button data-full="images/apt-living.jpg"><img src="images/apt-living.jpg" alt="Гостиная с диваном и обеденной зоной" loading="lazy"></button>
+      <button data-full="images/apt-kitchen.jpg"><img src="images/apt-kitchen.jpg" alt="Кухня в тёмных тонах" loading="lazy"></button>
+      <button data-full="images/apt-hall1.jpg"><img src="images/apt-hall1.jpg" alt="Прихожая с зеркалом и консолью" loading="lazy"></button>
+      <button data-full="images/apt-hall2.jpg"><img src="images/apt-hall2.jpg" alt="Коридор с гардеробной" loading="lazy"></button>
+      <button data-full="images/apt-living2.jpg"><img src="images/apt-living2.jpg" alt="Гостиная у окна с креслами" loading="lazy"></button>
+      <button data-full="images/apt-living3.jpg"><img src="images/apt-living3.jpg" alt="Гостиная с телевизором" loading="lazy"></button>
+      <button data-full="images/apt-bathroom.jpg"><img src="images/apt-bathroom.jpg" alt="Ванная комната с ванной и стиральной машиной" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section id="wifi">
+    <h2>Wi-Fi</h2>
+    <div class="card driver-grid">
+      <div class="driver-row">
+        <div class="driver-icon">📶</div>
+        <div>
+          <div class="driver-label">Сеть</div>
+          <div class="driver-value">Alibek</div>
+        </div>
+      </div>
+      <div class="driver-row">
+        <div class="driver-icon">🔑</div>
+        <div>
+          <div class="driver-label">Пароль</div>
+          <div class="driver-value">narkes1504</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coworking">
+    <h2>Коворкинги рядом</h2>
+    <p class="section-sub">Все три места находятся в районе пересечения Сейфуллина — Наурызбай батыра, в 5–15 минутах от квартиры. Точный маршрут постройте по ссылке «Маршрут в 2ГИС» — расстояние и время зависят от вида транспорта.</p>
+
+    <div class="place-card">
+      <div class="place-photos" id="coworkGallery1">
+        <button data-full="images/coworking-openspace.jpg"><img src="images/coworking-openspace.jpg" alt="Open space коворкинга 16 on:ALT" loading="lazy"></button>
+        <button data-full="images/coworking-meeting.jpg"><img src="images/coworking-meeting.jpg" alt="Переговорная комната 16 on:ALT" loading="lazy"></button>
+        <button data-full="images/coworking-desks.jpg"><img src="images/coworking-desks.jpg" alt="Рабочие места 16 on:ALT" loading="lazy"></button>
+        <button data-full="images/coworking-hall.jpg"><img src="images/coworking-hall.jpg" alt="Общий зал 16 on:ALT" loading="lazy"></button>
+        <button data-full="images/coworking-loungearea.jpg"><img src="images/coworking-loungearea.jpg" alt="Зона с растениями 16 on:ALT" loading="lazy"></button>
+        <button data-full="images/coworking-lounge.jpg"><img src="images/coworking-lounge.jpg" alt="Зона отдыха 16 on:ALT" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>16 on:ALT</h3><span class="badge">≈ 3–8 мин пешком от дома</span></div>
+        <div class="place-addr">ЖК Керемет, мкр Керемет, 7 к34 · Алматы</div>
+        <table class="price-table">
+          <tr><td>Open Space — час</td><td><span class="price-usd">$2,7</span><span class="price-kzt">1 200 ₸</span></td></tr>
+          <tr><td>Open Space — день</td><td><span class="price-usd">$15,6</span><span class="price-kzt">7 000 ₸</span></td></tr>
+          <tr><td>Open Space — месяц</td><td><span class="price-usd">$178,6</span><span class="price-kzt">80 000 ₸</span></td></tr>
+          <tr><td>Open Space — месяц, фикс. место</td><td><span class="price-usd">$223,3</span><span class="price-kzt">100 000 ₸</span></td></tr>
+          <tr><td>Meeting room — час</td><td><span class="price-usd">$33,5</span><span class="price-kzt">15 000 ₸</span></td></tr>
+        </table>
+        <div class="place-addr" style="margin-top:-4px;">Режим работы: ежедневно 09:00–21:00. В переговорной — маркерная доска и TV-экран.</div>
+        <div class="place-actions">
+          <a class="btn primary" href="https://2gis.kz/almaty/search/16%20on%3AALT" target="_blank" rel="noopener">Открыть в 2ГИС и проложить маршрут</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>Jas Coworking</h3><span class="badge">≈ 10–15 мин пешком</span></div>
+        <div class="place-addr">просп. Сейфуллина, 609 · Алматы · режим работы: круглосуточно</div>
+        <table class="price-table">
+          <tr><td>Пол дня</td><td><span class="price-usd">$16,8</span><span class="price-kzt">7 500 ₸</span></td></tr>
+          <tr><td>День</td><td><span class="price-usd">$33,5</span><span class="price-kzt">15 000 ₸</span></td></tr>
+          <tr><td>10 дней подряд</td><td><span class="price-usd">$134,0</span><span class="price-kzt">60 000 ₸</span></td></tr>
+          <tr><td>Месяц, место не фикс.</td><td><span class="price-usd">$268,0</span><span class="price-kzt">120 000 ₸</span></td></tr>
+          <tr><td>Месяц, место фикс.</td><td><span class="price-usd">$335,0</span><span class="price-kzt">150 000 ₸</span></td></tr>
+          <tr><td>Месяц Premium</td><td><span class="price-usd">$390,8</span><span class="price-kzt">175 000 ₸</span></td></tr>
+          <tr><td>Переговорная Event Area (до 40 чел.) — час</td><td><span class="price-usd">$44,7</span><span class="price-kzt">20 000 ₸</span></td></tr>
+          <tr><td>Переговорные A/B (до 25 чел.) — час</td><td><span class="price-usd">$33,5</span><span class="price-kzt">15 000 ₸</span></td></tr>
+        </table>
+        <div class="no-photo-note">📷 Реальных фото интерьера найти не удалось — проверьте фотогалерею на странице ниже перед бронированием.</div>
+        <div class="place-actions">
+          <a class="btn primary" href="https://2gis.kz/almaty/firm/70000001060869888" target="_blank" rel="noopener">Открыть в 2ГИС и проложить маршрут</a>
+          <a class="btn" href="https://coworking.jva.vc/" target="_blank" rel="noopener">Сайт coworking.jva.vc</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>Coworking Office</h3><span class="badge">≈ 10 мин пешком / 3 мин на авто</span></div>
+        <div class="place-addr">ТРК Forum, просп. Сейфуллина, 617, 4-й этаж · Алматы</div>
+        <table class="price-table">
+          <tr><td>Почасовая оплата</td><td><span class="price-usd">$3,3</span><span class="price-kzt">1 500 ₸</span></td></tr>
+          <tr><td>День (08:00–01:00)</td><td><span class="price-usd">$14,5</span><span class="price-kzt">6 500 ₸</span></td></tr>
+          <tr><td>Месяц, свободное место</td><td><span class="price-usd">$156,3</span><span class="price-kzt">70 000 ₸</span></td></tr>
+          <tr><td>Месяц, закреплённое место</td><td><span class="price-usd">$178,6</span><span class="price-kzt">80 000 ₸</span></td></tr>
+          <tr><td>Конференц-зал — час</td><td><span class="price-usd">$8,9–33,5</span><span class="price-kzt">4 000–15 000 ₸</span></td></tr>
+        </table>
+        <div class="no-photo-note">📷 Реальных фото интерьера найти не удалось — 29 фото есть в галерее объекта на 2ГИС, откройте по ссылке ниже.</div>
+        <div class="place-actions">
+          <a class="btn primary" href="https://2gis.kz/almaty/firm/70000001065042716" target="_blank" rel="noopener">Открыть в 2ГИС и проложить маршрут</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gym" style="position:relative;">
+    <div class="sticker-wrap" id="gymSticker" style="width:110px;height:110px;top:-6px;right:6px;">
+      <img class="sticker-inner" src="images/sticker-panda.svg" alt="Милая панда" title="Милая панда">
+    </div>
+    <h2>Спортзалы рядом</h2>
+    <p class="section-sub">Оба зала расположены в том же районе, что и коворкинги — Сейфуллина / Наурызбай батыра.</p>
+
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>Brooklyn Fitness Gym</h3><span class="badge">≈ 3–8 мин пешком</span></div>
+        <div class="place-addr">мкр Керемет, 7 к42 (цокольный этаж) · Алматы</div>
+        <table class="price-table">
+          <tr><td>Абонемент — месяц (от)</td><td><span class="price-usd">$13,4</span><span class="price-kzt">6 000 ₸</span></td></tr>
+          <tr><td>Абонемент — год (от)</td><td><span class="price-usd">$73,7</span><span class="price-kzt">33 000 ₸</span></td></tr>
+        </table>
+        <div class="place-addr" style="margin-top:-4px;">Режим работы: сегодня 07:00–22:30 (по данным на 23.09.2026, Пн–Пт обычно 07:00–23:00, Сб 09:00–21:00, Вс 11:00–17:00 — уточните на месте).</div>
+        <div class="no-photo-note">📷 Реальных фото зала найти не удалось (сайт fitcom.kz недоступен для загрузки изображений) — 53 фото есть в галерее объекта на 2ГИС.</div>
+        <div class="place-actions">
+          <a class="btn primary" href="https://2gis.kz/almaty/firm/9429940001069160" target="_blank" rel="noopener">Открыть в 2ГИС и проложить маршрут</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>Workout</h3><span class="badge">≈ 10 мин пешком / 3 мин на авто</span></div>
+        <div class="place-addr">ТРК Forum, просп. Сейфуллина, 617, 4-й этаж · Алматы</div>
+        <table class="price-table">
+          <tr><td>Годовой безлимит (от, в пересчёте на месяц)</td><td><span class="price-usd">$37,2</span><span class="price-kzt">16 658 ₸/мес</span></td></tr>
+          <tr><td>Тренировка с тренером</td><td><span class="price-usd">$11,2</span><span class="price-kzt">5 000 ₸</span></td></tr>
+        </table>
+        <div class="place-addr" style="margin-top:-4px;">Режим работы: 06:30–00:00, по предварительной записи. Сауна, аэробика, йога, Pilates, Zumba.</div>
+        <div class="no-photo-note">📷 Реальных фото зала найти не удалось — 51 фото есть в галерее объекта на 2ГИС.</div>
+        <div class="place-actions">
+          <a class="btn primary" href="https://2gis.kz/almaty/firm/70000001055194122" target="_blank" rel="noopener">Открыть в 2ГИС и проложить маршрут</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2 style="font-size:18px;">Источники и проверка данных</h2>
+    <ul class="source-list">
+      <li>Курс обмена: 1 USD = 447,85 ₸ — официальный курс Нацбанка РК на 23.09.2026 (<a href="https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut" target="_blank" rel="noopener">nationalbank.kz</a>)</li>
+      <li>16 on:ALT — цены и режим взяты из предоставленных вами фото прайса; адрес и рейтинг — <a href="https://2gis.kz/almaty/search/16%20on%3AALT" target="_blank" rel="noopener">2ГИС</a></li>
+      <li>Jas Coworking — <a href="https://coworking.jva.vc/" target="_blank" rel="noopener">coworking.jva.vc</a>, <a href="https://2gis.kz/almaty/firm/70000001060869888" target="_blank" rel="noopener">2ГИС</a></li>
+      <li>Coworking Office — <a href="https://2gis.kz/almaty/firm/70000001065042716/tab/prices" target="_blank" rel="noopener">прайс-лист на 2ГИС</a></li>
+      <li>Brooklyn Fitness Gym — <a href="https://zoon.kz/almaty/fitness/sportivnyj_klub_brooklyn_fitness_gym/" target="_blank" rel="noopener">Zoon.kz</a>, <a href="https://2gis.kz/almaty/firm/9429940001069160" target="_blank" rel="noopener">2ГИС</a> (данные о годовом абонементе противоречивы у разных источников — уточните на ресепшене)</li>
+      <li>Workout Forum — <a href="https://2gis.kz/almaty/firm/70000001055194122" target="_blank" rel="noopener">2ГИС</a></li>
+      <li>Расстояния указаны ориентировочно по расположению районов (все объекты — в квадрате Сейфуллина / Наурызбай батыра / Сатпаева / Тимирязева); точный маршрут стройте кнопкой «Маршрут» на страницах 2ГИС.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  Справочник обновлён 23 сентября 2026 · цены и режим работы могут измениться — сверяйтесь по ссылкам выше
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose" aria-label="Закрыть">✕</button>
+  <button class="lightbox-prev" id="lbPrev" aria-label="Предыдущее фото">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox-next" id="lbNext" aria-label="Следующее фото">›</button>
+  <div class="lightbox-counter" id="lbCounter"></div>
+</div>
+
+<script type="module">
+  import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+
+  inView("section", (el) => {
+    animate(el, { opacity: [0, 1], y: [24, 0] }, { duration: 0.6, easing: [0.22,1,0.36,1] });
+  }, { margin: "-10% 0px -10% 0px" });
+
+  inView(".card, .place-card, .meta-item", (el) => {
+    animate(el, { opacity: [0, 1], y: [16, 0] }, { duration: 0.5, easing: [0.22,1,0.36,1] });
+  }, { margin: "-5% 0px -5% 0px" });
+
+  document.querySelectorAll(".gallery, .place-photos").forEach(g=>{
+    const btns=[...g.querySelectorAll("button")];
+    animate(btns,{opacity:[0,1],scale:[0.96,1]},{delay:stagger(0.04),duration:0.4});
+  });
+
+  const stickerEl = document.querySelector(".sticker-inner");
+  if (stickerEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    stickerEl.addEventListener("mouseenter", ()=> animate(stickerEl, {rotate:[0,-8,8,0]}, {duration:0.6}));
+  }
+</script>
+
+<script>
+  // theme toggle
+  const toggle = document.getElementById("themeToggle");
+  const root = document.documentElement;
+  try{
+    const saved = localStorage.getItem("theme");
+    if(saved) root.setAttribute("data-theme", saved);
+  }catch(e){}
+  toggle.addEventListener("click", ()=>{
+    const current = root.getAttribute("data-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const currentlyDark = current ? current==="dark" : prefersDark;
+    const next = currentlyDark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("theme", next); }catch(e){}
+  });
+
+  // lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCounter = document.getElementById("lbCounter");
+  let currentGroup = [];
+  let currentIndex = 0;
+
+  function openLightbox(group, index){
+    currentGroup = group;
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.add("open");
+  }
+  function updateLightbox(){
+    const btn = currentGroup[currentIndex];
+    lbImg.src = btn.dataset.full;
+    lbImg.alt = btn.querySelector("img").alt;
+    lbCounter.textContent = (currentIndex+1) + " / " + currentGroup.length;
+  }
+  document.querySelectorAll(".gallery, .place-photos").forEach(g=>{
+    const btns=[...g.querySelectorAll("button")];
+    btns.forEach((b,i)=>{
+      b.addEventListener("click", ()=> openLightbox(btns, i));
+    });
+  });
+  document.getElementById("lbClose").addEventListener("click", ()=> lightbox.classList.remove("open"));
+  document.getElementById("lbPrev").addEventListener("click", ()=>{ currentIndex=(currentIndex-1+currentGroup.length)%currentGroup.length; updateLightbox(); });
+  document.getElementById("lbNext").addEventListener("click", ()=>{ currentIndex=(currentIndex+1)%currentGroup.length; updateLightbox(); });
+  lightbox.addEventListener("click", (e)=>{ if(e.target===lightbox) lightbox.classList.remove("open"); });
+  document.addEventListener("keydown", (e)=>{
+    if(!lightbox.classList.contains("open")) return;
+    if(e.key==="Escape") lightbox.classList.remove("open");
+    if(e.key==="ArrowLeft") document.getElementById("lbPrev").click();
+    if(e.key==="ArrowRight") document.getElementById("lbNext").click();
+  });
+</script>
+
+</body>
+</html>
