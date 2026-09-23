@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="locked">
 <head>
+<script>
+  try{
+    if (localStorage.getItem("ortauUnlocked") === "1") {
+      document.documentElement.classList.remove("locked");
+    }
+  }catch(e){}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Справочник проживания · Алматы</title>
@@ -357,9 +364,56 @@
   .leaflet-popup-tip{background:var(--bg-elev);}
   .leaflet-popup-content{font-size:13.5px;line-height:1.4;}
   .leaflet-popup-content b{font-size:14px;}
+
+  html.locked body > *:not(#lockOverlay){display:none;}
+  html.locked{overflow:hidden;}
+
+  #lockOverlay{
+    position:fixed;inset:0;z-index:99999;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--bg);
+    padding:20px;
+  }
+  .lock-card{
+    background:var(--bg-elev);
+    border:1px solid var(--border);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    padding:36px 28px;
+    max-width:340px;
+    width:100%;
+    text-align:center;
+  }
+  .lock-card .lock-emoji{font-size:36px;margin-bottom:10px;}
+  .lock-card h2{font-size:20px;margin:0 0 6px;font-weight:700;}
+  .lock-card p{color:var(--text-secondary);font-size:14px;margin:0 0 20px;}
+  .lock-card input{
+    width:100%;min-height:48px;border-radius:12px;
+    border:1px solid var(--border);background:var(--bg);color:var(--text);
+    font-size:16px;text-align:center;padding:0 14px;margin-bottom:12px;
+    box-sizing:border-box;
+  }
+  .lock-card button{
+    width:100%;min-height:48px;border-radius:12px;border:none;
+    background:var(--accent);color:#fff;font-size:15px;font-weight:700;cursor:pointer;
+  }
+  .lock-card .lock-error{color:#e04747;font-size:13px;margin-top:10px;min-height:16px;}
 </style>
 </head>
 <body>
+
+<div id="lockOverlay">
+  <div class="lock-card">
+    <div class="lock-emoji">🔒</div>
+    <h2>Справочник проживания</h2>
+    <p>Введите пароль, чтобы открыть страницу</p>
+    <form id="lockForm" autocomplete="off">
+      <input type="password" id="lockInput" placeholder="Пароль" autofocus>
+      <button type="submit">Открыть</button>
+      <div class="lock-error" id="lockError"></div>
+    </form>
+  </div>
+</div>
 
 <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌓 Тема</button>
 
@@ -451,7 +505,10 @@
     </div>
   </section>
 
-  <section id="wifi">
+  <section id="wifi" style="position:relative;">
+    <div class="sticker-wrap" id="wifiSticker" style="width:90px;height:90px;top:-10px;left:0;">
+      <img class="sticker-inner" src="images/sticker-cat-2.jpg" alt="Смешной чёрный котик зевает" title="Смешной котик">
+    </div>
     <h2>Wi-Fi</h2>
     <div class="card driver-grid">
       <div class="driver-row">
@@ -664,7 +721,10 @@
     </div>
   </section>
 
-  <section id="restaurants-list">
+  <section id="restaurants-list" style="position:relative;">
+    <div class="sticker-wrap" id="restSticker" style="width:100px;height:100px;top:6px;right:4px;">
+      <img class="sticker-inner" src="images/sticker-cat-3.jpg" alt="Милый рыже-белый котик зевает на солнце" title="Милый котик">
+    </div>
     <h2>Список мест</h2>
     <p class="section-sub">Кухня и адрес — по данным официальных сайтов/агрегаторов заведений на 23.09.2026. 🚗/🚶 — расчётное время от квартиры (по расстоянию с поправкой на реальные улицы, не факт. маршрут навигатора); пешком показано только если ≤20 минут.</p>
 
@@ -1060,9 +1120,10 @@
     animate(btns,{opacity:[0,1],scale:[0.96,1]},{delay:stagger(0.04),duration:0.4});
   });
 
-  const stickerEl = document.querySelector(".sticker-inner");
-  if (stickerEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    stickerEl.addEventListener("mouseenter", ()=> animate(stickerEl, {rotate:[0,-8,8,0]}, {duration:0.6}));
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.querySelectorAll(".sticker-inner").forEach(function(stickerEl){
+      stickerEl.addEventListener("mouseenter", ()=> animate(stickerEl, {rotate:[0,-8,8,0]}, {duration:0.6}));
+    });
   }
 </script>
 
@@ -1290,6 +1351,27 @@
   if (location.hash === "#restaurants"){
     switchMainTab("restaurants");
   }
+</script>
+
+<script>
+  (function(){
+    var CORRECT = "Ortau2026";
+    var form = document.getElementById("lockForm");
+    var input = document.getElementById("lockInput");
+    var err = document.getElementById("lockError");
+    if (!form) return;
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      if (input.value === CORRECT){
+        document.documentElement.classList.remove("locked");
+        try{ localStorage.setItem("ortauUnlocked", "1"); }catch(err2){}
+      } else {
+        err.textContent = "Неверный пароль, попробуйте ещё раз";
+        input.value = "";
+        input.focus();
+      }
+    });
+  })();
 </script>
 
 </body>
