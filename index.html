@@ -175,19 +175,50 @@
   .meta-item .value{font-size:16px;font-weight:600;}
   .meta-item .value a{font-weight:600;}
 
-  .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+  .carousel-wrap{position:relative;}
+  .gallery,
+  .place-photos{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
     gap:10px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
   }
-  @media(max-width:640px){.gallery{grid-template-columns:repeat(2,1fr);}}
-  .gallery button{
+  .gallery::-webkit-scrollbar,
+  .place-photos::-webkit-scrollbar{display:none;}
+  .gallery button,
+  .place-photos button{
     padding:0;border:none;background:none;cursor:pointer;
     border-radius:14px;overflow:hidden;aspect-ratio:4/3;
     min-height:44px;
+    flex:0 0 78%;
+    scroll-snap-align:start;
   }
-  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
-  .gallery button:hover img{transform:scale(1.06);}
+  @media(min-width:640px){
+    .gallery button,
+    .place-photos button{flex:0 0 32%;}
+  }
+  .gallery img,
+  .place-photos img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .gallery button:hover img,
+  .place-photos button:hover img{transform:scale(1.06);}
+  .place-photos{border-radius:0;gap:2px;}
+  .place-photos button{border-radius:0;}
+
+  .carousel-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(0,0,0,0.55);color:#fff;border:none;
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;cursor:pointer;z-index:5;
+    min-height:44px;min-width:44px;
+  }
+  .carousel-arrow.prev{left:6px;}
+  .carousel-arrow.next{right:6px;}
+  @media(min-width:640px){
+    .carousel-arrow{display:none;}
+  }
 
   /* place cards */
   .place-card{
@@ -198,13 +229,6 @@
     margin-bottom:24px;
     box-shadow:var(--shadow);
   }
-  .place-photos{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2px;
-  }
-  .place-photos button{padding:0;border:none;background:none;cursor:pointer;aspect-ratio:4/3;overflow:hidden;min-height:44px;}
-  .place-photos img{width:100%;height:100%;object-fit:cover;}
   .place-body{padding:22px 24px 26px;}
   .place-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
   .place-title h3{font-size:20px;margin:0;font-weight:700;}
@@ -573,20 +597,6 @@
     </div>
   </section>
 
-  <section id="sources">
-    <h2 style="font-size:18px;">Источники и проверка данных</h2>
-    <ul class="source-list">
-      <li>Курс обмена: 1 USD = 447,85 ₸ — официальный курс Нацбанка РК на 23.09.2026 (<a href="https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut" target="_blank" rel="noopener">nationalbank.kz</a>)</li>
-      <li>16 on:ALT — цены и режим взяты из предоставленных вами фото прайса; адрес и рейтинг — <a href="https://2gis.kz/almaty/search/16%20on%3AALT" target="_blank" rel="noopener">2ГИС</a></li>
-      <li>Jas Coworking — тарифы и состав услуг со скриншотов сайта <a href="https://coworking.jva.vc/" target="_blank" rel="noopener">coworking.jva.vc</a> (раздел «Тарифы»), фото — с того же сайта; адрес и режим — <a href="https://2gis.kz/almaty/firm/70000001060869888" target="_blank" rel="noopener">2ГИС</a></li>
-      <li>Coworking Office — тарифы конференц-залов и Welcome/Month со сторис Instagram-аккаунта коворкинга (предоставлены вами); базовые тарифы также сверены с <a href="https://2gis.kz/almaty/firm/70000001065042716/tab/prices" target="_blank" rel="noopener">прайс-листом на 2ГИС</a>; фото — реальные снимки входа и зала (предоставлены вами)</li>
-      <li>Brooklyn Fitness Gym — тарифы со скриншота вкладки «Цены» на 2ГИС (обновлено 27.01.2026), фото — реальные снимки зала (предоставлены вами); <a href="https://2gis.kz/almaty/firm/9429940001069160" target="_blank" rel="noopener">карточка объекта на 2ГИС</a></li>
-      <li>Workout Forum — членский взнос, переоформление, заморозка и состав услуг — с ваших данных; фото — реальные снимки зала (предоставлены вами); базовые тарифы и режим — <a href="https://2gis.kz/almaty/firm/70000001055194122" target="_blank" rel="noopener">2ГИС</a></li>
-      <li>Координаты на карте — геокодированы через OpenStreetMap Nominatim и 2ГИС; для мкр Керемет, 7 (16 on:ALT, Brooklyn Fitness) известен только дом целиком, без разбивки на корпуса — координата приблизительная.</li>
-      <li>Расстояния указаны ориентировочно по расположению районов (все объекты — в квадрате Сейфуллина / Наурызбай батыра / Сатпаева / Тимирязева); точный маршрут стройте кнопкой «Маршрут» на страницах 2ГИС.</li>
-    </ul>
-  </section>
-
 </main>
 
 <footer>
@@ -638,6 +648,29 @@
     const next = currentlyDark ? "light" : "dark";
     root.setAttribute("data-theme", next);
     try{ localStorage.setItem("theme", next); }catch(e){}
+  });
+
+  // carousel: wrap each gallery/place-photos track with prev/next arrows
+  document.querySelectorAll(".gallery, .place-photos").forEach(track=>{
+    const wrap = document.createElement("div");
+    wrap.className = "carousel-wrap";
+    track.parentNode.insertBefore(wrap, track);
+    wrap.appendChild(track);
+
+    const prev = document.createElement("button");
+    prev.className = "carousel-arrow prev";
+    prev.setAttribute("aria-label","Прокрутить назад");
+    prev.textContent = "‹";
+    const next = document.createElement("button");
+    next.className = "carousel-arrow next";
+    next.setAttribute("aria-label","Прокрутить вперёд");
+    next.textContent = "›";
+
+    prev.addEventListener("click", ()=> track.scrollBy({left:-track.clientWidth*0.85, behavior:"smooth"}));
+    next.addEventListener("click", ()=> track.scrollBy({left:track.clientWidth*0.85, behavior:"smooth"}));
+
+    wrap.appendChild(prev);
+    wrap.appendChild(next);
   });
 
   // lightbox
@@ -695,9 +728,10 @@
 
   var map = L.map("mapview", { scrollWheelZoom:false }).setView([43.2355,76.9365], 15);
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '© OpenStreetMap, © CARTO',
-    maxZoom: 19
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19,
+    subdomains: "abc"
   }).addTo(map);
 
   L.marker([43.2364265,76.9377950], {icon:homeIcon}).addTo(map)
