@@ -269,6 +269,8 @@
     margin-bottom:24px;
     box-shadow:var(--shadow);
   }
+  .place-video{background:#000;display:flex;justify-content:center;border-top:2px solid var(--bg-elev);}
+  .place-video video{display:block;width:auto;max-width:100%;max-height:72vh;}
   .place-body{padding:22px 24px 26px;}
   .place-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
   .place-title h3{font-size:20px;margin:0;font-weight:700;}
@@ -485,6 +487,9 @@
         <button data-full="images/coworking-theoffice-2.jpg"><img src="images/coworking-theoffice-2.jpg" alt="Арочные стеклянные кабинеты и жёлтые кресла у круглого стола" loading="lazy"></button>
         <button data-full="images/coworking-theoffice-3.jpg"><img src="images/coworking-theoffice-3.jpg" alt="Галерея с арками, рабочими кабинками и жёлтыми креслами" loading="lazy"></button>
       </div>
+      <div class="place-video">
+        <video controls playsinline preload="metadata" src="images/theoffice-video.mp4#t=0.001" aria-label="Видео коворкинга THE Office"></video>
+      </div>
       <div class="place-body">
         <div class="place-title"><h3>THE Office Coworking</h3><span class="badge">≈ 5 мин пешком · 🚗 ≈ 4 мин</span></div>
         <div class="place-addr">ТЦ Jurek Tau, пр. Аль-Фараби, 5/2 · ежедневно 08:00–22:00</div>
@@ -610,7 +615,7 @@
 
   <section id="restaurants-map" style="padding-top:0;">
     <h2>Карта ресторанов</h2>
-    <p class="section-sub">🏠 чёрный значок — квартира (пр. Аль-Фараби, 21/4); розовые сердечки — 24 места из вашего списка. Клик по значку — название и кухня.</p>
+    <p class="section-sub">🏠 чёрный значок — квартира (пр. Аль-Фараби, 21/4); розовые сердечки — 26 мест из вашего списка. Клик по значку — название и кухня.</p>
     <div class="card" style="padding:0;overflow:hidden;">
       <div id="mapview2" style="width:100%;height:420px;"></div>
     </div>
@@ -990,6 +995,30 @@
       </div>
     </div>
 
+    <div class="place-card">
+      <div class="place-photos" id="restGalleryLeto">
+        <button data-full="images/rest-leto-1.jpg"><img src="images/rest-leto-1.jpg" alt="Зал кафе с оранжевыми подвесными светильниками, деревом посередине и накрытыми столами" loading="lazy"></button>
+        <button data-full="images/rest-leto-2.jpg"><img src="images/rest-leto-2.jpg" alt="Столики у панорамного окна с золотистой посудой" loading="lazy"></button>
+      </div>
+      <div class="place-body">
+        <div class="place-title"><h3>Кафе «Лето»</h3><span class="badge">Итальянская / европейская</span></div>
+        <div class="place-addr">AFD Plaza, пр. Аль-Фараби, 21, 1 этаж · ежедневно 12:00–02:00 · средний чек 10–15 тыс. ₸ (≈$22–33) · летняя веранда, Wi-Fi, винная карта · бронь +7 700 300 93 93</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚶 ≈1–2 мин · 🚗 ≈3 мин</div>
+        <div class="place-addr" style="font-size:13px;">В меню: хинкали, паста, пицца на дровах, люля-кебаб, вареники, салаты, суши, смузи.</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%84%D0%B5%20%D0%9B%D0%B5%D1%82%D0%BE%2C%20AFD%20Plaza%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2021%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-body">
+        <div class="place-title"><h3>Very Well</h3><span class="badge">Ресторан</span></div>
+        <div class="place-addr">пр. Аль-Фараби, 27</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚶 ≈4 мин · 🚗 ≈4 мин</div>
+        <div class="no-photo-note">Информацию об этом заведении (кухня, часы работы, цены, фото) в открытых источниках найти не удалось — указан только присланный вами адрес. Положение на карте приблизительное, по адресу дома.</div>
+        <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Very%20Well%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2027%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
+      </div>
+    </div>
+
   </section>
 </main>
 
@@ -1179,7 +1208,9 @@
     {name:"Lavka by Proshenkov", cuisine:"Бистро, завтраки 08:00–16:00", addr:"пр. Аль-Фараби, 15/1 к5в, БЦ Нурлы-Тау (положение приблизительное)", lat:43.2304169, lon:76.9471025},
     {name:"DUSHES", cuisine:"Европейская / итальянская / французская, завтраки", addr:"пр. Аль-Фараби, 21/1, ЖК AFD Plaza", lat:43.2287106, lon:76.9419472},
     {name:"Collab", cuisine:"Кофейня, спешелти кофе, завтраки", addr:"ул. Панфилова, 203", lat:43.2289164, lon:76.9484183},
-    {name:"Gaucho Kitchen", cuisine:"Стейк-хаус, аргентинский гриль", addr:"пр. Сейфуллина, 577", lat:43.2461380, lon:76.9333536}
+    {name:"Gaucho Kitchen", cuisine:"Стейк-хаус, аргентинский гриль", addr:"пр. Сейфуллина, 577", lat:43.2461380, lon:76.9333536},
+    {name:"Кафе «Лето»", cuisine:"Итальянская / европейская", addr:"AFD Plaza, пр. Аль-Фараби, 21", lat:43.2287106, lon:76.9419472},
+    {name:"Very Well", cuisine:"Ресторан", addr:"пр. Аль-Фараби, 27 (положение приблизительное)", lat:43.227779, lon:76.940350}
   ];
 
   var map2Initialized = false;
@@ -1232,7 +1263,7 @@
       restMain.style.display = "";
       subnav.style.display = "none";
       title.textContent = "Рестораны и кафе";
-      subtitle.textContent = "24 проверенных места в Алматы — с типом кухни и картой.";
+      subtitle.textContent = "26 проверенных мест в Алматы — с типом кухни и картой.";
       initRestaurantMap();
       setTimeout(function(){ if(map2) map2.invalidateSize(); }, 50);
       history.replaceState(null, "", "#restaurants");
