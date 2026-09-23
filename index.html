@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Справочник проживания · Алматы</title>
-<meta name="description" content="Всё о проживании в Алматы с 23 сентября по 14 октября: встреча в аэропорту, квартира ЖК Ortau, Wi-Fi, коворкинги и спортзалы рядом.">
+<meta name="description" content="Всё о проживании в Алматы с 23 сентября по 14 октября: квартира на Аль-Фараби, коворкинги и спортзалы рядом.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root{
@@ -421,7 +421,7 @@
 <header class="hero">
   <div class="hero-eyebrow">Алматы · 23 сентября — 14 октября 2026</div>
   <h1 id="pageTitle">Справочник проживания</h1>
-  <p id="pageSubtitle">Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.</p>
+  <p id="pageSubtitle">Квартира, коворкинги и спортзалы рядом с домом.</p>
 </header>
 
 <div class="maintabs">
@@ -431,10 +431,8 @@
 
 <nav class="subnav" id="subnavStay">
   <div class="wrap">
-    <a href="#driver">Трансфер</a>
     <a href="#apartment">Квартира</a>
     <a href="#map">Карта</a>
-    <a href="#wifi">Wi-Fi</a>
     <a href="#coworking">Коворкинги</a>
     <a href="#gym">Спортзалы</a>
   </div>
@@ -442,89 +440,24 @@
 
 <main class="wrap" id="tabStay" style="padding-top:40px;">
 
-  <section id="driver" style="padding-top:0;">
-    <h2>Встреча в аэропорту</h2>
-    <p class="section-sub">Водитель встретит на выходе из зала прилёта с табличкой.</p>
-    <div class="card driver-grid">
-      <div class="driver-row">
-        <div class="driver-icon">🚗</div>
-        <div>
-          <div class="driver-label">Автомобиль</div>
-          <div class="driver-value">Белый BYD Khan · госномер 457 AYG 02</div>
-        </div>
-      </div>
-      <div class="driver-row">
-        <div class="driver-icon">👤</div>
-        <div>
-          <div class="driver-label">Водитель</div>
-          <div class="driver-value">Самат — встретит с табличкой</div>
-        </div>
-      </div>
-      <div class="driver-row">
-        <div class="driver-icon">📞</div>
-        <div>
-          <div class="driver-label">Телефон / WhatsApp</div>
-          <div class="driver-value"><a href="tel:+77051807152">+7 705 180 7152</a></div>
-        </div>
-      </div>
+  <section id="apartment" style="padding-top:0;position:relative;">
+    <div class="sticker-wrap" id="aptSticker" style="width:96px;height:96px;top:-4px;right:0;">
+      <img class="sticker-inner" src="images/sticker-cat-2.jpg" alt="Смешной чёрный котик зевает" title="Смешной котик">
     </div>
-  </section>
-
-  <section id="apartment">
-    <h2>Квартира · ЖК Ortau</h2>
-    <p class="section-sub">Наурызбай батыра, 127, блок 3 — этаж 3, квартира 152.</p>
-
+    <h2>Квартира</h2>
+    <p class="section-sub">Проспект Аль-Фараби, 21/4 — блок 4, 20 этаж.</p>
     <div class="apt-meta">
       <div class="meta-item">
         <div class="label">Адрес</div>
-        <div class="value">ул. Наурызбай батыра, 127, блок 3<br>Алматы</div>
+        <div class="value">пр. Аль-Фараби, 21/4<br>Алматы</div>
       </div>
       <div class="meta-item">
-        <div class="label">Этаж / квартира</div>
-        <div class="value">3-й этаж, квартира №152</div>
+        <div class="label">Блок / этаж</div>
+        <div class="value">Блок 4, 20 этаж</div>
       </div>
       <div class="meta-item">
         <div class="label">Геолокация</div>
-        <div class="value"><a href="https://www.google.com/maps/search/?api=1&query=43.236492,76.937837" target="_blank" rel="noopener">Открыть в Google Картах ↗</a></div>
-      </div>
-      <div class="meta-item">
-        <div class="label">Доступ на территорию</div>
-        <div class="value">Один подъезд, калитка/дверь — по магнитному ключу (выдаётся при заселении сотрудником)</div>
-      </div>
-    </div>
-
-    <div class="gallery" id="aptGallery">
-      <button data-full="images/apt-building.jpg"><img src="images/apt-building.jpg" alt="Фасад жилого комплекса Ortau" loading="lazy"></button>
-      <button data-full="images/apt-bedroom.jpg"><img src="images/apt-bedroom.jpg" alt="Спальня с двуспальной кроватью" loading="lazy"></button>
-      <button data-full="images/apt-living.jpg"><img src="images/apt-living.jpg" alt="Гостиная с диваном и обеденной зоной" loading="lazy"></button>
-      <button data-full="images/apt-kitchen.jpg"><img src="images/apt-kitchen.jpg" alt="Кухня в тёмных тонах" loading="lazy"></button>
-      <button data-full="images/apt-hall1.jpg"><img src="images/apt-hall1.jpg" alt="Прихожая с зеркалом и консолью" loading="lazy"></button>
-      <button data-full="images/apt-hall2.jpg"><img src="images/apt-hall2.jpg" alt="Коридор с гардеробной" loading="lazy"></button>
-      <button data-full="images/apt-living2.jpg"><img src="images/apt-living2.jpg" alt="Гостиная у окна с креслами" loading="lazy"></button>
-      <button data-full="images/apt-living3.jpg"><img src="images/apt-living3.jpg" alt="Гостиная с телевизором" loading="lazy"></button>
-      <button data-full="images/apt-bathroom.jpg"><img src="images/apt-bathroom.jpg" alt="Ванная комната с ванной и стиральной машиной" loading="lazy"></button>
-    </div>
-  </section>
-
-  <section id="wifi" style="position:relative;">
-    <div class="sticker-wrap" id="wifiSticker" style="width:90px;height:90px;top:-10px;left:0;">
-      <img class="sticker-inner" src="images/sticker-cat-2.jpg" alt="Смешной чёрный котик зевает" title="Смешной котик">
-    </div>
-    <h2>Wi-Fi</h2>
-    <div class="card driver-grid">
-      <div class="driver-row">
-        <div class="driver-icon">📶</div>
-        <div>
-          <div class="driver-label">Сеть</div>
-          <div class="driver-value">Alibek</div>
-        </div>
-      </div>
-      <div class="driver-row">
-        <div class="driver-icon">🔑</div>
-        <div>
-          <div class="driver-label">Пароль</div>
-          <div class="driver-value">narkes1504</div>
-        </div>
+        <div class="value"><a href="https://www.google.com/maps/search/?api=1&query=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2021/4%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах ↗</a></div>
       </div>
     </div>
   </section>
@@ -544,7 +477,7 @@
 
   <section id="coworking">
     <h2>Коворкинги рядом</h2>
-    <p class="section-sub">Все три места рядом с домом — в нескольких минутах ходьбы. Время в пути — расчётное (по расстоянию с поправкой на улицы, не маршрут навигатора); точный маршрут — по кнопке «Маршрут от квартиры».</p>
+    <p class="section-sub">Все три места в 14–17 минутах ходьбы от дома (≈6–7 минут на машине). Время в пути — расчётное (по расстоянию с поправкой на улицы, не маршрут навигатора); точный маршрут — по кнопке «Маршрут от квартиры».</p>
 
     <div class="place-card">
       <div class="place-photos" id="coworkGallery1">
@@ -554,7 +487,7 @@
         <button data-full="images/coworking-lounge.jpg"><img src="images/coworking-lounge.jpg" alt="Зона отдыха 16 on:ALT" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>16 on:ALT</h3><span class="badge">≈ 2–3 мин пешком · 🚗 ≈ 3 мин</span></div>
+        <div class="place-title"><h3>16 on:ALT</h3><span class="badge">≈ 15 мин пешком · 🚗 ≈ 6 мин</span></div>
         <div class="place-addr">ЖК Керемет, мкр Керемет, 7 к34 · Алматы</div>
         <table class="price-table">
           <tr><td>Open Space — час</td><td><span class="price-usd">$2,7</span><span class="price-kzt">1 200 ₸</span></td></tr>
@@ -566,7 +499,7 @@
         <div class="place-addr" style="margin-top:-4px;">Режим работы: ежедневно 09:00–21:00.</div>
         <div class="place-actions">
           <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=16%20on%3AALT%20coworking%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA34%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2364265,76.9377950&destination=16%20on%3AALT%20coworking%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA34%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2288681,76.9428372&destination=16%20on%3AALT%20coworking%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA34%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
         </div>
       </div>
     </div>
@@ -580,7 +513,7 @@
         <button data-full="images/coworking-jas-5.jpg"><img src="images/coworking-jas-5.jpg" alt="Холл Jas Coworking со ступенями-трибуной у панорамных окон" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>Jas Coworking</h3><span class="badge">≈ 3–4 мин пешком · 🚗 ≈ 4 мин</span></div>
+        <div class="place-title"><h3>Jas Coworking</h3><span class="badge">≈ 17 мин пешком · 🚗 ≈ 7 мин</span></div>
         <div class="place-addr">просп. Сейфуллина, 609 · Алматы · режим работы: круглосуточно</div>
         <div class="place-addr" style="margin-top:-6px;">Open Space: более 200 рабочих мест, система шумоизоляции; бесплатный доступ к meeting-room (3 часа на 4 человек), мебель по европейскому стандарту, доступ на все мероприятия JAS Ventures Almaty.</div>
         <table class="price-table">
@@ -596,7 +529,7 @@
         <div class="no-photo-note">Во все тарифы «Рабочие места» входит: интернет 200 Мб/с, услуги администратора, кухня, фитнес-зал, душевые, зоны отдыха (кофейня, collaboration area), клининг. В тариф «10 дней подряд» дополнительно — 1 час meeting-room на 4 человек и распечатка 20 ч/б страниц.</div>
         <div class="place-actions">
           <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Jas%20Coworking%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20609%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2364265,76.9377950&destination=Jas%20Coworking%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20609%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2288681,76.9428372&destination=Jas%20Coworking%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20609%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
           <a class="btn" href="https://coworking.jva.vc/" target="_blank" rel="noopener">Сайт coworking.jva.vc</a>
         </div>
       </div>
@@ -612,7 +545,7 @@
         <button data-full="images/coworking-office-6.jpg"><img src="images/coworking-office-6.jpg" alt="Переговорная Work Hard в Coworking Office" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>Coworking Office</h3><span class="badge">≈ 6 мин пешком · 🚗 ≈ 4 мин</span></div>
+        <div class="place-title"><h3>Coworking Office</h3><span class="badge">≈ 14 мин пешком · 🚗 ≈ 6 мин</span></div>
         <div class="place-addr">ТРК Forum, просп. Сейфуллина, 617, 4-й этаж · Алматы</div>
 
         <div class="place-addr" style="margin-top:14px;font-weight:600;color:var(--text);">Тарифы коворкинга</div>
@@ -634,7 +567,7 @@
 
         <div class="place-actions">
           <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Coworking%20Office%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2364265,76.9377950&destination=Coworking%20Office%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2288681,76.9428372&destination=Coworking%20Office%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
         </div>
       </div>
     </div>
@@ -645,7 +578,7 @@
       <img class="sticker-inner" src="images/sticker-cat.jpg" alt="Смешной котик с забавной мордочкой" title="Смешной котик">
     </div>
     <h2>Спортзалы рядом</h2>
-    <p class="section-sub">Оба зала расположены в том же районе, что и коворкинги — Сейфуллина / Наурызбай батыра.</p>
+    <p class="section-sub">Оба зала в том же районе, что и коворкинги — в 14–15 минутах ходьбы от дома (≈6 минут на машине).</p>
 
     <div class="place-card">
       <div class="place-photos" id="gymGallery1">
@@ -657,7 +590,7 @@
         <button data-full="images/gym-brooklyn-6.jpg"><img src="images/gym-brooklyn-6.jpg" alt="Раздевалка Brooklyn Fitness Gym с шкафчиками" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>Brooklyn Fitness Gym</h3><span class="badge">≈ 2–3 мин пешком · 🚗 ≈ 3 мин</span></div>
+        <div class="place-title"><h3>Brooklyn Fitness Gym</h3><span class="badge">≈ 15 мин пешком · 🚗 ≈ 6 мин</span></div>
         <div class="place-addr">мкр Керемет, 7 к42 (цокольный этаж) · Алматы</div>
 
         <div class="place-addr" style="margin-top:14px;font-weight:600;color:var(--text);">Дневной абонемент (07:00–18:00) на месяц</div>
@@ -676,7 +609,7 @@
         <div class="no-photo-note" style="color:var(--warn);">⚠️ Минус по отзывам и фото: зал выглядит подуставшим (оборудование и интерьер не новые) — стоит иметь это в виду перед покупкой абонемента.</div>
         <div class="place-actions">
           <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Brooklyn%20Fitness%20Gym%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA42%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2364265,76.9377950&destination=Brooklyn%20Fitness%20Gym%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA42%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2288681,76.9428372&destination=Brooklyn%20Fitness%20Gym%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%2C%207%20%D0%BA42%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
         </div>
       </div>
     </div>
@@ -690,7 +623,7 @@
         <button data-full="images/gym-workout-5.jpg"><img src="images/gym-workout-5.jpg" alt="Зона тренажёров с экраном у красной колонны в Workout" loading="lazy"></button>
       </div>
       <div class="place-body">
-        <div class="place-title"><h3>Workout</h3><span class="badge">≈ 6 мин пешком · 🚗 ≈ 4 мин</span></div>
+        <div class="place-title"><h3>Workout</h3><span class="badge">≈ 14 мин пешком · 🚗 ≈ 6 мин</span></div>
         <div class="place-addr">ТРК Forum, просп. Сейфуллина, 617, 4-й этаж · Алматы</div>
         <table class="price-table">
           <tr><td>Годовой безлимит (от, в пересчёте на месяц)</td><td><span class="price-usd">$37,2</span><span class="price-kzt">16 658 ₸/мес</span></td></tr>
@@ -703,7 +636,7 @@
         <div class="place-addr" style="margin-top:10px;">Режим работы: 06:30–00:00, по предварительной записи. Сауна, аэробика, йога, Pilates, Zumba.</div>
         <div class="place-actions">
           <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Workout%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2364265,76.9377950&destination=Workout%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=43.2288681,76.9428372&destination=Workout%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&travelmode=walking" target="_blank" rel="noopener">Маршрут от квартиры</a>
         </div>
       </div>
     </div>
@@ -715,7 +648,7 @@
 
   <section id="restaurants-map" style="padding-top:0;">
     <h2>Карта ресторанов</h2>
-    <p class="section-sub">🏠 чёрный значок — квартира ЖК Ortau; розовые сердечки — 24 места из вашего списка. Клик по значку — название и кухня.</p>
+    <p class="section-sub">🏠 чёрный значок — квартира (пр. Аль-Фараби, 21/4); розовые сердечки — 24 места из вашего списка. Клик по значку — название и кухня.</p>
     <div class="card" style="padding:0;overflow:hidden;">
       <div id="mapview2" style="width:100%;height:420px;"></div>
     </div>
@@ -743,8 +676,8 @@
       </div>
       <div class="place-body">
         <div class="place-title"><h3>Arabica specialty coffee &amp; kitchen</h3><span class="badge">Спешелти кофе, европейская/халяль</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
-        <div class="place-addr">ул. Наурызбай батыра, 127/1 · в вашем доме ЖК Ortau, бизнес-ланч от 3990 ₸</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 в вашем доме — 1 минута</div>
+        <div class="place-addr">ул. Наурызбай батыра, 127/1 · ЖК Ortau, бизнес-ланч от 3990 ₸</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин · 🚶 ≈16 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/Ebc5jyNdQfmSEU6g9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -757,7 +690,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Coffee Boom Roasters &amp; Bakery</h3><span class="badge">Кофейня, своя обжарка и выпечка</span></div>
         <div class="place-addr">ТРК Forum, пр. Сейфуллина, 617, 3-й этаж · вход со стороны ул. Тимирязева</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈4 мин · 🚶 ≈6 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин · 🚶 ≈14 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Coffee%20Boom%20Roasters%20%26%20Bakery%2C%20%D0%A2%D0%A0%D0%9A%20Forum%2C%20%D0%BF%D1%80.%20%D0%A1%D0%B5%D0%B9%D1%84%D1%83%D0%BB%D0%BB%D0%B8%D0%BD%D0%B0%2C%20617%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -773,7 +706,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Daily Coffee</h3><span class="badge">Кофейня, европейская/паназиатская</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">пр. Абылай хана, 147 · завтраки, панорамный вид, настольные игры</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин · 🚶 ≈15 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/JA3qdcSgNAxVtaBKA?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -788,7 +721,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Voronka Specialty Coffee</h3><span class="badge">Спешелти кофе</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">ул. Желтоксан, 160 · завтраки весь день 08:00–23:00, своя выпечка</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈7 мин · 🚶 ≈17 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/JkZSD4YudQoJXUWS9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -801,7 +734,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Collab</h3><span class="badge">Спешелти кофе</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">ул. Панфилова, 203 · завтраки, смузи, свежевыжатые соки</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈7 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈5 мин · 🚶 ≈8 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/WZsYQuxPtTFmRXqF7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -818,7 +751,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Fika</h3><span class="badge">Завтраки / авторская</span></div>
         <div class="place-addr">ул. Кабанбай батыра, 104 · завтраки 08:00–16:00, известна кофе и выпечкой</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈11 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Fika%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2C%20104%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -832,7 +765,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Cafeteria</h3><span class="badge">Завтраки / европейская, итальянская</span></div>
         <div class="place-addr">ул. Байсеитовой, 32 (угол Курмангазы) · кофе и выпечка, летняя терраса</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈7 мин · 🚶 ≈18 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafeteria%2C%20%D1%83%D0%BB.%20%D0%91%D0%B0%D0%B9%D1%81%D0%B5%D0%B8%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%2C%2032%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -848,7 +781,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Lavka by Proshenkov</h3><span class="badge">Бистро шефа Прошенкова</span></div>
         <div class="place-addr">пр. Аль-Фараби, 15/1 к5в, ЖК Нурлы Тау · завтраки 08:00–16:00</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈16 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈4 мин · 🚶 ≈7 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/jzSS8k73dRdC1S436?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -862,7 +795,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Хосе и Josper</h3><span class="badge">Стейк-хаус, халяль</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">ул. Желтоксан, 162 · завтраки 10:00–13:00, гриль Josper на углях</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин · 🚶 ≈17 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/yxeHUymnNyu9dtUM9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -880,7 +813,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Auyl</h3><span class="badge">Кочевая / казахская</span></div>
         <div class="place-addr">ул. Керей-Жанибек хандар, 586, Медеуский р-н · часть отеля Qazaq Auyl, вид на горы</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈49 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈46 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Auyl%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20586%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -895,7 +828,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Astra</h3><span class="badge">Европейская / казахская / русская</span></div>
         <div class="place-addr">ул. Желтоксан, 12 · ресторан при отеле Astra</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈17 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈20 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Astra%2C%20%D1%83%D0%BB.%20%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%BA%D1%81%D0%B0%D0%BD%2C%2012%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -909,7 +842,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Rifugio del Monte</h3><span class="badge">Европейская / средиземноморская</span></div>
         <div class="place-addr">ул. Керей-Жанибек хандар, 513а · на горнолыжном курорте Шымбулак, винная карта</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈63 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈59 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Rifugio%20del%20Monte%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20513%D0%B0%2C%20%D0%A8%D1%8B%D0%BC%D0%B1%D1%83%D0%BB%D0%B0%D0%BA%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -924,7 +857,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Akami</h3><span class="badge">Японская / авторская</span></div>
         <div class="place-addr">ул. Курмангазы, 66 · винная карта, VIP-зал</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин · 🚶 ≈16 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Akami%2C%20%D1%83%D0%BB.%20%D0%9A%D1%83%D1%80%D0%BC%D0%B0%D0%BD%D0%B3%D0%B0%D0%B7%D1%8B%2C%2066%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -938,7 +871,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Cafe Alma</h3><span class="badge">Европейская / казахская</span></div>
         <div class="place-addr">пр. Аль-Фараби, 28 · у Cafe Alma в Алматы несколько филиалов, указан ближайший к центру</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈8 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈5 мин · 🚶 ≈10 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Alma%2C%20%D0%BF%D1%80.%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2028%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -954,7 +887,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Manana</h3><span class="badge">Грузинская</span></div>
         <div class="place-addr">пр. Достык, 535 · при отеле Donatello, грузинские вина</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈20 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈17 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Manana%2C%20%D0%BF%D1%80.%20%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%2C%20535%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -968,7 +901,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Spiros</h3><span class="badge">Греческая</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">пр. Достык, 109Б</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈12 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Spiros%2C%20%D0%BF%D1%80.%20%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%2C%20109%D0%91%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -983,7 +916,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Haragun</h3><span class="badge">Грузинская, халяль</span></div>
         <div class="place-addr">Садовый переулок, 2205, мкр Кольсай · панорамный вид, живая музыка по пт-сб</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈23 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈20 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Haragun%2C%20%D0%A1%D0%B0%D0%B4%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%202205%2C%20%D0%BC%D0%BA%D1%80%20%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%B0%D0%B9%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -997,7 +930,7 @@
       <div class="place-body">
         <div class="place-title"><h3>La Barca Fish & Wine</h3><span class="badge">Средиземноморская, рыба</span></div>
         <div class="place-addr">пр. Абылай хана, 145 · винная карта, VIP-зал</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈6 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈9 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=La%20Barca%20Fish%20%26%20Wine%2C%20%D0%BF%D1%80.%20%D0%90%D0%B1%D1%8B%D0%BB%D0%B0%D0%B9%20%D1%85%D0%B0%D0%BD%D0%B0%2C%20145%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1011,7 +944,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Хороший год</h3><span class="badge">Европейская авторская, паназиатские нотки</span></div>
         <div class="place-addr">ул. Шевченко, 18 · винный ресторан, 200+ позиций в карте</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈10 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈11 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=%D0%A5%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9%20%D0%B3%D0%BE%D0%B4%2C%20%D1%83%D0%BB.%20%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%2C%2018%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1028,7 +961,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Queen Mountain Resort</h3><span class="badge">Авторская / казахская, винный</span></div>
         <div class="place-addr">ул. Керей-Жанибек хандар, 375, Медеуский р-н · горный вид, до 500 мест</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈41 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈38 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Queen%20Mountain%20Resort%2C%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9-%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%20375%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1044,7 +977,7 @@
       <div class="place-body">
         <div class="place-title"><h3>DUSHES</h3><span class="badge">Европейская / итальянская / французская</span><span class="badge" style="background:transparent;border:1px solid var(--border);">🍳 завтраки</span></div>
         <div class="place-addr">пр. Аль-Фараби, 21/1, ЖК AFD Plaza · живая музыка, летняя терраса</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈11 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚶 ≈1–2 мин · 🚗 ≈3 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/Bf7busNDDmNKqZ4c7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1060,7 +993,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Korean Food Story</h3><span class="badge">Корейская, кафе-бакалея</span></div>
         <div class="place-addr">пр. Аль-Фараби, 19 к2Б · лапша wok, кофе с собой</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈15 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈4 мин · 🚶 ≈5 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/CPAWUZZZu5MYKq6w9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1075,7 +1008,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Ziyafet Steak House</h3><span class="badge">Стейк-хаус, европейская/турецкая</span></div>
         <div class="place-addr">ул. Желтоксан, 172 · мясо на углях, живая музыка</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈5 мин · 🚶 ≈8 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈7 мин · 🚶 ≈19 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/iMpQwY6mGuVM3V3N7?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1090,7 +1023,7 @@
       <div class="place-body">
         <div class="place-title"><h3>Gaucho Kitchen</h3><span class="badge">Стейк-хаус, аргентинский гриль</span></div>
         <div class="place-addr">пр. Сейфуллина, 577 · мраморная говядина, открытая кухня</div>
-        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈7 мин · 🚶 ≈20 мин</div>
+        <div class="place-addr" style="margin-top:-8px;font-size:13px;">🚗 ≈10 мин</div>
         <div class="place-actions"><a class="btn primary" href="https://maps.app.goo.gl/Zz1cbcJQszv4zwum9?g_st=it" target="_blank" rel="noopener">Открыть в Google Картах</a></div>
       </div>
     </div>
@@ -1226,7 +1159,7 @@
   var coworkIcon = pinIcon("coworking","💼");
   var gymIcon = pinIcon("gym","🏋️");
 
-  var map = L.map("mapview", { scrollWheelZoom:false }).setView([43.2355,76.9365], 15);
+  var map = L.map("mapview", { scrollWheelZoom:false }).setView([43.2325,76.9395], 15);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '© OpenStreetMap contributors',
@@ -1234,8 +1167,8 @@
     subdomains: "abc"
   }).addTo(map);
 
-  L.marker([43.2364265,76.9377950], {icon:homeIcon}).addTo(map)
-    .bindPopup("<b>Квартира · ЖК Ortau</b><br>Наурызбай батыра, 127, блок 3, кв. 152");
+  L.marker([43.2288681,76.9428372], {icon:homeIcon}).addTo(map)
+    .bindPopup("<b>Квартира</b><br>пр. Аль-Фараби, 21/4, блок 4, 20 этаж<br>(положение приблизительное)");
 
   L.marker([43.235433,76.937199], {icon:coworkIcon}).addTo(map)
     .bindPopup("<b>16 on:ALT</b><br>мкр Керемет, 7 к34 (координата приблизительная)");
@@ -1251,6 +1184,7 @@
 
   L.marker([43.2339733,76.9354565], {icon:gymIcon}).addTo(map)
     .bindPopup("<b>Workout</b><br>ТРК Forum, просп. Сейфуллина, 617");
+  map.fitBounds([[43.2288681,76.9428372],[43.2360071,76.9354182],[43.2337733,76.9352565],[43.2364265,76.9377950]], {padding:[40,40]});
 
   // --- restaurants tab: heart map + KML export ---
   var heartSvg = '<svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 21s-7.5-4.6-10.2-9.1C.1 9 1 5.6 4 4.3c2.2-1 4.6-.3 6 1.6.4.5.7 1 1 1.6.3-.6.6-1.1 1-1.6 1.4-1.9 3.8-2.6 6-1.6 3 1.3 3.9 4.7 2.2 7.6C19.5 16.4 12 21 12 21z"/></svg>';
@@ -1263,7 +1197,7 @@
   });
 
   var restaurants = [
-    {name:"Arabica specialty coffee & kitchen", cuisine:"Спешелти кофе, европейская/халяль, завтраки", addr:"ул. Наурызбай батыра, 127/1 — в вашем доме", lat:43.2364265, lon:76.9377950},
+    {name:"Arabica specialty coffee & kitchen", cuisine:"Спешелти кофе, европейская/халяль, завтраки", addr:"ул. Наурызбай батыра, 127/1", lat:43.2364265, lon:76.9377950},
     {name:"Coffee Boom Roasters & Bakery", cuisine:"Кофейня, своя обжарка и выпечка", addr:"ТРК Forum, пр. Сейфуллина, 617, 3-й этаж", lat:43.2337733, lon:76.9352565},
     {name:"Auyl", cuisine:"Кочевая / казахская", addr:"ул. Керей-Жанибек хандар, 586, Медеуский р-н", lat:43.162334, lon:77.059799},
     {name:"Astra", cuisine:"Европейская / казахская / русская", addr:"ул. Желтоксан, 12", lat:43.271993, lon:76.937682},
@@ -1278,13 +1212,13 @@
     {name:"La Barca Fish & Wine", cuisine:"Средиземноморская, рыба", addr:"пр. Абылай хана, 145", lat:43.243993, lon:76.942533},
     {name:"Хороший год", cuisine:"Европейская авторская, паназиатские нотки", addr:"ул. Шевченко, 18", lat:43.246916, lon:76.955683},
     {name:"Queen Mountain Resort", cuisine:"Авторская / казахская, винный", addr:"ул. Керей-Жанибек хандар, 375, Медеуский р-н", lat:43.171772, lon:77.034992},
-    {name:"Korean Food Story", cuisine:"Корейская, кафе-бакалея", addr:"пр. Аль-Фараби, 19 к2Б", lat:43.2125045, lon:76.9144293},
+    {name:"Korean Food Story", cuisine:"Корейская, кафе-бакалея", addr:"пр. Аль-Фараби, 19 к2Б (БЦ Нурлы-Тау, положение приблизительное)", lat:43.2299942, lon:76.9461129},
     {name:"Daily Coffee", cuisine:"Кофейня, европейская/паназиатская, завтраки", addr:"пр. Абылай хана, 147", lat:43.2431698, lon:76.9425441},
     {name:"Хосе и Josper", cuisine:"Стейк-хаус, халяль/европейская, завтраки 10:00–13:00", addr:"ул. Желтоксан, 162", lat:43.2445987, lon:76.9413261},
     {name:"Voronka Specialty Coffee", cuisine:"Спешелти кофе, завтраки 08:00–23:00", addr:"ул. Желтоксан, 160", lat:43.2451183, lon:76.9412386},
     {name:"Ziyafet Steak House", cuisine:"Стейк-хаус, европейская/турецкая", addr:"ул. Желтоксан, 172", lat:43.2387463, lon:76.9421261},
-    {name:"Lavka by Proshenkov", cuisine:"Бистро, завтраки 08:00–16:00", addr:"пр. Аль-Фараби, 15/1 к5в, ЖК Нурлы Тау", lat:43.2065797, lon:76.9224992},
-    {name:"DUSHES", cuisine:"Европейская / итальянская / французская, завтраки", addr:"пр. Аль-Фараби, 21/1, ЖК AFD Plaza", lat:43.2198059, lon:76.9216925},
+    {name:"Lavka by Proshenkov", cuisine:"Бистро, завтраки 08:00–16:00", addr:"пр. Аль-Фараби, 15/1 к5в, БЦ Нурлы-Тау (положение приблизительное)", lat:43.2304169, lon:76.9471025},
+    {name:"DUSHES", cuisine:"Европейская / итальянская / французская, завтраки", addr:"пр. Аль-Фараби, 21/1, ЖК AFD Plaza", lat:43.2287106, lon:76.9419472},
     {name:"Collab", cuisine:"Кофейня, спешелти кофе, завтраки", addr:"ул. Панфилова, 203", lat:43.2289164, lon:76.9484183},
     {name:"Gaucho Kitchen", cuisine:"Стейк-хаус, аргентинский гриль", addr:"пр. Сейфуллина, 577", lat:43.2461380, lon:76.9333536}
   ];
@@ -1300,8 +1234,8 @@
       maxZoom: 19,
       subdomains: "abc"
     }).addTo(map2);
-    L.marker([43.2364265,76.9377950], {icon:homeIcon}).addTo(map2)
-      .bindPopup("<b>Квартира · ЖК Ortau</b><br>Наурызбай батыра, 127, блок 3, кв. 152");
+    L.marker([43.2288681,76.9428372], {icon:homeIcon}).addTo(map2)
+      .bindPopup("<b>Квартира</b><br>пр. Аль-Фараби, 21/4, блок 4, 20 этаж<br>(положение приблизительное)");
     restaurants.forEach(function(r){
       L.marker([r.lat, r.lon], {icon:heartIcon}).addTo(map2)
         .bindPopup("<b>"+r.name+"</b><br>"+r.cuisine+"<br>"+r.addr);
@@ -1350,7 +1284,7 @@
       stayMain.style.display = "";
       subnav.style.display = "";
       title.textContent = "Справочник проживания";
-      subtitle.textContent = "Всё в одном месте: встреча в аэропорту, квартира, Wi-Fi, коворкинги и спортзалы рядом с домом.";
+      subtitle.textContent = "Квартира, коворкинги и спортзалы рядом с домом.";
       history.replaceState(null, "", "#stay");
     }
   }
