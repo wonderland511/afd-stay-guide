@@ -246,6 +246,8 @@
   .place-photos{border-radius:0;gap:2px;}
   .place-photos button{border-radius:0;}
 
+  .gallery.tall button{aspect-ratio:3/4;flex:0 0 58%;}
+  @media(min-width:640px){.gallery.tall button{flex:0 0 24%;}}
   .carousel-arrow{
     position:absolute;top:50%;transform:translateY(-50%);
     width:40px;height:40px;border-radius:50%;
@@ -461,6 +463,18 @@
         <div class="label">Геолокация</div>
         <div class="value"><a href="https://www.google.com/maps/search/?api=1&query=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%90%D0%BB%D1%8C-%D0%A4%D0%B0%D1%80%D0%B0%D0%B1%D0%B8%2C%2021/4%2C%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть в Google Картах ↗</a></div>
       </div>
+    </div>
+
+    <div class="gallery tall" id="aptGallery">
+      <button data-full="images/apartment-1.jpg"><img src="images/apartment-1.jpg" alt="Гостиная с обеденной зоной, панорамным окном и зелёными креслами" loading="lazy"></button>
+      <button data-full="images/apartment-2.jpg"><img src="images/apartment-2.jpg" alt="Гостиная с зелёным диваном, телевизором и оранжевыми подвесными светильниками" loading="lazy"></button>
+      <button data-full="images/apartment-3.jpg"><img src="images/apartment-3.jpg" alt="Вид из окна на жилые башни и город" loading="lazy"></button>
+      <button data-full="images/apartment-4.jpg"><img src="images/apartment-4.jpg" alt="Рабочее место у окна с римскими шторами" loading="lazy"></button>
+      <button data-full="images/apartment-5.jpg"><img src="images/apartment-5.jpg" alt="Прихожая с мраморным полом и зеркальной стеной" loading="lazy"></button>
+      <button data-full="images/apartment-6.jpg"><img src="images/apartment-6.jpg" alt="Вторая гостиная с бирюзовым диваном и журнальными столиками" loading="lazy"></button>
+      <button data-full="images/apartment-7.jpg"><img src="images/apartment-7.jpg" alt="Ванная комната с душевой и мраморной плиткой" loading="lazy"></button>
+      <button data-full="images/apartment-8.jpg"><img src="images/apartment-8.jpg" alt="Спальня с серой кроватью, люстрой и шторами" loading="lazy"></button>
+      <button data-full="images/apartment-9.jpg"><img src="images/apartment-9.jpg" alt="Спальня с мягким изголовьем и абстрактной картиной над кроватью" loading="lazy"></button>
     </div>
   </section>
 
