@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="locked">
 <head>
-<script>
-  try{
-    if (localStorage.getItem("ortauUnlocked") === "1") {
-      document.documentElement.classList.remove("locked");
-    }
-  }catch(e){}
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Справочник проживания · Алматы</title>
@@ -1228,21 +1221,31 @@
 
 <script>
   (function(){
-    var CORRECT = "Ortau2026";
+    var CORRECT_HASH = "8ed0a60342ad1be98d3dac300fe01672e6216abe2a62646d96d0db4a814f8582";
     var form = document.getElementById("lockForm");
     var input = document.getElementById("lockInput");
     var err = document.getElementById("lockError");
     if (!form) return;
+    function sha256(text){
+      var enc = new TextEncoder().encode(text);
+      return window.crypto.subtle.digest("SHA-256", enc).then(function(buf){
+        return Array.from(new Uint8Array(buf)).map(function(b){ return b.toString(16).padStart(2,"0"); }).join("");
+      });
+    }
     form.addEventListener("submit", function(e){
       e.preventDefault();
-      if (input.value === CORRECT){
-        document.documentElement.classList.remove("locked");
-        try{ localStorage.setItem("ortauUnlocked", "1"); }catch(err2){}
-      } else {
-        err.textContent = "Неверный пароль, попробуйте ещё раз";
-        input.value = "";
-        input.focus();
-      }
+      var val = input.value.trim();
+      if (!val) return;
+      sha256(val).then(function(hash){
+        if (hash === CORRECT_HASH){
+          err.textContent = "";
+          document.documentElement.classList.remove("locked");
+        } else {
+          err.textContent = "Неверный пароль, попробуйте ещё раз";
+          input.value = "";
+          input.focus();
+        }
+      });
     });
   })();
 </script>
