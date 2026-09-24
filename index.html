@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru" class="locked">
 <head>
+<script>
+  try{
+    if (localStorage.getItem("afdUnlocked") === "1") {
+      document.documentElement.classList.remove("locked");
+    }
+  }catch(e){}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Справочник проживания · Алматы</title>
@@ -1248,6 +1255,7 @@
         if (hash === CORRECT_HASH){
           err.textContent = "";
           document.documentElement.classList.remove("locked");
+          try{ localStorage.setItem("afdUnlocked", "1"); }catch(e2){}
         } else {
           err.textContent = "Неверный пароль, попробуйте ещё раз";
           input.value = "";
