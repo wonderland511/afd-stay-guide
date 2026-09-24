@@ -1256,6 +1256,11 @@
           err.textContent = "";
           document.documentElement.classList.remove("locked");
           try{ localStorage.setItem("afdUnlocked", "1"); }catch(e2){}
+          setTimeout(function(){
+            var id = (location.hash || "").slice(1);
+            var el = id ? document.getElementById(id) : null;
+            if (el) el.scrollIntoView();
+          }, 50);
         } else {
           err.textContent = "Неверный пароль, попробуйте ещё раз";
           input.value = "";
