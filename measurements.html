@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мерки для одежды</title>
+<meta name="description" content="Мерки тела для заказа одежды онлайн: торс, брюки, стопа.">
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --bg-elev:#ffffff;
+    --text:#1d1d1f;
+    --text-secondary:#6e6e73;
+    --border:#e5e5ea;
+    --body:#e3e3e8;
+    --body-edge:#c7c7cc;
+    --top:#0071e3;
+    --pants:#c2410c;
+    --shadow:0 2px 20px rgba(0,0,0,0.06);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000000;
+      --bg-elev:#1c1c1e;
+      --text:#f5f5f7;
+      --text-secondary:#98989d;
+      --border:#2c2c2e;
+      --body:#2c2c2e;
+      --body-edge:#48484a;
+      --top:#3fa2ff;
+      --pants:#ff8a4c;
+      --shadow:0 2px 24px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000000;
+    --bg-elev:#1c1c1e;
+    --text:#f5f5f7;
+    --text-secondary:#98989d;
+    --border:#2c2c2e;
+    --body:#2c2c2e;
+    --body-edge:#48484a;
+    --top:#3fa2ff;
+    --pants:#ff8a4c;
+    --shadow:0 2px 24px rgba(0,0,0,0.5);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px 48px;}
+  header{padding:48px 0 24px;text-align:center;}
+  .eyebrow{font-size:14px;font-weight:600;color:var(--top);letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:700;margin:0 0 8px;letter-spacing:-.02em;}
+  .lead{color:var(--text-secondary);margin:0;}
+  .card{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:20px;}
+  h2{font-size:20px;margin:0 0 14px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;}
+  .dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none;}
+  .dot.top{background:var(--top);}
+  .dot.pants{background:var(--pants);}
+  .figure svg{width:100%;height:auto;display:block;}
+  .legend{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14px;color:var(--text-secondary);margin-top:8px;}
+  .legend span{display:flex;align-items:center;gap:6px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:720px){.grid{grid-template-columns:1fr;}.card.figure{padding:12px 4px;}}
+  table{width:100%;border-collapse:collapse;font-size:15px;}
+  td{padding:9px 0;border-bottom:1px solid var(--border);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.v{text-align:right;font-weight:600;white-space:nowrap;padding-left:12px;font-variant-numeric:tabular-nums;}
+  .en{display:block;font-size:13px;color:var(--text-secondary);}
+  .sub td:first-child{padding-left:14px;}
+  .feet{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .feet svg{width:160px;height:auto;flex:none;}
+  .feet table{flex:1;min-width:200px;}
+  ol{margin:0;padding-left:20px;}
+  ol li{margin-bottom:10px;}
+  ol li:last-child{margin-bottom:0;}
+
+  /* SVG */
+  .silhouette{fill:var(--body);}
+  .m{fill:none;stroke-width:2.2;}
+  .m.top{stroke:var(--top);}
+  .m.pants{stroke:var(--pants);}
+  .m.dash{stroke-dasharray:5 4;}
+  .lead-line{fill:none;stroke-width:1;stroke-dasharray:2 3;}
+  .lead-line.top{stroke:var(--top);}
+  .lead-line.pants{stroke:var(--pants);}
+  .lbl-name{font-size:15px;fill:var(--text-secondary);}
+  .lbl-val{font-size:20px;font-weight:700;}
+  .lbl-val.top{fill:var(--top);}
+  .lbl-val.pants{fill:var(--pants);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Мерки тела</div>
+    <h1>Мерки для одежды</h1>
+    <p class="lead">Все значения в сантиметрах</p>
+  </header>
+
+  <section class="card figure">
+    <svg viewBox="-20 0 640 760" role="img" aria-label="Схема человека с отмеченными мерками">
+      <defs>
+        <marker id="tick-top" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M5 0 L5 10" stroke="var(--top)" stroke-width="2"/>
+        </marker>
+        <marker id="tick-pants" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M5 0 L5 10" stroke="var(--pants)" stroke-width="2"/>
+        </marker>
+        <g id="arm">
+          <path d="M218,118 C202,124 196,140 194,170 L186,280 L180,370 L198,372 L204,285 L218,180 Z"/>
+          <ellipse cx="189" cy="392" rx="10" ry="19"/>
+        </g>
+        <g id="leg">
+          <path d="M222,330 C218,380 222,440 228,500 C226,550 236,600 244,700 L268,700 C266,640 270,570 268,500 C272,450 278,410 282,385 L222,385 Z"/>
+          <ellipse cx="254" cy="710" rx="20" ry="9"/>
+        </g>
+      </defs>
+
+      <!-- Силуэт -->
+      <g class="silhouette">
+        <circle cx="280" cy="56" r="30"/>
+        <rect x="268" y="80" width="24" height="30" rx="6"/>
+        <path d="M268,104 C255,112 230,112 218,118 C210,122 212,140 218,165 L222,190 C226,225 236,250 236,265 C232,290 220,310 220,335 L222,388 L338,388 L340,335 C340,310 328,290 324,265 C324,250 334,225 338,190 L342,165 C348,140 350,122 342,118 C330,112 305,112 292,104 Z"/>
+        <use href="#arm"/>
+        <use href="#arm" transform="translate(560,0) scale(-1,1)"/>
+        <use href="#leg"/>
+        <use href="#leg" transform="translate(560,0) scale(-1,1)"/>
+      </g>
+
+      <!-- ===== ТОРС ===== -->
+      <!-- Шея -->
+      <ellipse class="m top" cx="280" cy="98" rx="15" ry="4"/>
+      <path class="lead-line top" d="M265,98 H140"/>
+      <text x="132" y="92" text-anchor="end"><tspan class="lbl-name">Шея</tspan><tspan class="lbl-val top" x="132" dy="21">40</tspan></text>
+
+      <!-- Плечи -->
+      <path class="m top" d="M218,122 H342" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+      <path class="lead-line top" d="M342,122 C380,122 400,110 440,110"/>
+      <text x="448" y="104"><tspan class="lbl-name">Ширина плеч</tspan><tspan class="lbl-val top" x="448" dy="21">44–45</tspan></text>
+
+      <!-- Грудь -->
+      <ellipse class="m top" cx="280" cy="188" rx="60" ry="8"/>
+      <path class="lead-line top" d="M220,188 H140"/>
+      <text x="132" y="182" text-anchor="end"><tspan class="lbl-name">Грудь</tspan><tspan class="lbl-val top" x="132" dy="21">100,5</tspan></text>
+
+      <!-- Бицепс -->
+      <ellipse class="m top" cx="355" cy="198" rx="14" ry="4"/>
+      <path class="lead-line top" d="M369,198 H440"/>
+      <text x="448" y="192"><tspan class="lbl-name">Бицепс</tspan><tspan class="lbl-val top" x="448" dy="21">33,5</tspan></text>
+
+      <!-- Рукав -->
+      <path class="m top dash" d="M214,108 C196,116 186,140 183,170 L169,372" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+      <path class="lead-line top" d="M173,302 H140"/>
+      <text x="132" y="296" text-anchor="end"><tspan class="lbl-name">Длина рукава</tspan><tspan class="lbl-val top" x="132" dy="21">59</tspan></text>
+
+      <!-- Талия -->
+      <ellipse class="m top" cx="280" cy="262" rx="44" ry="7"/>
+      <path class="lead-line top" d="M236,262 C200,262 190,238 140,238"/>
+      <text x="132" y="232" text-anchor="end"><tspan class="lbl-name">Талия</tspan><tspan class="lbl-val top" x="132" dy="21">78</tspan></text>
+
+      <!-- Бёдра -->
+      <ellipse class="m top" cx="280" cy="345" rx="62" ry="8"/>
+      <path class="lead-line top" d="M218,345 H140"/>
+      <text x="132" y="339" text-anchor="end"><tspan class="lbl-name">Бёдра</tspan><tspan class="lbl-val top" x="132" dy="21">96,5</tspan></text>
+
+      <!-- Длина верхней одежды (по спине) -->
+      <path class="m top" d="M405,106 V388" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+      <path class="m top" d="M425,106 V500" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+      <path class="lead-line top" d="M292,106 H425"/>
+      <path class="lead-line top" d="M338,388 H440"/>
+      <path class="lead-line top" d="M272,500 H440"/>
+      <text x="448" y="370"><tspan class="lbl-name">Спина до ягодиц</tspan><tspan class="lbl-val top" x="448" dy="21">72</tspan></text>
+      <text x="448" y="482"><tspan class="lbl-name">Спина до колен</tspan><tspan class="lbl-val top" x="448" dy="21">99</tspan></text>
+
+      <!-- ===== БРЮКИ ===== -->
+      <!-- Талия брюк -->
+      <ellipse class="m pants dash" cx="280" cy="290" rx="47" ry="7"/>
+      <path class="lead-line pants" d="M327,290 H440"/>
+      <text x="448" y="284"><tspan class="lbl-name">Талия брюк</tspan><tspan class="lbl-val pants" x="448" dy="21">84</tspan></text>
+
+      <!-- Бедро одной ноги -->
+      <ellipse class="m pants" cx="309" cy="420" rx="27" ry="5"/>
+      <path class="lead-line pants" d="M336,420 H440"/>
+      <text x="448" y="414"><tspan class="lbl-name">Бедро ноги</tspan><tspan class="lbl-val pants" x="448" dy="21">56</tspan></text>
+
+      <!-- Икры -->
+      <ellipse class="m pants" cx="251" cy="580" rx="17" ry="4"/>
+      <path class="lead-line pants" d="M234,580 H140"/>
+      <text x="132" y="574" text-anchor="end"><tspan class="lbl-name">Икры</tspan><tspan class="lbl-val pants" x="132" dy="21">37,5</tspan></text>
+
+      <!-- Длина брюк -->
+      <path class="m pants" d="M155,290 V700" marker-start="url(#tick-pants)" marker-end="url(#tick-pants)"/>
+      <path class="lead-line pants" d="M155,290 H233"/>
+      <path class="lead-line pants" d="M155,700 H244"/>
+      <text x="132" y="464" text-anchor="end"><tspan class="lbl-name">Длина брюк</tspan><tspan class="lbl-val pants" x="132" dy="21">96</tspan></text>
+      <path class="lead-line pants" d="M140,470 H155"/>
+    </svg>
+    <div class="legend">
+      <span><i class="dot top"></i>Торс / верх</span>
+      <span><i class="dot pants"></i>Брюки</span>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2><i class="dot top"></i>Торс</h2>
+      <table>
+        <tr><td>Обхват шеи<span class="en">neck</span></td><td class="v">40</td></tr>
+        <tr><td>Обхват груди<span class="en">chest</span></td><td class="v">100,5</td></tr>
+        <tr><td>Обхват талии<span class="en">waist</span></td><td class="v">78</td></tr>
+        <tr><td>Обхват бёдер<span class="en">hip (seat)</span></td><td class="v">96,5</td></tr>
+        <tr><td>Ширина плеч<span class="en">shoulders</span></td><td class="v">44–45</td></tr>
+        <tr><td>Обхват плеча, бицепс<span class="en">bicep</span></td><td class="v">33,5</td></tr>
+        <tr><td>Длина рукава<span class="en">sleeve length</span></td><td class="v">59</td></tr>
+        <tr><td colspan="2">Длина верхней одежды<span class="en">back length</span></td></tr>
+        <tr class="sub"><td>до конца ягодиц</td><td class="v">72</td></tr>
+        <tr class="sub"><td>до колен</td><td class="v">99</td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2><i class="dot pants"></i>Брюки</h2>
+      <table>
+        <tr><td>Обхват талии для брюк<span class="en">pant waist</span></td><td class="v">84</td></tr>
+        <tr><td>Обхват бёдер<span class="en">hip</span></td><td class="v">96,5</td></tr>
+        <tr><td>Обхват бедра одной ноги<span class="en">thigh</span></td><td class="v">56</td></tr>
+        <tr><td>Икры<span class="en">calf</span></td><td class="v">37,5</td></tr>
+        <tr><td>Длина брюк<span class="en">pant length</span></td><td class="v">96</td></tr>
+      </table>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Стопа</h2>
+    <div class="feet">
+      <svg viewBox="0 0 160 260" role="img" aria-label="Схема стопы: длина 27 см, ширина 11 см">
+        <path class="silhouette" d="M80,20 C110,20 122,45 122,80 C122,120 112,150 108,180 C104,215 100,240 78,240 C56,240 50,215 50,185 C50,150 40,120 40,85 C40,45 52,20 80,20 Z"/>
+        <path class="m top" d="M140,20 V240" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+        <path class="m top" d="M40,80 H122" marker-start="url(#tick-top)" marker-end="url(#tick-top)"/>
+        <text x="146" y="135" class="lbl-val top" transform="rotate(90 146 135)" text-anchor="middle">27</text>
+        <text x="81" y="72" class="lbl-val top" text-anchor="middle">11</text>
+      </svg>
+      <table>
+        <tr><td>Длина стопы<span class="en">foot length</span></td><td class="v">27</td></tr>
+        <tr><td>Ширина стопы, если нужно<span class="en">foot width</span></td><td class="v">11</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Советы при заказе одежды онлайн</h2>
+    <ol>
+      <li>Все обхваты — это мерки клиента, а не мерки будущей одежды. Обычно на сайтах брендов есть <b>body measurements</b> и <b>garment measurements</b>. Здесь должны подходить <b>body measurements</b>.</li>
+      <li>Длина рукава замерена до участка, где ориентировочно должен заканчиваться рукав пиджака. Такая длина будет коротковата для куртки и пальто: для них можно заказать на пару сантиметров длиннее. Рукава рубашки тоже лучше брать больше, чем замеренная длина рукава.</li>
+    </ol>
+  </section>
+</div>
+</body>
+</html>
