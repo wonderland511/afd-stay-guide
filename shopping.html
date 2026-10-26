@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кашемир и мерино</title>
+<meta name="description" content="Где в Стамбуле купить кашемировые лонгсливы и мериносовые футболки: магазины, артикулы, фото.">
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --bg-elev:#ffffff;
+    --bg-photo:#ececf0;
+    --text:#1d1d1f;
+    --text-secondary:#6e6e73;
+    --border:#e5e5ea;
+    --accent:#0071e3;
+    --cashmere:#a16207;
+    --merino:#047857;
+    --muted:#8e8e93;
+    --shadow:0 2px 20px rgba(0,0,0,0.06);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000000;
+      --bg-elev:#1c1c1e;
+      --bg-photo:#2c2c2e;
+      --text:#f5f5f7;
+      --text-secondary:#98989d;
+      --border:#2c2c2e;
+      --accent:#3fa2ff;
+      --cashmere:#f2b84b;
+      --merino:#4ade80;
+      --muted:#8e8e93;
+      --shadow:0 2px 24px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000000;
+    --bg-elev:#1c1c1e;
+    --bg-photo:#2c2c2e;
+    --text:#f5f5f7;
+    --text-secondary:#98989d;
+    --border:#2c2c2e;
+    --accent:#3fa2ff;
+    --cashmere:#f2b84b;
+    --merino:#4ade80;
+    --muted:#8e8e93;
+    --shadow:0 2px 24px rgba(0,0,0,0.5);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px 48px;}
+  header{padding:48px 0 24px;text-align:center;}
+  .eyebrow{font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:700;margin:0 0 8px;letter-spacing:-.02em;}
+  .lead{color:var(--text-secondary);margin:0 auto;max-width:640px;}
+  .card{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:20px;}
+  h2{font-size:24px;margin:36px 0 6px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;}
+  .section-note{color:var(--text-secondary);margin:0 0 18px;font-size:15px;}
+  .dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none;}
+  .dot.cashmere{background:var(--cashmere);}
+  .dot.merino{background:var(--merino);}
+
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:900px){.products{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.products{grid-template-columns:1fr;}}
+
+  .product{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;}
+  .photo{position:relative;aspect-ratio:4/5;background:var(--bg-photo);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:13px;text-align:center;padding:16px;}
+  .photo svg{width:46%;height:auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .brand{font-size:13px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.03em;}
+  .name{font-size:18px;font-weight:600;line-height:1.3;margin:0;}
+  .sku{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-secondary);}
+  .sku code{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--text);background:var(--bg-photo);padding:2px 8px;border-radius:6px;}
+  .copy{border:1px solid var(--border);background:transparent;color:var(--text-secondary);border-radius:6px;font:inherit;font-size:12px;padding:2px 8px;cursor:pointer;}
+  .copy:hover{color:var(--text);}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--text-secondary);}
+  .tag.cashmere{color:var(--cashmere);border-color:currentColor;}
+  .tag.merino{color:var(--merino);border-color:currentColor;}
+  .desc{margin:0;font-size:14px;color:var(--text-secondary);}
+  .price{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;}
+  .verdict{font-size:14px;margin:0;}
+  .verdict.ok{color:var(--merino);}
+  .verdict.wait{color:var(--cashmere);}
+  .links{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px;font-weight:500;}
+
+  table{width:100%;border-collapse:collapse;font-size:15px;}
+  th{text-align:left;font-size:13px;font-weight:600;color:var(--text-secondary);padding:0 12px 8px 0;border-bottom:1px solid var(--border);}
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--border);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td:first-child{font-weight:600;white-space:nowrap;}
+  .table-scroll{overflow-x:auto;}
+  ul.criteria{margin:0;padding-left:20px;}
+  ul.criteria li{margin-bottom:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Шопинг в Стамбуле</div>
+    <h1>Кашемир и мерино</h1>
+    <p class="lead">Кашемировые лонгсливы и мериносовые футболки: артикулы и магазины, где их купить в Стамбуле.</p>
+  </header>
+
+  <section class="card">
+    <ul class="criteria">
+      <li><b>Кашемир:</b> волокно грейда A, длинный штапель, нить в 2 сложения (2-ply). Бюджет — до $200.</li>
+      <li><b>Мерино:</b> сертификат RWS или ZQ (этичное овцеводство, без мулезинга).</li>
+    </ul>
+  </section>
+
+  <!-- ===== КАШЕМИР ===== -->
+  <h2><i class="dot cashmere"></i>Кашемир</h2>
+  <p class="section-note">Лонгсливы и джемперы из 100% кашемира.</p>
+
+  <div class="products">
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 14 C40 20 60 20 64 14 L84 22 L96 86 L84 88 L76 44 L76 92 L24 92 L24 44 L16 88 L4 86 L16 22 Z"/></svg>
+        Фото — на сайте M&amp;S
+        <img src="images/shop-ms-t304101a.jpg" alt="M&amp;S Autograph Pure Cashmere Crew Neck" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Marks &amp; Spencer · Autograph</div>
+        <h3 class="name">Pure Cashmere Crew Neck</h3>
+        <div class="sku">Артикул <code>T304101A</code><button class="copy" data-copy="T304101A">Копировать</button></div>
+        <div class="tags"><span class="tag cashmere">100% кашемир</span><span class="tag">Круглый вырез</span><span class="tag">8 цветов</span></div>
+        <div class="price">£99</div>
+        <p class="verdict ok">Единственный вариант, который укладывается в $200 по полной цене.</p>
+        <div class="links">
+          <a href="https://www.marksandspencer.com/pure-cashmere-crew-neck-jumper/p/clp60548474" target="_blank" rel="noopener">Фото и описание ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 14 L50 38 L64 14 L84 22 L96 86 L84 88 L76 44 L76 92 L24 92 L24 44 L16 88 L4 86 L16 22 Z"/></svg>
+        Фото — на сайте Falconeri
+        <img src="images/shop-falconeri-uml250b.jpg" alt="Falconeri Ultrafine Cashmere V-neck" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Falconeri</div>
+        <h3 class="name">Ultrafine Cashmere, V-вырез</h3>
+        <div class="sku">Артикул <code>UML250B</code><button class="copy" data-copy="UML250B">Копировать</button></div>
+        <div class="tags"><span class="tag cashmere">100% кашемир</span><span class="tag">V-вырез</span><span class="tag">Ultrafine</span></div>
+        <div class="price">$355</div>
+        <p class="verdict wait">Выше лимита — брать имеет смысл только на распродаже.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?q=Falconeri+UML250B" target="_blank" rel="noopener">Найти по артикулу ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 14 C40 20 60 20 64 14 L84 22 L96 86 L84 88 L76 44 L76 92 L24 92 L24 44 L16 88 L4 86 L16 22 Z"/></svg>
+        Фото — на сайте Falconeri
+        <img src="images/shop-falconeri-uml428a.jpg" alt="Falconeri Ultrasoft Cashmere Crew Neck" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Falconeri</div>
+        <h3 class="name">Ultrasoft Cashmere, круглый вырез</h3>
+        <div class="sku">Артикул <code>UML428A</code><button class="copy" data-copy="UML428A">Копировать</button></div>
+        <div class="tags"><span class="tag cashmere">100% кашемир</span><span class="tag">Круглый вырез</span><span class="tag">Вязка в 4 нити</span></div>
+        <div class="price">$425</div>
+        <p class="verdict wait">Выше лимита — брать имеет смысл только на распродаже.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?q=Falconeri+UML428A" target="_blank" rel="noopener">Найти по артикулу ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== МЕРИНО ===== -->
+  <h2><i class="dot merino"></i>Мериносовые футболки</h2>
+  <p class="section-note">Футболки и лонгсливы из мериноса с сертификатом ZQ, плюс запасной вариант без сертификата.</p>
+
+  <div class="products">
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 16 C40 22 60 22 64 16 L90 28 L82 46 L74 42 L74 90 L26 90 L26 42 L18 46 L10 28 Z"/></svg>
+        Фото — на сайте Icebreaker
+        <img src="images/shop-icebreaker-0a56wl.jpg" alt="Icebreaker Merino 150 Tech Lite III" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Icebreaker</div>
+        <h3 class="name">Merino 150 Tech Lite III, короткий рукав</h3>
+        <div class="sku">Артикул <code>0A56WL</code><button class="copy" data-copy="0A56WL">Копировать</button></div>
+        <div class="tags"><span class="tag merino">ZQ / ZQRX</span><span class="tag">100% мерино</span><span class="tag">150 г/м²</span></div>
+        <p class="desc">Лёгкая футболка: носится одна или как базовый слой.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?q=Icebreaker+Merino+150+Tech+Lite+III+0A56WL" target="_blank" rel="noopener">Фото и описание ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 14 C40 20 60 20 64 14 L84 22 L96 86 L84 88 L76 44 L76 92 L24 92 L24 44 L16 88 L4 86 L16 22 Z"/></svg>
+        Фото — на сайте Icebreaker
+        <img src="images/shop-icebreaker-104365.jpg" alt="Icebreaker Merino 200 Oasis Long Sleeve Crewe" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Icebreaker</div>
+        <h3 class="name">Merino 200 Oasis Long Sleeve Crewe, лонгслив</h3>
+        <div class="sku">Артикул <code>104365</code><button class="copy" data-copy="104365">Копировать</button></div>
+        <div class="tags"><span class="tag merino">ZQ</span><span class="tag">18,9 мкм</span><span class="tag">200 г/м²</span><span class="tag">Приталенный</span></div>
+        <p class="desc">Плотнее Tech Lite. Подходит на прохладную погоду.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?q=Icebreaker+Merino+200+Oasis+Long+Sleeve+Crewe+104365" target="_blank" rel="noopener">Фото и описание ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M36 16 C40 22 60 22 64 16 L90 28 L82 46 L74 42 L74 90 L26 90 L26 42 L18 46 L10 28 Z"/></svg>
+        Фото — на сайте Decathlon
+        <img src="images/shop-decathlon-8493310.jpg" alt="Decathlon Forclaz Travel 500" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">Decathlon · Forclaz</div>
+        <h3 class="name">Travel 500, короткий рукав</h3>
+        <div class="sku">Модель <code>8493310</code><button class="copy" data-copy="8493310">Копировать</button></div>
+        <div class="tags"><span class="tag">Без RWS/ZQ</span><span class="tag">155 г/м²</span></div>
+        <p class="desc">Запасной вариант. В составе мерино с добавкой акрила, а не чистая шерсть.</p>
+        <div class="links">
+          <a href="https://www.decathlon.com/products/mens-short-sleeved-merino-wool-hiking-travel-t-shirt-travel-500-106265" target="_blank" rel="noopener">Фото и описание ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== МАГАЗИНЫ ===== -->
+  <h2>Где купить в Стамбуле</h2>
+  <p class="section-note">M&amp;S и Falconeri лучше мерить в магазине. Перед поездкой стоит уточнить наличие по артикулу.</p>
+
+  <section class="card">
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Бренд</th><th>Где</th><th>Карта</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Marks &amp; Spencer</td>
+            <td>Офлайн: İstinyePark, Нишанташи</td>
+            <td>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Marks+%26+Spencer+%C4%B0stinyePark+Istanbul" target="_blank" rel="noopener">İstinyePark ↗</a><br>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Marks+%26+Spencer+Ni%C5%9Fanta%C5%9F%C4%B1+Istanbul" target="_blank" rel="noopener">Нишанташи ↗</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Falconeri</td>
+            <td>Офлайн: İstinyePark, Нишанташи</td>
+            <td>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Falconeri+%C4%B0stinyePark+Istanbul" target="_blank" rel="noopener">İstinyePark ↗</a><br>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Falconeri+Ni%C5%9Fanta%C5%9F%C4%B1+Istanbul" target="_blank" rel="noopener">Нишанташи ↗</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Icebreaker</td>
+            <td>Через Intersport</td>
+            <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Intersport+Istanbul" target="_blank" rel="noopener">Intersport ↗</a></td>
+          </tr>
+          <tr>
+            <td>Decathlon</td>
+            <td>Магазины Decathlon по городу</td>
+            <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Decathlon+Istanbul" target="_blank" rel="noopener">Decathlon ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      try{
+        navigator.clipboard.writeText(text).then(function(){
+          btn.textContent = 'Скопировано';
+          setTimeout(function(){ btn.textContent = 'Копировать'; }, 1500);
+        });
+      }catch(e){}
+    });
+  });
+</script>
+</body>
+</html>
