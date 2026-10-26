@@ -106,6 +106,18 @@
   tr:last-child td{border-bottom:none;}
   td:first-child{font-weight:600;white-space:nowrap;}
   .table-scroll{overflow-x:auto;}
+  .store{display:block;margin-bottom:10px;}
+  .store:hover{text-decoration:none;}
+  .store b{font-weight:600;}
+  .store:hover b{text-decoration:underline;}
+  .store span{display:block;font-size:14px;color:var(--text-secondary);}
+  .store-note{margin:0;font-size:13px;color:var(--text-secondary);}
+
+  .sticker{width:104px;height:104px;object-fit:cover;border-radius:50%;border:3px solid var(--bg-elev);box-shadow:0 3px 14px rgba(0,0,0,0.25);flex:none;}
+  .sticker-h2{width:88px;height:88px;margin-left:auto;}
+  .sticker-row{display:flex;justify-content:flex-end;margin-top:8px;}
+  .credits{margin-top:24px;font-size:12px;color:var(--text-secondary);text-align:center;}
+
   ul.criteria{margin:0;padding-left:20px;}
   ul.criteria li{margin-bottom:6px;}
 </style>
@@ -126,7 +138,7 @@
   </section>
 
   <!-- ===== КАШЕМИР ===== -->
-  <h2><i class="dot cashmere"></i>Кашемир</h2>
+  <h2><i class="dot cashmere"></i>Кашемир<img class="sticker sticker-h2" src="images/sticker-cat-beanie.jpg" alt="Милый рыжий котёнок в вязаной шапке" title="Милый котик"></h2>
   <p class="section-note">Лонгсливы и джемперы из 100% кашемира.</p>
 
   <div class="products">
@@ -276,46 +288,57 @@
   <section class="card">
     <div class="table-scroll">
       <table>
-        <thead><tr><th>Бренд</th><th>Где</th><th>Карта</th></tr></thead>
+        <thead><tr><th>Бренд</th><th>Магазины — адрес открывает точку в Google Картах</th></tr></thead>
         <tbody>
           <tr>
             <td>Marks &amp; Spencer</td>
-            <td>Офлайн: İstinyePark, Нишанташи</td>
             <td>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Marks+%26+Spencer+%C4%B0stinyePark+Istanbul" target="_blank" rel="noopener">İstinyePark ↗</a><br>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Marks+%26+Spencer+Ni%C5%9Fanta%C5%9F%C4%B1+Istanbul" target="_blank" rel="noopener">Нишанташи ↗</a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.11032,29.03263" target="_blank" rel="noopener"><b>ТЦ İstinyePark ↗</b><span>Pınar Mah., Katar Cad. No:73, Sarıyer</span></a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.05105,28.99279" target="_blank" rel="noopener"><b>ТЦ City's Nişantaşı ↗</b><span>Teşvikiye Cad. No:12, Teşvikiye, Şişli</span></a>
+              <p class="store-note">Точка — центр торгового центра, положение магазина внутри приблизительное.</p>
             </td>
           </tr>
           <tr>
             <td>Falconeri</td>
-            <td>Офлайн: İstinyePark, Нишанташи</td>
             <td>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Falconeri+%C4%B0stinyePark+Istanbul" target="_blank" rel="noopener">İstinyePark ↗</a><br>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Falconeri+Ni%C5%9Fanta%C5%9F%C4%B1+Istanbul" target="_blank" rel="noopener">Нишанташи ↗</a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.05106,28.99086" target="_blank" rel="noopener"><b>Нишанташи ↗</b><span>Valikonağı Cad., Harbiye Mah., Şişli</span></a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=40.95944,29.08294" target="_blank" rel="noopener"><b>Суадие, азиатская сторона ↗</b><span>Suadiye Mah., Kadıköy</span></a>
             </td>
           </tr>
           <tr>
             <td>GOBI Cashmere</td>
-            <td>Kanyon AVM (Левент): Büyükdere Cd. 185/G, Şişli<br>Vadistanbul AVM: Azerbaycan Cd. 3J/7, Ayazağa, Sarıyer<br>Тел.: <a href="tel:+908502904624">0850 290 46 24</a></td>
             <td>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=41.07806,29.01056" target="_blank" rel="noopener">Kanyon ↗</a><br>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=41.10731,28.98681" target="_blank" rel="noopener">Vadistanbul ↗</a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.07806,29.01056" target="_blank" rel="noopener"><b>ТЦ Kanyon, Левент ↗</b><span>Büyükdere Cad. No:185/G, Şişli</span></a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.10731,28.98681" target="_blank" rel="noopener"><b>ТЦ Vadistanbul ↗</b><span>Ayazağa Mah., Azerbaycan Cad. 3J/7, Sarıyer</span></a>
+              <p class="store-note">Тел. обоих магазинов: <a href="tel:+908502904624">0850 290 46 24</a></p>
             </td>
           </tr>
           <tr>
             <td>Icebreaker</td>
-            <td>Через Intersport</td>
-            <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Intersport+Istanbul" target="_blank" rel="noopener">Intersport ↗</a></td>
+            <td>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.10741,28.98741" target="_blank" rel="noopener"><b>Intersport, ТЦ Vadistanbul ↗</b><span>Ayazağa, Azerbaycan Cad. No:3/C, Sarıyer</span></a>
+              <p class="store-note">Тот же ТЦ, что и GOBI. Точка — центр ТЦ. Тел.: <a href="tel:+905309180857">0530 918 08 57</a></p>
+            </td>
           </tr>
           <tr>
             <td>Decathlon</td>
-            <td>Магазины Decathlon по городу</td>
-            <td><a href="https://www.google.com/maps/search/?api=1&amp;query=Decathlon+Istanbul" target="_blank" rel="noopener">Decathlon ↗</a></td>
+            <td>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.06342,28.99282" target="_blank" rel="noopener"><b>ТЦ Cevahir, этаж −2 ↗</b><span>Büyükdere Cad. No:22, Şişli</span></a>
+              <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=41.07579,29.01107" target="_blank" rel="noopener"><b>Зинджирликую, рядом с Kanyon ↗</b><span>Büyükdere Cad. No:117, Esentepe, Şişli</span></a>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <div class="sticker-row">
+      <img class="sticker" src="images/sticker-cat-basket.jpg" alt="Милая кошка сидит в корзинке для покупок" title="Милая кошка">
+    </div>
   </section>
+
+  <footer class="credits">
+    Фото котиков: «<a href="https://commons.wikimedia.org/wiki/File:Gatos_friolentos.jpg" target="_blank" rel="noopener">Gatos friolentos</a>», автор Gatolocura, CC BY-SA 4.0;
+    «<a href="https://commons.wikimedia.org/wiki/File:Cat_in_a_box.jpg" target="_blank" rel="noopener">Cat in a box</a>», автор Lenora, CC BY-SA 3.0. Обрезаны.
+  </footer>
 </div>
 
 <script>
@@ -330,6 +353,18 @@
       }catch(e){}
     });
   });
+</script>
+
+<script type="module">
+  import { animate } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.querySelectorAll(".sticker").forEach(function(el){
+      const wiggle = () => animate(el, { rotate: [0, -8, 8, 0] }, { duration: 0.6 });
+      el.addEventListener("mouseenter", wiggle);
+      el.addEventListener("click", wiggle);
+    });
+  }
 </script>
 </body>
 </html>
