@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кроссовки в Рио</title>
+<meta name="description" content="Кроссовки на широкую стопу (27–27,5 × 11 см) в Рио-де-Жанейро: примерка HOKA и New Balance в Barra, Altra с доставкой по Бразилии.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --bg-elev:#ffffff;
+    --bg-photo:#ececf0;
+    --text:#1d1d1f;
+    --text-secondary:#6e6e73;
+    --border:#e5e5ea;
+    --accent:#0071e3;
+    --hoka:#0369a1;
+    --nb:#b91c1c;
+    --altra:#7c3aed;
+    --ok:#047857;
+    --warn:#a16207;
+    --muted:#8e8e93;
+    --shadow:0 2px 20px rgba(0,0,0,0.06);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000000;
+      --bg-elev:#1c1c1e;
+      --bg-photo:#2c2c2e;
+      --text:#f5f5f7;
+      --text-secondary:#98989d;
+      --border:#2c2c2e;
+      --accent:#3fa2ff;
+      --hoka:#38bdf8;
+      --nb:#f87171;
+      --altra:#a78bfa;
+      --ok:#4ade80;
+      --warn:#f2b84b;
+      --muted:#8e8e93;
+      --shadow:0 2px 24px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000000;
+    --bg-elev:#1c1c1e;
+    --bg-photo:#2c2c2e;
+    --text:#f5f5f7;
+    --text-secondary:#98989d;
+    --border:#2c2c2e;
+    --accent:#3fa2ff;
+    --hoka:#38bdf8;
+    --nb:#f87171;
+    --altra:#a78bfa;
+    --ok:#4ade80;
+    --warn:#f2b84b;
+    --muted:#8e8e93;
+    --shadow:0 2px 24px rgba(0,0,0,0.5);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px 48px;}
+  header{padding:48px 0 24px;text-align:center;}
+  .eyebrow{font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:700;margin:0 0 8px;letter-spacing:-.02em;}
+  .lead{color:var(--text-secondary);margin:0 auto;max-width:640px;}
+  .card{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:20px;}
+  h2{font-size:24px;margin:36px 0 6px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;}
+  .section-note{color:var(--text-secondary);margin:0 0 18px;font-size:15px;}
+  .dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none;}
+  .dot.hoka{background:var(--hoka);}
+  .dot.nb{background:var(--nb);}
+  .dot.altra{background:var(--altra);}
+  .dot.map{background:var(--ok);}
+
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:900px){.products{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.products{grid-template-columns:1fr;}}
+
+  .product{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;}
+  .photo{position:relative;aspect-ratio:4/3;background:var(--bg-photo);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:13px;text-align:center;padding:16px;}
+  .photo svg{width:52%;height:auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f7f7f9;}
+  .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .brand{font-size:13px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.03em;}
+  .name{font-size:18px;font-weight:600;line-height:1.3;margin:0;}
+  .sku{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-secondary);flex-wrap:wrap;}
+  .sku code{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--text);background:var(--bg-photo);padding:2px 8px;border-radius:6px;}
+  .copy{border:1px solid var(--border);background:transparent;color:var(--text-secondary);border-radius:6px;font:inherit;font-size:12px;padding:2px 8px;cursor:pointer;}
+  .copy:hover{color:var(--text);}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--text-secondary);}
+  .tag.wide{color:var(--ok);border-color:currentColor;}
+  .tag.hoka{color:var(--hoka);border-color:currentColor;}
+  .tag.nb{color:var(--nb);border-color:currentColor;}
+  .tag.altra{color:var(--altra);border-color:currentColor;}
+  .desc{margin:0;font-size:14px;color:var(--text-secondary);}
+  .price{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;}
+  .price small{font-size:14px;font-weight:500;color:var(--text-secondary);}
+  .verdict{font-size:14px;margin:0;}
+  .verdict.ok{color:var(--ok);}
+  .verdict.wait{color:var(--warn);}
+  .where{font-size:14px;margin:0;}
+  .where b{font-weight:600;}
+  .links{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px;font-weight:500;}
+
+  .stores{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:900px){.stores{grid-template-columns:1fr;}}
+  .store-card h3{margin:0 0 4px;font-size:18px;}
+  .store-card p{margin:0 0 10px;font-size:14px;color:var(--text-secondary);}
+  .store-card .links{padding-top:0;}
+
+  .map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--bg-photo);margin-bottom:20px;}
+  .map iframe{display:block;width:100%;height:380px;border:0;}
+  @media (max-width:600px){.map iframe{height:300px;}}
+
+  ul.criteria{margin:0;padding-left:20px;}
+  ul.criteria li{margin-bottom:6px;}
+  .phrase{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap;margin-top:12px;}
+  .phrase blockquote{margin:0;flex:1;min-width:240px;padding:12px 14px;border-left:3px solid var(--accent);background:var(--bg-photo);border-radius:8px;font-size:15px;}
+  .warn{border-left:3px solid var(--warn);}
+  .credits{margin-top:24px;font-size:12px;color:var(--text-secondary);text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Шопинг в Рио-де-Жанейро</div>
+    <h1>Кроссовки на широкую стопу</h1>
+    <p class="lead">Стопа 27–27,5 × 11 см, чёрный или тёмно-серый цвет. HOKA и New Balance можно примерить в Barra, Altra — заказать с доставкой по Бразилии.</p>
+  </header>
+
+  <section class="card">
+    <ul class="criteria">
+      <li><b>Ширина:</b> только модели с маркировкой <b>Wide / 2E</b> или <b>Extra Wide / 4E</b>, либо Altra с колодкой Original FootShape. Обычная ширина D при 11 см будет давить.</li>
+      <li><b>Длина:</b> впереди большого пальца должно оставаться 5–10 мм. Ориентир — US 10 (стелька около 28 см). Просите сразу два соседних размера.</li>
+      <li><b>Цвет:</b> Black/Black, Black/Grey, тёмно-серый.</li>
+      <li><b>Оплата:</b> HOKA и New Balance — обычная примерка в магазине, без заказа и предоплаты.</li>
+    </ul>
+  </section>
+
+  <!-- ===== КАРТА ===== -->
+  <h2><i class="dot map"></i>Где примерить</h2>
+  <p class="section-note">HOKA и New Balance находятся в одном торговом центре, BarraShopping. Запасная точка New Balance — RioSul в Ботафого.</p>
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=BarraShopping,+Av.+das+Am%C3%A9ricas,+4666,+Barra+da+Tijuca,+Rio+de+Janeiro&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BarraShopping на Google Картах"></iframe>
+  </div>
+  <div class="stores">
+    <section class="card store-card">
+      <div class="tags" style="margin-bottom:8px"><span class="tag hoka">HOKA</span><span class="tag">Шаг 1</span></div>
+      <h3>HOKA, BarraShopping</h3>
+      <p>Av. das Américas, 4666, Barra da Tijuca. Пн–сб 10:00–22:00, вс и праздники 14:00–20:00.</p>
+      <p>Что просить: <b>Bondi 9 Wide</b>, Black/Black или Gray.</p>
+      <div class="links">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=HOKA+BarraShopping+Av.+das+Am%C3%A9ricas+4666+Rio+de+Janeiro" target="_blank" rel="noopener">Google Карты ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=BarraShopping+Av.+das+Am%C3%A9ricas+4666+Rio+de+Janeiro" target="_blank" rel="noopener">Маршрут ↗</a>
+        <a href="https://wa.me/5511917818557" target="_blank" rel="noopener">WhatsApp HOKA ↗</a>
+      </div>
+    </section>
+    <section class="card store-card">
+      <div class="tags" style="margin-bottom:8px"><span class="tag nb">New Balance</span><span class="tag">Шаг 2</span></div>
+      <h3>New Balance, BarraShopping</h3>
+      <p>Av. das Américas, 4666, уровень Lagoa (loja 203/204), Barra da Tijuca.</p>
+      <p>Что просить: <b>1080 или 860</b>, ширина <b>2E или 4E</b>, чёрный.</p>
+      <div class="links">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=New+Balance+BarraShopping+Av.+das+Am%C3%A9ricas+4666+Rio+de+Janeiro" target="_blank" rel="noopener">Google Карты ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=BarraShopping+Av.+das+Am%C3%A9ricas+4666+Rio+de+Janeiro" target="_blank" rel="noopener">Маршрут ↗</a>
+        <a href="https://wa.me/5521986950053" target="_blank" rel="noopener">WhatsApp NB ↗</a>
+      </div>
+    </section>
+    <section class="card store-card">
+      <div class="tags" style="margin-bottom:8px"><span class="tag nb">New Balance</span><span class="tag">Запасной</span></div>
+      <h3>New Balance, RioSul</h3>
+      <p>Rua Lauro Müller, 116, Botafogo. Пн–сб 10:00–22:00, вс и праздники 13:00–21:00.</p>
+      <p>Если в Barra не нашлось 2E/4E нужного размера.</p>
+      <div class="links">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=New+Balance+RioSul+Shopping+Rua+Lauro+M%C3%BCller+116+Botafogo+Rio+de+Janeiro" target="_blank" rel="noopener">Google Карты ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=RioSul+Shopping+Rua+Lauro+M%C3%BCller+116+Botafogo+Rio+de+Janeiro" target="_blank" rel="noopener">Маршрут ↗</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="card">
+    <b>Перед поездкой напишите в WhatsApp магазина</b> — сайты не показывают остатки конкретной точки. Фраза для продавца:
+    <div class="phrase">
+      <blockquote>Olá! Vocês têm na loja tênis masculino largo (Wide 2E ou 4E), cor preta, para pé de 27,5 cm de comprimento e 11 cm de largura? Gostaria de experimentar dois tamanhos.</blockquote>
+      <button class="copy" data-copy="Olá! Vocês têm na loja tênis masculino largo (Wide 2E ou 4E), cor preta, para pé de 27,5 cm de comprimento e 11 cm de largura? Gostaria de experimentar dois tamanhos.">Копировать</button>
+    </div>
+  </section>
+
+  <!-- ===== HOKA ===== -->
+  <h2><i class="dot hoka"></i>HOKA — примерка в BarraShopping</h2>
+  <p class="section-note">Первый кандидат. Wide-версия Bondi соответствует примерно 2E.</p>
+  <div class="products">
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 120 70" aria-hidden="true"><path d="M8 52 C8 40 14 34 24 32 L48 26 L62 12 L74 14 L80 26 C92 30 104 34 110 42 C114 48 112 56 104 58 L16 60 C10 60 8 57 8 52 Z M8 54 L112 54"/></svg>
+        Фото — на сайте HOKA
+        <img src="https://dms.deckers.com/hoka/image/upload/f_auto,q_auto/w_800/1162011-BBLC_1.png" alt="HOKA Bondi 9, Black/Black" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">HOKA</div>
+        <h3 class="name">Bondi 9 Wide, Black/Black</h3>
+        <div class="sku">Артикул <code>1162013-BBLC</code><button class="copy" data-copy="1162013-BBLC">Копировать</button></div>
+        <div class="tags"><span class="tag wide">Wide / 2E</span><span class="tag">Black/Black</span><span class="tag">Максимальная амортизация</span></div>
+        <div class="price">R$ 1.499,99</div>
+        <p class="verdict ok">Лучше всего подходит под запрос. Есть также серый вариант Wide.</p>
+        <p class="where"><b>Примерить:</b> HOKA, BarraShopping.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?tbm=isch&amp;q=HOKA+Bondi+9+Wide+Black+Black+1162013" target="_blank" rel="noopener">Все фото ↗</a>
+          <a href="https://www.hoka.com/pt-br/" target="_blank" rel="noopener">HOKA Brasil ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== NEW BALANCE ===== -->
+  <h2><i class="dot nb"></i>New Balance — примерка в BarraShopping или RioSul</h2>
+  <p class="section-note">Спрашивайте именно 2E или 4E. Обычные 1080/860 без маркировки ширины не подойдут.</p>
+  <div class="products">
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 120 70" aria-hidden="true"><path d="M8 52 C8 40 14 34 24 32 L48 26 L62 12 L74 14 L80 26 C92 30 104 34 110 42 C114 48 112 56 104 58 L16 60 C10 60 8 57 8 52 Z M8 54 L112 54"/></svg>
+        Фото — на сайте New Balance
+        <img src="https://nb.scene7.com/is/image/NB/m1080b14_nb_02_i?$pdpflexf2$&amp;wid=880&amp;hei=880" alt="New Balance Fresh Foam X 1080v14, чёрный" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">New Balance</div>
+        <h3 class="name">Fresh Foam X 1080, 2E Wide, чёрный</h3>
+        <div class="sku">Артикул <code>M1080B14 2E</code><button class="copy" data-copy="M1080B14 2E">Копировать</button></div>
+        <div class="tags"><span class="tag wide">2E Wide</span><span class="tag">Black/Magnet</span><span class="tag">Нейтральный, мягкий</span></div>
+        <p class="desc">Мягкий кроссовок на каждый день. Артикул — версия v14. В магазине может быть уже v15: просите «1080, largura 2E, preto».</p>
+        <p class="where"><b>Примерить:</b> New Balance, BarraShopping или RioSul.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?tbm=isch&amp;q=New+Balance+1080v14+2E+Black+M1080B14" target="_blank" rel="noopener">Все фото ↗</a>
+        </div>
+      </div>
+    </article>
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 120 70" aria-hidden="true"><path d="M8 52 C8 40 14 34 24 32 L48 26 L62 12 L74 14 L80 26 C92 30 104 34 110 42 C114 48 112 56 104 58 L16 60 C10 60 8 57 8 52 Z M8 54 L112 54"/></svg>
+        Фото — на сайте New Balance
+        <img src="https://nb.scene7.com/is/image/NB/m860k15_nb_02_i?$pdpflexf2$&amp;wid=880&amp;hei=880" alt="New Balance Fresh Foam X 860v15, чёрный" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+      </div>
+      <div class="body">
+        <div class="brand">New Balance</div>
+        <h3 class="name">Fresh Foam X 860v15, 4E Extra Wide, Black/White</h3>
+        <div class="tags"><span class="tag wide">4E Extra Wide</span><span class="tag">Black/White</span><span class="tag">С поддержкой стопы</span></div>
+        <p class="desc">Самая широкая полнота из найденного: шире, чем Bondi Wide. Это модель с поддержкой (stability): подойдёт, если стопа заваливается внутрь.</p>
+        <p class="verdict wait">Наличие 4E в магазинах Рио не подтверждено — спросите заранее.</p>
+        <p class="where"><b>Примерить:</b> New Balance, BarraShopping или RioSul.</p>
+        <div class="links">
+          <a href="https://www.google.com/search?tbm=isch&amp;q=New+Balance+860v15+4E+Black+White" target="_blank" rel="noopener">Все фото ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== ALTRA ===== -->
+  <h2><i class="dot altra"></i>Altra — доставка в Рио</h2>
+  <p class="section-note">Официального магазина Altra в Бразилии нет. Ниже — бразильские продавцы. При онлайн-покупке в Бразилии по закону (CDC, ст. 49) можно отказаться от товара в течение 7 дней после получения.</p>
+  <div class="products">
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 120 70" aria-hidden="true"><path d="M8 52 C8 40 14 34 24 32 L48 26 L62 12 L74 14 L80 26 C92 30 104 34 110 42 C114 48 112 56 104 58 L16 60 C10 60 8 57 8 52 Z M8 54 L112 54"/></svg>
+        Фото — по ссылке «Все фото»
+      </div>
+      <div class="body">
+        <div class="brand">Altra · ASPORTS</div>
+        <h3 class="name">Lone Peak 9, Black</h3>
+        <div class="sku">Артикул <code>AL0A85PG</code><button class="copy" data-copy="AL0A85PG">Копировать</button></div>
+        <div class="tags"><span class="tag altra">Original FootShape</span><span class="tag">Black</span><span class="tag">Нулевой перепад</span></div>
+        <div class="price">R$ 1.206,50 <small>(вместо R$ 1.270)</small></div>
+        <p class="verdict ok">Бразильский магазин, доставка по стране. Original FootShape — самая просторная колодка Altra.</p>
+        <p class="desc">Размер по таблице Altra: US 10 = EU 44. Перед заказом проверьте наличие чёрного цвета в нужном размере.</p>
+        <div class="links">
+          <a href="https://www.asports.com.br/run-tenis-de-corrida/altra/" target="_blank" rel="noopener">ASPORTS ↗</a>
+          <a href="https://www.google.com/search?tbm=isch&amp;q=Altra+Lone+Peak+9+Black+AL0A85PG" target="_blank" rel="noopener">Все фото ↗</a>
+        </div>
+      </div>
+    </article>
+    <article class="product">
+      <div class="photo">
+        <svg viewBox="0 0 120 70" aria-hidden="true"><path d="M8 52 C8 40 14 34 24 32 L48 26 L62 12 L74 14 L80 26 C92 30 104 34 110 42 C114 48 112 56 104 58 L16 60 C10 60 8 57 8 52 Z M8 54 L112 54"/></svg>
+        Фото — по ссылке «Все фото»
+      </div>
+      <div class="body">
+        <div class="brand">Altra · Amazon.com.br</div>
+        <h3 class="name">Lone Peak 8 и другие модели</h3>
+        <div class="tags"><span class="tag altra">Original FootShape</span><span class="tag">Есть версии Wide</span></div>
+        <div class="price">от R$ 979 <small>(Lone Peak 8)</small></div>
+        <p class="verdict wait">Часть товаров идёт через Amazon Global — это импорт, ждать дольше.</p>
+        <p class="desc">Смотрите блок «Enviado por / Vendido por» и выбирайте товары со склада в Бразилии.</p>
+        <div class="links">
+          <a href="https://www.amazon.com.br/T%C3%AAnis-de-Corrida-Masculinos-ALTRA/s?keywords=T%C3%AAnis+de+Corrida+Masculinos&amp;rh=n%3A17682460011%2Cp_89%3AALTRA" target="_blank" rel="noopener">Altra на Amazon ↗</a>
+          <a href="https://www.google.com/search?tbm=isch&amp;q=Altra+Lone+Peak+8+Black" target="_blank" rel="noopener">Все фото ↗</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section class="card warn">
+    <b>Осторожно:</b>
+    <ul class="criteria" style="margin-top:6px">
+      <li><b>tenisaltra.com</b> и похожие сайты с Altra за ~R$ 400 — похоже на подделку или мошеннический магазин. Оригинал стоит от R$ 950.</li>
+      <li><b>Lone Peak 9+ × and wander</b> (Working Title) — подтвердить наличие не удалось: коллекция почти везде распродана, и её цвета — тёмно-зелёный и оранжевый, а не чёрный.</li>
+    </ul>
+  </section>
+
+  <p class="credits">Данные собраны 27.10.2026. Цены и наличие могут измениться.</p>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      try{
+        navigator.clipboard.writeText(text).then(function(){
+          btn.textContent = 'Скопировано';
+          setTimeout(function(){ btn.textContent = 'Копировать'; }, 1500);
+        });
+      }catch(e){}
+    });
+  });
+</script>
+</body>
+</html>
