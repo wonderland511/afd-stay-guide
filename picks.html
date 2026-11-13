@@ -144,6 +144,11 @@
   .hl td:first-child{border-radius:10px 0 0 10px;padding-left:8px;}
   .hl td:last-child{border-radius:0 10px 10px 0;}
 
+  .stores{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;}
+  .stores a{display:block;padding:12px 14px;border:1px solid var(--border);border-radius:14px;min-height:56px;}
+  .stores a:hover{text-decoration:none;border-color:var(--accent);}
+  .stores b{font-weight:600;font-size:15px;}
+  .stores span{display:block;font-size:13.5px;color:var(--text-2);}
   .sizes{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
   @media (max-width:860px){.sizes{grid-template-columns:minmax(0,1fr);}}
   .sizes .card{position:relative;}
@@ -198,7 +203,7 @@
     <div class="summary-foot">
       <label class="switch"><input type="checkbox" id="pix" checked> Оплата Rest Money через Pix (−5%)</label>
       <button class="btn ghost" id="copyBtn" type="button">Скопировать список</button>
-      <p class="small" style="margin:0;flex-basis:100%">Доставка Rest Money бесплатная. Доставка Decathlon считается по CEP и в сумму не входит.</p>
+      <p class="small" style="margin:0;flex-basis:100%">Доставка входит в итог. Её стоимость посчитана 13.11.2026 на CEP 22071-000 (Копакабана, Rua Miguel Lemos). Способ доставки выбирается в карточке каждого товара.</p>
     </div>
   </section>
 
@@ -231,6 +236,7 @@
         <dt>Волокно</dt><dd>18,5 мкм: тоньше, чем у Simond (19,5 мкм).</dd>
         <dt>Сертификат</dt><dd class="q">RWS или ZQ на странице не указан.</dd>
         <dt>Уход</dt><dd>Машинная стирка при 30 °C со средством для шерсти, сушить на воздухе. Нельзя сушить в машине, гладить и отбеливать.</dd>
+        <dt>Гарантия</dt><dd>2 года от производственного брака.</dd>
         <dt>Отзывы</dt><dd>4,7 из 5, 1308 отзывов на decathlon.com.br.</dd>
       </dl>
 
@@ -242,6 +248,14 @@
         </div>
       </div>
       <div class="callout"><b>Посадка облегающая.</b> Decathlon советует брать на размер больше. Обхват груди 100,5 см по таблице — это G (98–104). На размер больше — GG (104–114).</div>
+
+      <div>
+        <div class="picker-label">Доставка</div>
+        <div class="chips" data-ship-group="dec">
+          <button class="chip" type="button" data-ship="courier" aria-pressed="true">Курьер · $2,46 · 4 раб. дня</button>
+          <button class="chip" type="button" data-ship="pickup" aria-pressed="false">Самовывоз, Леблон · бесплатно · 5 раб. дней</button>
+        </div>
+      </div>
 
       <label class="add"><input type="checkbox" data-item="tee" checked> Добавить в выбор</label>
       <div class="links">
@@ -300,14 +314,22 @@
         </div>
       </div>
 
+      <div>
+        <div class="picker-label">Доставка</div>
+        <div class="chips" data-ship-group="rm">
+          <button class="chip" type="button" data-ship="std" aria-pressed="true">Обычная · бесплатно · 3–15 раб. дней</button>
+          <button class="chip" type="button" data-ship="fast" aria-pressed="false">Быстрая · $7,11 · 1–12 раб. дней</button>
+        </div>
+      </div>
+
       <dl class="specs">
         <dt>Состав</dt><dd>100% кашемир, волокно из Внутренней Монголии.</dd>
         <dt>Грейд</dt><dd class="q">На сайте не указан.</dd>
         <dt>Нить</dt><dd class="q">Сложение (2-ply) на сайте не указано.</dd>
         <dt>Уход</dt><dd>Только сухая чистка.</dd>
         <dt>Наличие</dt><dd>Размер G есть во всех трёх цветах (13.11.2026).</dd>
-        <dt>Доставка</dt><dd>Бесплатно. Сборка заказа — 1–2 рабочих дня, обычная доставка — 3–15 рабочих дней, быстрая — 1–12.</dd>
-        <dt>Возврат</dt><dd>В течение 7 дней после получения. На значке написано «120% гарантии», но в условиях — возврат полной суммы. Гарантия — 1 год.</dd>
+        <dt>Доставка</dt><dd>Отправка из Куритибы. Сначала 1–2 рабочих дня на сборку заказа, потом: обычная доставка — бесплатно, 3–15 рабочих дней; быстрая — R$ 39,92 ($7,11), 1–12 рабочих дней. Для 1 и 2 водолазок цена быстрой доставки одинаковая.</dd>
+        <dt>Возврат</dt><dd>Бесплатно, почтой, в течение 7 дней после получения. На значке написано «120% гарантии», но в условиях — возврат полной суммы. Гарантия — 1 год.</dd>
         <dt>Отзывы</dt><dd>5,0 из 5, но всего 19 отзывов.</dd>
       </dl>
       <div class="links">
@@ -315,6 +337,32 @@
       </div>
     </div>
   </article>
+
+  <!-- ===== ДОСТАВКА ===== -->
+  <h2>Доставка в Рио</h2>
+  <p class="note">Посчитано на сайтах магазинов 13.11.2026 для CEP 22071-000 (Копакабана, Rua Miguel Lemos). На другой адрес цена и срок могут отличаться. Сроки указаны в рабочих днях.</p>
+  <section class="card">
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Магазин</th><th>Способ</th><th>Цена</th><th>Срок</th></tr></thead>
+        <tbody>
+          <tr><td>Decathlon</td><td>Курьер до двери</td><td>$2,46 <span class="small">(R$ 13,84)</span></td><td>4 дня</td></tr>
+          <tr><td>Decathlon</td><td>Самовывоз из магазина в Рио</td><td class="ok">Бесплатно</td><td>5 дней</td></tr>
+          <tr><td>Rest Money</td><td>Обычная (Envio Padrão), с трек-номером</td><td class="ok">Бесплатно</td><td>1–2 дня сборка + 3–15 дней</td></tr>
+          <tr><td>Rest Money</td><td>Быстрая (Envio Rápido), с трек-номером</td><td>$7,11 <span class="small">(R$ 39,92)</span></td><td>1–2 дня сборка + 1–12 дней</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin:14px 0 8px"><b>Где забрать футболку Decathlon.</b> Ближе всего к Копакабане магазин в Леблоне. Адрес открывает точку в Google Картах; координаты взяты из данных Decathlon о пунктах выдачи.</p>
+    <div class="stores">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=-22.9840964,-43.2197055" target="_blank" rel="noopener"><b>Decathlon Leblon ↗</b><span>Av. Ataulfo de Paiva, 391, Leblon</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=-22.9220738,-43.2354729" target="_blank" rel="noopener"><b>Decathlon Tijuca ↗</b><span>Av. Maracanã, 987, Tijuca</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=-23.0028,-43.32168" target="_blank" rel="noopener"><b>Decathlon Barra da Tijuca ↗</b><span>Av. das Américas, 2000, Barra da Tijuca</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=-22.8859963,-43.2827627" target="_blank" rel="noopener"><b>Decathlon Norte Shopping ↗</b><span>Av. Dom Hélder Câmara, 5332, Cachambi</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=-22.89609,-43.12416" target="_blank" rel="noopener"><b>Decathlon Plaza Niterói ↗</b><span>Rua Quinze de Novembro, 8, Centro, Niterói</span></a>
+    </div>
+    <p class="small" style="margin:12px 0 0">При расчёте доставки корзина Decathlon показала цену футболки R$ 224,99 ($40,06) вместо R$ 249,99. Название акции в ответе не указано, поэтому в итог идёт цена со страницы товара. Окончательная цена будет видна при оформлении заказа.</p>
+  </section>
 
   <!-- ===== СОСТАВ И КРИТЕРИИ ===== -->
   <h2>Состав против критериев</h2>
@@ -328,7 +376,7 @@
           <tr><td>Тонкость волокна</td><td class="ok">18,5 мкм</td><td class="unk">Не указана</td></tr>
           <tr><td>Грейд / сертификат</td><td class="unk">RWS / ZQ не указан</td><td class="unk">Грейд не указан</td></tr>
           <tr><td>Нить 2-ply</td><td>—</td><td class="unk">Не указано</td></tr>
-          <tr><td>Цена до $200</td><td class="ok">$44,51</td><td class="ok">$177,66, через Pix $168,78</td></tr>
+          <tr><td>Цена до $200</td><td class="ok">$44,51 + доставка $2,46 или самовывоз</td><td class="ok">$177,66, через Pix $168,78; доставка бесплатно</td></tr>
           <tr><td>Уход</td><td>Машинная стирка 30 °C</td><td>Сухая чистка</td></tr>
         </tbody>
       </table>
@@ -387,7 +435,9 @@
 <script>
 (function(){
   var RATE = 5.6169;               // R$ за $1, ЕЦБ, 12.11.2026
-  var TEE = 249.99, RM = 997.90, RM_PIX = 948.01;   // Pix: −5% от R$ 997,90 = R$ 948,005
+  var TEE = 249.99, RM = 997.90, RM_PIX = 948.01;
+  var SHIP = { courier:['Доставка Decathlon: курьер, 4 раб. дня',13.84], pickup:['Самовывоз Decathlon Leblon, 5 раб. дней',0],
+               std:['Доставка Rest Money: обычная, 3–15 раб. дней',0], fast:['Доставка Rest Money: быстрая, 1–12 раб. дней',39.92] };   // Pix: −5% от R$ 997,90 = R$ 948,005
 
   var SETS = {
     'forclaz': [
@@ -472,8 +522,8 @@
   });
 
   /* ---------- выбор и итог ---------- */
-  var KEY = 'afd-picks-v1';
-  var state = { tee:true, 'rm-preto':true, 'rm-cinza':true, 'rm-grisalho':false, teeSize:'G', rmSize:'G', pix:true };
+  var KEY = 'afd-picks-v2';
+  var state = { tee:true, 'rm-preto':true, 'rm-cinza':true, 'rm-grisalho':false, teeSize:'G', rmSize:'G', pix:true, decShip:'courier', rmShip:'std' };
   try { var saved = JSON.parse(localStorage.getItem(KEY) || 'null'); if(saved) for(var k in saved) if(k in state) state[k] = saved[k]; } catch(e){}
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
 
@@ -485,7 +535,10 @@
   function lines(){
     var out = [], rmP = state.pix ? RM_PIX : RM;
     if(state.tee) out.push([LABEL.tee + ', ' + state.teeSize, TEE]);
-    ['rm-preto','rm-cinza','rm-grisalho'].forEach(function(k){ if(state[k]) out.push([LABEL[k] + ', ' + state.rmSize, rmP]); });
+    var anyRm = false;
+    ['rm-preto','rm-cinza','rm-grisalho'].forEach(function(k){ if(state[k]){ anyRm = true; out.push([LABEL[k] + ', ' + state.rmSize, rmP]); } });
+    if(state.tee) out.push(SHIP[state.decShip]);
+    if(anyRm) out.push(SHIP[state.rmShip]);
     return out;
   }
   function render(){
@@ -493,6 +546,10 @@
     document.querySelectorAll('[data-size-group]').forEach(function(g){
       var cur = g.getAttribute('data-size-group') === 'tee' ? state.teeSize : state.rmSize;
       g.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-size') === cur ? 'true' : 'false'); });
+    });
+    document.querySelectorAll('[data-ship-group]').forEach(function(g){
+      var cur = g.getAttribute('data-ship-group') === 'dec' ? state.decShip : state.rmShip;
+      g.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-ship') === cur ? 'true' : 'false'); });
     });
     document.getElementById('pix').checked = state.pix;
     var rmP = state.pix ? RM_PIX : RM;
@@ -506,7 +563,7 @@
     L.forEach(function(l){
       tot += l[1];
       var li = document.createElement('li'), a = document.createElement('span'), b = document.createElement('span');
-      a.textContent = l[0]; b.textContent = usd(l[1]/RATE); li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+      a.textContent = l[0]; b.textContent = l[1] ? usd(l[1]/RATE) : 'бесплатно'; li.appendChild(a); li.appendChild(b); ul.appendChild(li);
     });
     document.getElementById('sumUsd').textContent = usd(tot/RATE);
     document.getElementById('sumBrl').textContent = brl(tot);
@@ -521,13 +578,20 @@
       });
     });
   });
+  document.querySelectorAll('[data-ship-group]').forEach(function(g){
+    g.querySelectorAll('.chip').forEach(function(c){
+      c.addEventListener('click', function(){
+        state[g.getAttribute('data-ship-group') === 'dec' ? 'decShip' : 'rmShip'] = c.getAttribute('data-ship'); save(); render();
+      });
+    });
+  });
   document.getElementById('pix').addEventListener('change', function(e){ state.pix = e.target.checked; save(); render(); });
 
   var toast = document.getElementById('toast');
   function say(t){ toast.textContent = t; toast.classList.add('show'); clearTimeout(say.t); say.t = setTimeout(function(){ toast.classList.remove('show'); }, 1800); }
   document.getElementById('copyBtn').addEventListener('click', function(){
     var L = lines(); if(!L.length){ say('Список пуст'); return; }
-    var tot = 0, txt = L.map(function(l){ tot += l[1]; return '• ' + l[0] + ' — ' + usd(l[1]/RATE) + ' (' + brl(l[1]) + ')'; }).join('\n');
+    var tot = 0, txt = L.map(function(l){ tot += l[1]; return '• ' + l[0] + ' — ' + (l[1] ? usd(l[1]/RATE) + ' (' + brl(l[1]) + ')' : 'бесплатно'); }).join('\n');
     txt += '\nИтого: ' + usd(tot/RATE) + ' (' + brl(tot) + ')';
     try { navigator.clipboard.writeText(txt).then(function(){ say('Список скопирован'); }, function(){ say('Не удалось скопировать'); }); }
     catch(e){ say('Не удалось скопировать'); }
