@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Мерино и кашемир: выбор</title>
+<meta name="description" content="Выбранные вещи: мериносовая футболка Forclaz и кашемировая водолазка Rest Money — состав, размеры, цены в долларах, итог заказа.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#f5f5f7; --bg-elev:#ffffff; --bg-soft:#ececf0; --text:#1d1d1f; --text-2:#6e6e73;
+    --border:#e3e3e8; --accent:#0071e3; --accent-soft:rgba(0,113,227,.10);
+    --cashmere:#a16207; --merino:#047857; --warn:#b45309; --no:#c2410c;
+    --shadow:0 2px 20px rgba(0,0,0,.06); --radius:22px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000; --bg-elev:#1c1c1e; --bg-soft:#2c2c2e; --text:#f5f5f7; --text-2:#a1a1a6;
+      --border:#2f2f33; --accent:#3fa2ff; --accent-soft:rgba(63,162,255,.16);
+      --cashmere:#f2b84b; --merino:#4ade80; --warn:#fbbf24; --no:#fb923c;
+      --shadow:0 2px 24px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000; --bg-elev:#1c1c1e; --bg-soft:#2c2c2e; --text:#f5f5f7; --text-2:#a1a1a6;
+    --border:#2f2f33; --accent:#3fa2ff; --accent-soft:rgba(63,162,255,.16);
+    --cashmere:#f2b84b; --merino:#4ade80; --warn:#fbbf24; --no:#fb923c;
+    --shadow:0 2px 24px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{overflow-x:hidden;}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  button{font:inherit;color:inherit;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:10px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 64px;}
+
+  /* ---- появление: только CSS ---- */
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .appear{animation:fadeInUp .55s ease-out both;}
+  .appear.d1{animation-delay:.06s;} .appear.d2{animation-delay:.12s;} .appear.d3{animation-delay:.18s;}
+  @media (prefers-reduced-motion: reduce){.appear{animation:none;opacity:1;transform:none;}}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0 0;gap:12px;}
+  .back{font-size:15px;font-weight:500;}
+  .theme-btn{border:1px solid var(--border);background:var(--bg-elev);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px;min-height:40px;}
+
+  header{padding:36px 0 20px;text-align:center;}
+  .eyebrow{font-size:14px;font-weight:600;color:var(--accent);letter-spacing:.03em;text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(30px,5.5vw,46px);font-weight:700;margin:0 0 10px;letter-spacing:-.025em;line-height:1.1;}
+  .lead{color:var(--text-2);margin:0 auto;max-width:660px;font-size:17px;}
+
+  h2{font-size:clamp(22px,3.6vw,28px);letter-spacing:-.02em;margin:48px 0 6px;}
+  .note{color:var(--text-2);font-size:15px;margin:0 0 18px;}
+  .card{background:var(--bg-elev);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;}
+
+  /* ---- итог ---- */
+  .summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 28px;align-items:center;margin-top:8px;}
+  .summary ul{list-style:none;margin:0;padding:0;}
+  .summary li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--border);font-size:15px;}
+  .summary li:last-child{border-bottom:none;}
+  .summary li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600;}
+  .summary .empty{color:var(--text-2);}
+  .total{text-align:right;}
+  .total .label{font-size:13px;color:var(--text-2);font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
+  .total .usd{font-size:clamp(34px,6vw,46px);font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1;}
+  .total .brl{color:var(--text-2);font-size:15px;font-variant-numeric:tabular-nums;}
+  .summary-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:16px;}
+  .switch{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;min-height:44px;}
+  .switch input{appearance:none;-webkit-appearance:none;width:51px;height:31px;border-radius:999px;background:var(--bg-soft);position:relative;cursor:pointer;transition:background .2s;flex:none;margin:0;}
+  .switch input::after{content:"";position:absolute;top:2px;left:2px;width:27px;height:27px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25);transition:transform .2s;}
+  .switch input:checked{background:#34c759;}
+  .switch input:checked::after{transform:translateX(20px);}
+  .btn{border:none;background:var(--accent);color:#fff;border-radius:999px;padding:12px 22px;font-weight:600;font-size:15px;cursor:pointer;min-height:48px;}
+  .btn.ghost{background:var(--accent-soft);color:var(--accent);}
+  .small{font-size:13px;color:var(--text-2);}
+  @media (max-width:640px){.summary{grid-template-columns:minmax(0,1fr);}.total{text-align:left;}}
+
+  /* ---- карточки товаров ---- */
+  .product{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0;overflow:hidden;padding:0;margin-bottom:24px;}
+  @media (max-width:860px){.product{grid-template-columns:minmax(0,1fr);}}
+  .gallery{background:var(--bg-soft);padding:16px;display:flex;flex-direction:column;gap:12px;}
+  .stage{position:relative;border-radius:16px;overflow:hidden;background:#f2f2f2;aspect-ratio:4/5;}
+  .stage button.open{all:unset;cursor:zoom-in;display:block;width:100%;height:100%;}
+  .stage img{width:100%;height:100%;object-fit:cover;display:block;}
+  .stage.contain img{object-fit:contain;background:#f4f4f4;}
+  .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.9);color:#1d1d1f;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;}
+  .nav.prev{left:10px;} .nav.next{right:10px;}
+  .count{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums;}
+  .zoom-hint{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:4px 10px;border-radius:999px;}
+  .thumbs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+  .thumbs::-webkit-scrollbar{display:none;}
+  .thumbs button{flex:none;width:62px;height:62px;border-radius:12px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:#eee;}
+  .thumbs button[aria-current="true"]{border-color:var(--accent);}
+  .thumbs img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  .info{padding:24px 26px 26px;display:flex;flex-direction:column;gap:14px;}
+  .brand{font-size:13px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.04em;}
+  .name{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0;line-height:1.2;}
+  .price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .price{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+  .price-row .orig{color:var(--text-2);font-size:15px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--border);color:var(--text-2);}
+  .tag.merino{color:var(--merino);border-color:currentColor;}
+  .tag.cashmere{color:var(--cashmere);border-color:currentColor;}
+
+  dl.specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0;font-size:14.5px;}
+  dl.specs dt{color:var(--text-2);padding:9px 14px 9px 0;border-top:1px solid var(--border);}
+  dl.specs dd{margin:0;padding:9px 0;border-top:1px solid var(--border);}
+  .q{color:var(--warn);}
+
+  .picker-label{font-size:13px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);background:var(--bg-elev);border-radius:999px;padding:9px 16px;cursor:pointer;font-size:15px;font-weight:500;min-height:46px;transition:border-color .15s,background .15s;}
+  .chip:hover{border-color:var(--text-2);}
+  .chip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);}
+  .chip .sw{width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,0,0,.18);flex:none;}
+  .chip .tick{font-weight:700;width:14px;text-align:center;}
+  .add{display:flex;align-items:center;gap:12px;border:1.5px solid var(--border);border-radius:16px;padding:12px 16px;cursor:pointer;min-height:56px;font-weight:600;}
+  .add input{width:22px;height:22px;accent-color:var(--accent);margin:0;flex:none;}
+  .add:has(input:checked){border-color:var(--accent);background:var(--accent-soft);}
+  .callout{background:var(--bg-soft);border-radius:14px;padding:12px 14px;font-size:14px;}
+  .callout b{font-weight:600;}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+  .links a{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;background:var(--accent-soft);font-weight:600;font-size:15px;}
+  .links a:hover{text-decoration:none;filter:brightness(1.05);}
+
+  /* ---- таблицы ---- */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px;}
+  th{text-align:left;font-size:12.5px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.04em;padding:0 12px 10px 0;border-bottom:1px solid var(--border);}
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--border);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td:first-child{font-weight:600;}
+  .ok{color:var(--merino);font-weight:600;}
+  .unk{color:var(--warn);font-weight:600;}
+  .hl td{background:var(--accent-soft);}
+  .hl td:first-child{border-radius:10px 0 0 10px;padding-left:8px;}
+  .hl td:last-child{border-radius:0 10px 10px 0;}
+
+  .sizes{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:860px){.sizes{grid-template-columns:minmax(0,1fr);}}
+  .sizes .card{position:relative;}
+  .sizes h3{margin:0 0 4px;font-size:18px;}
+  .sizes table{min-width:0;}
+
+  /* ---- стикер ---- */
+  .sticker{position:absolute;top:-46px;right:14px;width:112px;height:112px;object-fit:cover;object-position:50% 30%;border-radius:50%;border:4px solid var(--bg-elev);box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:2;}
+  .has-sticker h3{padding-right:120px;}
+  @media (max-width:860px){.sizes{margin-top:56px;}}
+
+  /* ---- лайтбокс ---- */
+  .lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:56px 12px;}
+  .lb.open{display:flex;}
+  .lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;}
+  .lb button{position:absolute;border:none;background:rgba(255,255,255,.14);color:#fff;width:52px;height:52px;border-radius:50%;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .lb button:hover{background:rgba(255,255,255,.26);}
+  .lb .x{top:14px;right:14px;}
+  .lb .lp{left:14px;top:50%;transform:translateY(-50%);}
+  .lb .ln{right:14px;top:50%;transform:translateY(-50%);}
+  .lb .lc{position:absolute;top:26px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;}
+
+  footer{margin-top:48px;font-size:12.5px;color:var(--text-2);text-align:center;line-height:1.6;}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;display:none;z-index:120;}
+  .toast.show{display:block;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="back" href="shopping.html">‹ Кашемир и мерино: все варианты</a>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить тему">Тема</button>
+  </div>
+
+  <header class="appear">
+    <div class="eyebrow">Рио-де-Жанейро · заказ онлайн</div>
+    <h1>Мерино и кашемир:<br>что выбрано</h1>
+    <p class="lead">Мериносовая футболка Forclaz и кашемировая водолазка Rest Money. Выберите цвета и размеры — итог пересчитается в долларах.</p>
+  </header>
+
+  <!-- ===== ИТОГ ===== -->
+  <section class="card summary appear d1" aria-labelledby="sumTitle">
+    <div>
+      <div class="picker-label" id="sumTitle">Мой выбор</div>
+      <ul id="sumList"><li class="empty">Ничего не выбрано</li></ul>
+    </div>
+    <div class="total">
+      <div class="label">Итого</div>
+      <div class="usd" id="sumUsd">$0,00</div>
+      <div class="brl" id="sumBrl">R$ 0,00</div>
+    </div>
+    <div class="summary-foot">
+      <label class="switch"><input type="checkbox" id="pix" checked> Оплата Rest Money через Pix (−5%)</label>
+      <button class="btn ghost" id="copyBtn" type="button">Скопировать список</button>
+      <p class="small" style="margin:0;flex-basis:100%">Доставка Rest Money бесплатная. Доставка Decathlon считается по CEP и в сумму не входит.</p>
+    </div>
+  </section>
+
+  <!-- ===== FORCLAZ ===== -->
+  <h2 class="appear d2">Футболка из мериноса</h2>
+  <p class="note">Замена футболке Simond из основного списка (70% мерино + 30% акрил).</p>
+
+  <article class="card product appear d2" id="tee">
+    <div class="gallery" data-gallery="forclaz">
+      <div class="stage">
+        <button class="open" type="button" aria-label="Увеличить фото"><img src="images/pick-forclaz-1.jpg" alt="Футболка Forclaz из мериноса, серая с чёрными рукавами, вид спереди" referrerpolicy="no-referrer"></button>
+        <button class="nav prev" type="button" aria-label="Предыдущее фото">‹</button>
+        <button class="nav next" type="button" aria-label="Следующее фото">›</button>
+        <span class="zoom-hint">Нажмите, чтобы увеличить</span>
+        <span class="count">1 / 7</span>
+      </div>
+      <div class="thumbs"></div>
+    </div>
+    <div class="info">
+      <div class="brand">Decathlon · Forclaz · REF 8976797</div>
+      <h3 class="name">Camiseta Masculina de Trilha Lã Merino, серая</h3>
+      <div class="tags">
+        <span class="tag merino">89% мерино</span><span class="tag">11% полиамид</span><span class="tag merino">18,5 мкм</span><span class="tag">~180 г в размере G</span>
+      </div>
+      <div class="price-row"><span class="price">$44,51</span><span class="orig">R$ 249,99 · 5 × R$ 49,99 без процентов</span></div>
+
+      <dl class="specs">
+        <dt>Состав</dt><dd>Основная ткань — 89% мерино + 11% полиамид. Под мышками — 98% шерсть + 2% полиамид.</dd>
+        <dt>Пряжа</dt><dd>Beta-Spun: шерсть мериноса обвивает нить полиамида. По описанию Decathlon, так ткань лучше переносит трение и не так легко рвётся.</dd>
+        <dt>Волокно</dt><dd>18,5 мкм: тоньше, чем у Simond (19,5 мкм).</dd>
+        <dt>Сертификат</dt><dd class="q">RWS или ZQ на странице не указан.</dd>
+        <dt>Уход</dt><dd>Машинная стирка при 30 °C со средством для шерсти, сушить на воздухе. Нельзя сушить в машине, гладить и отбеливать.</dd>
+        <dt>Отзывы</dt><dd>4,7 из 5, 1308 отзывов на decathlon.com.br.</dd>
+      </dl>
+
+      <div>
+        <div class="picker-label">Размер</div>
+        <div class="chips" data-size-group="tee">
+          <button class="chip" type="button" data-size="G" aria-pressed="true">G</button>
+          <button class="chip" type="button" data-size="GG" aria-pressed="false">GG</button>
+        </div>
+      </div>
+      <div class="callout"><b>Посадка облегающая.</b> Decathlon советует брать на размер больше. Обхват груди 100,5 см по таблице — это G (98–104). На размер больше — GG (104–114).</div>
+
+      <label class="add"><input type="checkbox" data-item="tee" checked> Добавить в выбор</label>
+      <div class="links">
+        <a href="https://www.decathlon.com.br/camiseta-masculina-de-la-merino-cinza-preto-8976797-forclaz/p" target="_blank" rel="noopener">Открыть на Decathlon ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== REST MONEY ===== -->
+  <h2 class="appear d3">Кашемировая водолазка</h2>
+  <p class="note">В магазинах Рио её нет: заказ на сайте, отправка из Куритибы.</p>
+
+  <article class="card product appear d3" id="rm">
+    <div class="gallery" data-gallery="rm-preto">
+      <div class="stage">
+        <button class="open" type="button" aria-label="Увеличить фото"><img src="images/pick-rm-preto-2.jpg" alt="Водолазка Rest Money, чёрная, на модели" referrerpolicy="no-referrer"></button>
+        <button class="nav prev" type="button" aria-label="Предыдущее фото">‹</button>
+        <button class="nav next" type="button" aria-label="Следующее фото">›</button>
+        <span class="zoom-hint">Нажмите, чтобы увеличить</span>
+        <span class="count">1 / 5</span>
+      </div>
+      <div class="thumbs"></div>
+    </div>
+    <div class="info">
+      <div class="brand">Rest Money · Curitiba</div>
+      <h3 class="name">Suéter Masculino Gola Alta 100% Caxemira</h3>
+      <div class="tags">
+        <span class="tag cashmere">100% кашемир</span><span class="tag">Внутренняя Монголия</span><span class="tag">Высокий ворот</span>
+      </div>
+      <div class="price-row"><span class="price" id="rmPrice">$168,78</span><span class="orig" id="rmOrig">≈ R$ 948,01 через Pix · без Pix $177,66 (R$ 997,90)</span></div>
+
+      <div>
+        <div class="picker-label">Цвет — фото</div>
+        <div class="chips" id="rmView">
+          <button class="chip" type="button" data-view="preto" aria-pressed="true"><i class="sw" style="background:#1b1b1d"></i>Preto · чёрный</button>
+          <button class="chip" type="button" data-view="cinza" aria-pressed="false"><i class="sw" style="background:#b9b9bb"></i>Cinza · светло-серый</button>
+          <button class="chip" type="button" data-view="grisalho" aria-pressed="false"><i class="sw" style="background:#77787a"></i>Grisalho · тёмно-серый</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="picker-label">Добавить в выбор</div>
+        <div class="chips">
+          <label class="add" style="min-height:48px;padding:8px 14px"><input type="checkbox" data-item="rm-preto" checked> Чёрная</label>
+          <label class="add" style="min-height:48px;padding:8px 14px"><input type="checkbox" data-item="rm-cinza" checked> Светло-серая</label>
+          <label class="add" style="min-height:48px;padding:8px 14px"><input type="checkbox" data-item="rm-grisalho"> Тёмно-серая</label>
+        </div>
+      </div>
+
+      <div>
+        <div class="picker-label">Размер</div>
+        <div class="chips" data-size-group="rm">
+          <button class="chip" type="button" data-size="M" aria-pressed="false">M</button>
+          <button class="chip" type="button" data-size="G" aria-pressed="true">G</button>
+          <button class="chip" type="button" data-size="GG" aria-pressed="false">GG</button>
+        </div>
+      </div>
+
+      <dl class="specs">
+        <dt>Состав</dt><dd>100% кашемир, волокно из Внутренней Монголии.</dd>
+        <dt>Грейд</dt><dd class="q">На сайте не указан.</dd>
+        <dt>Нить</dt><dd class="q">Сложение (2-ply) на сайте не указано.</dd>
+        <dt>Уход</dt><dd>Только сухая чистка.</dd>
+        <dt>Наличие</dt><dd>Размер G есть во всех трёх цветах (13.11.2026).</dd>
+        <dt>Доставка</dt><dd>Бесплатно. Сборка заказа — 1–2 рабочих дня, обычная доставка — 3–15 рабочих дней, быстрая — 1–12.</dd>
+        <dt>Возврат</dt><dd>В течение 7 дней после получения. На значке написано «120% гарантии», но в условиях — возврат полной суммы. Гарантия — 1 год.</dd>
+        <dt>Отзывы</dt><dd>5,0 из 5, но всего 19 отзывов.</dd>
+      </dl>
+      <div class="links">
+        <a href="https://restmoney.com.br/products/sueter-masculino-gola-alta-100-caxemira-rest-money%E2%84%A2?variant=54515645546569" target="_blank" rel="noopener">Открыть на Rest Money ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== СОСТАВ И КРИТЕРИИ ===== -->
+  <h2>Состав против критериев</h2>
+  <p class="note">Критерии из <a href="shopping.html">основного списка</a>: кашемир — грейд A, нить 2-ply, до $200; мерино — сертификат RWS или ZQ.</p>
+  <section class="card">
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Критерий</th><th>Forclaz, мерино</th><th>Rest Money, кашемир</th></tr></thead>
+        <tbody>
+          <tr><td>Состав</td><td>89% мерино + 11% полиамид</td><td class="ok">100% кашемир</td></tr>
+          <tr><td>Тонкость волокна</td><td class="ok">18,5 мкм</td><td class="unk">Не указана</td></tr>
+          <tr><td>Грейд / сертификат</td><td class="unk">RWS / ZQ не указан</td><td class="unk">Грейд не указан</td></tr>
+          <tr><td>Нить 2-ply</td><td>—</td><td class="unk">Не указано</td></tr>
+          <tr><td>Цена до $200</td><td class="ok">$44,51</td><td class="ok">$177,66, через Pix $168,78</td></tr>
+          <tr><td>Уход</td><td>Машинная стирка 30 °C</td><td>Сухая чистка</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== РАЗМЕРЫ ===== -->
+  <h2>Размеры по моим меркам</h2>
+  <p class="note">Мерки — со страницы <a href="measurements.html">«Мерки для одежды»</a>: грудь 100,5 см, плечи 44–45, рукав 59, талия 78.</p>
+  <div class="sizes">
+    <section class="card">
+      <h3>Forclaz — мерки тела</h3>
+      <p class="small" style="margin:0 0 10px">Таблица Decathlon, обхваты в см.</p>
+      <table>
+        <thead><tr><th>Размер</th><th>Грудь</th><th>Талия</th></tr></thead>
+        <tbody>
+          <tr><td>M</td><td>92–98</td><td>82–88</td></tr>
+          <tr class="hl"><td>G</td><td>98–104 ← 100,5</td><td>88–94</td></tr>
+          <tr><td>GG</td><td>104–114</td><td>94–105</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin:10px 0 0">По груди подходит G. Посадка облегающая, поэтому сайт советует GG.</p>
+    </section>
+    <section class="card has-sticker">
+      <img class="sticker" src="images/sticker-cat-sweater.jpg" alt="Милый серый котик в розовом свитере" title="Котик тоже за кашемир">
+      <h3>Rest Money</h3>
+      <p class="small" style="margin:0 0 10px">Таблица магазина, см.</p>
+      <table>
+        <thead><tr><th>Размер</th><th>Грудь</th><th>Плечи</th><th>Рукав</th><th>Длина</th></tr></thead>
+        <tbody>
+          <tr><td>M</td><td>104</td><td>42</td><td>59</td><td>68</td></tr>
+          <tr class="hl"><td>G</td><td>110</td><td>43</td><td>60</td><td>69</td></tr>
+          <tr><td>GG</td><td>114</td><td>44</td><td>61</td><td>70</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin:10px 0 0">Магазин не пишет, мерки ли это тела или изделия. Грудь он предлагает мерить по телу, а плечи и рукав — по швам вещи. Если это мерки изделия, G свободнее груди на ~10 см, рукав на 1 см длиннее мерки, а плечи на 1–2 см уже. Для более свободной посадки магазин советует брать на размер больше.</p>
+    </section>
+  </div>
+
+  <footer>
+    Цены с сайтов магазинов на 13.11.2026. В долларах по курсу ЕЦБ на 12.11.2026: $1 = R$ 5,6169 (<a href="https://api.frankfurter.dev/v1/2026-11-12?from=USD&amp;to=BRL" target="_blank" rel="noopener">Frankfurter / ЕЦБ</a>).<br>
+    Фото товаров — с сайтов Decathlon и Rest Money. Стикер: «<a href="https://commons.wikimedia.org/wiki/File:Cat_in_Festive_Sweater.jpg" target="_blank" rel="noopener">Cat in Festive Sweater</a>», автор Ngase, CC BY 4.0, обрезано.
+  </footer>
+</div>
+
+<!-- лайтбокс -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <span class="lc" id="lbCount"></span>
+  <img id="lbImg" alt="">
+  <button class="x" type="button" id="lbClose" aria-label="Закрыть">×</button>
+  <button class="lp" type="button" id="lbPrev" aria-label="Предыдущее фото">‹</button>
+  <button class="ln" type="button" id="lbNext" aria-label="Следующее фото">›</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var RATE = 5.6169;               // R$ за $1, ЕЦБ, 12.11.2026
+  var TEE = 249.99, RM = 997.90, RM_PIX = 948.01;   // Pix: −5% от R$ 997,90 = R$ 948,005
+
+  var SETS = {
+    'forclaz': [
+      ['images/pick-forclaz-1.jpg','Футболка Forclaz, вид спереди'],
+      ['images/pick-forclaz-2.jpg','Футболка Forclaz, вид сбоку'],
+      ['images/pick-forclaz-3.jpg','Футболка Forclaz, вид сзади'],
+      ['images/pick-forclaz-4.jpg','Футболка Forclaz, ворот изнутри'],
+      ['images/pick-forclaz-5.jpg','Ткань футболки Forclaz крупным планом'],
+      ['images/pick-forclaz-6.jpg','Футболка Forclaz, предметное фото'],
+      ['images/pick-forclaz-sizes.png','Таблица размеров Decathlon для футболки 8976797', true]
+    ]
+  };
+  ['preto','cinza','grisalho'].forEach(function(c){
+    var name = {preto:'чёрная', cinza:'светло-серая', grisalho:'тёмно-серая'}[c];
+    SETS['rm-'+c] = [
+      ['images/pick-rm-'+c+'-2.jpg','Водолазка Rest Money, '+name+', на модели'],
+      ['images/pick-rm-'+c+'-1.jpg','Водолазка Rest Money, '+name+', сложенная'],
+      ['images/pick-rm-'+c+'-3.jpg','Водолазка Rest Money, '+name+', вид сзади'],
+      ['images/pick-rm-'+c+'-4.jpg','Водолазка Rest Money, '+name+', вязка крупным планом'],
+      ['images/pick-rm-'+c+'-5.jpg','Водолазка Rest Money, '+name+', в кресле']
+    ];
+  });
+
+  /* ---------- галереи ---------- */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCount = document.getElementById('lbCount');
+  var lbSet = null, lbIdx = 0;
+  function showLb(){ var it = SETS[lbSet][lbIdx]; lbImg.src = it[0]; lbImg.alt = it[1]; lbCount.textContent = (lbIdx+1)+' / '+SETS[lbSet].length; }
+  function openLb(set, i){ lbSet = set; lbIdx = i; showLb(); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  function stepLb(d){ var n = SETS[lbSet].length; lbIdx = (lbIdx + d + n) % n; showLb(); }
+  document.getElementById('lbClose').onclick = closeLb;
+  document.getElementById('lbPrev').onclick = function(){ stepLb(-1); };
+  document.getElementById('lbNext').onclick = function(){ stepLb(1); };
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    if(e.key === 'ArrowLeft') stepLb(-1);
+    if(e.key === 'ArrowRight') stepLb(1);
+  });
+
+  function Gallery(root){
+    this.root = root; this.set = root.getAttribute('data-gallery'); this.i = 0;
+    this.img = root.querySelector('.stage img'); this.stage = root.querySelector('.stage');
+    this.count = root.querySelector('.count'); this.thumbs = root.querySelector('.thumbs');
+    var self = this;
+    root.querySelector('.nav.prev').onclick = function(){ self.go(self.i-1); };
+    root.querySelector('.nav.next').onclick = function(){ self.go(self.i+1); };
+    root.querySelector('.open').onclick = function(){ openLb(self.set, self.i); };
+    var x0 = null;
+    this.stage.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+    this.stage.addEventListener('touchend', function(e){ if(x0===null) return; var dx = e.changedTouches[0].clientX - x0; if(Math.abs(dx) > 40) self.go(self.i + (dx < 0 ? 1 : -1)); x0 = null; });
+    this.load(this.set);
+  }
+  Gallery.prototype.load = function(set){
+    this.set = set; this.root.setAttribute('data-gallery', set); this.thumbs.innerHTML = '';
+    var self = this;
+    SETS[set].forEach(function(it, k){
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Фото '+(k+1));
+      var im = document.createElement('img'); im.src = it[0]; im.alt = ''; im.loading = 'lazy';
+      b.appendChild(im); b.onclick = function(){ self.go(k); }; self.thumbs.appendChild(b);
+    });
+    this.go(0);
+  };
+  Gallery.prototype.go = function(k){
+    var arr = SETS[this.set], n = arr.length; this.i = (k + n) % n;
+    this.img.src = arr[this.i][0]; this.img.alt = arr[this.i][1];
+    this.stage.classList.toggle('contain', !!arr[this.i][2]);
+    this.count.textContent = (this.i+1)+' / '+n;
+    var bs = this.thumbs.children;
+    for(var j=0;j<bs.length;j++) bs[j].setAttribute('aria-current', j===this.i ? 'true' : 'false');
+    if(bs[this.i] && bs[this.i].scrollIntoView) bs[this.i].scrollIntoView({block:'nearest', inline:'nearest'});
+  };
+  var galleries = {};
+  document.querySelectorAll('.gallery').forEach(function(g){ galleries[g.closest('article').id] = new Gallery(g); });
+
+  document.querySelectorAll('#rmView .chip').forEach(function(ch){
+    ch.addEventListener('click', function(){
+      document.querySelectorAll('#rmView .chip').forEach(function(o){ o.setAttribute('aria-pressed', o===ch ? 'true' : 'false'); });
+      galleries.rm.load('rm-' + ch.getAttribute('data-view'));
+    });
+  });
+
+  /* ---------- выбор и итог ---------- */
+  var KEY = 'afd-picks-v1';
+  var state = { tee:true, 'rm-preto':true, 'rm-cinza':true, 'rm-grisalho':false, teeSize:'G', rmSize:'G', pix:true };
+  try { var saved = JSON.parse(localStorage.getItem(KEY) || 'null'); if(saved) for(var k in saved) if(k in state) state[k] = saved[k]; } catch(e){}
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+
+  function usd(n){ return '$' + n.toFixed(2).replace('.', ','); }
+  function brl(n){ return 'R$ ' + n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+
+  var LABEL = { tee:'Футболка Forclaz, мерино', 'rm-preto':'Водолазка Rest Money, чёрная', 'rm-cinza':'Водолазка Rest Money, светло-серая', 'rm-grisalho':'Водолазка Rest Money, тёмно-серая' };
+
+  function lines(){
+    var out = [], rmP = state.pix ? RM_PIX : RM;
+    if(state.tee) out.push([LABEL.tee + ', ' + state.teeSize, TEE]);
+    ['rm-preto','rm-cinza','rm-grisalho'].forEach(function(k){ if(state[k]) out.push([LABEL[k] + ', ' + state.rmSize, rmP]); });
+    return out;
+  }
+  function render(){
+    document.querySelectorAll('[data-item]').forEach(function(cb){ cb.checked = !!state[cb.getAttribute('data-item')]; });
+    document.querySelectorAll('[data-size-group]').forEach(function(g){
+      var cur = g.getAttribute('data-size-group') === 'tee' ? state.teeSize : state.rmSize;
+      g.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-size') === cur ? 'true' : 'false'); });
+    });
+    document.getElementById('pix').checked = state.pix;
+    var rmP = state.pix ? RM_PIX : RM;
+    document.getElementById('rmPrice').textContent = usd(rmP / RATE);
+    document.getElementById('rmOrig').textContent = state.pix
+      ? '≈ ' + brl(rmP) + ' через Pix · без Pix ' + usd(RM/RATE) + ' (' + brl(RM) + ')'
+      : brl(RM) + ' · 6 × R$ 166,32 без процентов · через Pix ≈ ' + usd(RM_PIX/RATE);
+    var L = lines(), ul = document.getElementById('sumList'); ul.innerHTML = '';
+    var tot = 0;
+    if(!L.length){ ul.innerHTML = '<li class="empty">Ничего не выбрано</li>'; }
+    L.forEach(function(l){
+      tot += l[1];
+      var li = document.createElement('li'), a = document.createElement('span'), b = document.createElement('span');
+      a.textContent = l[0]; b.textContent = usd(l[1]/RATE); li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+    });
+    document.getElementById('sumUsd').textContent = usd(tot/RATE);
+    document.getElementById('sumBrl').textContent = brl(tot);
+  }
+  document.querySelectorAll('[data-item]').forEach(function(cb){
+    cb.addEventListener('change', function(){ state[cb.getAttribute('data-item')] = cb.checked; save(); render(); });
+  });
+  document.querySelectorAll('[data-size-group]').forEach(function(g){
+    g.querySelectorAll('.chip').forEach(function(c){
+      c.addEventListener('click', function(){
+        state[g.getAttribute('data-size-group') === 'tee' ? 'teeSize' : 'rmSize'] = c.getAttribute('data-size'); save(); render();
+      });
+    });
+  });
+  document.getElementById('pix').addEventListener('change', function(e){ state.pix = e.target.checked; save(); render(); });
+
+  var toast = document.getElementById('toast');
+  function say(t){ toast.textContent = t; toast.classList.add('show'); clearTimeout(say.t); say.t = setTimeout(function(){ toast.classList.remove('show'); }, 1800); }
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var L = lines(); if(!L.length){ say('Список пуст'); return; }
+    var tot = 0, txt = L.map(function(l){ tot += l[1]; return '• ' + l[0] + ' — ' + usd(l[1]/RATE) + ' (' + brl(l[1]) + ')'; }).join('\n');
+    txt += '\nИтого: ' + usd(tot/RATE) + ' (' + brl(tot) + ')';
+    try { navigator.clipboard.writeText(txt).then(function(){ say('Список скопирован'); }, function(){ say('Не удалось скопировать'); }); }
+    catch(e){ say('Не удалось скопировать'); }
+  });
+  render();
+
+  /* ---------- тема ---------- */
+  var root = document.documentElement, TKEY = 'afd-theme';
+  try { var t = localStorage.getItem(TKEY); if(t) root.setAttribute('data-theme', t); } catch(e){}
+  function isDark(){ var a = root.getAttribute('data-theme'); return a ? a === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches; }
+  var tb = document.getElementById('themeBtn');
+  function label(){ tb.textContent = isDark() ? 'Светлая тема' : 'Тёмная тема'; }
+  tb.addEventListener('click', function(){ var n = isDark() ? 'light' : 'dark'; root.setAttribute('data-theme', n); try { localStorage.setItem(TKEY, n); } catch(e){} label(); });
+  label();
+})();
+</script>
+
+<script type="module">
+(async () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  try {
+    const { animate } = await import("https://cdn.jsdelivr.net/npm/motion@11.18.2/+esm");
+    // только необязательные микроанимации: появление контента от них не зависит
+    document.querySelectorAll(".chip, .btn, .links a, .add").forEach((el) => {
+      el.addEventListener("pointerdown", () => animate(el, { scale: 0.96 }, { duration: 0.12 }));
+      const up = () => animate(el, { scale: 1 }, { type: "spring", stiffness: 500, damping: 22 });
+      el.addEventListener("pointerup", up); el.addEventListener("pointerleave", up);
+    });
+    document.querySelectorAll(".sticker").forEach((el) => {
+      const wiggle = () => animate(el, { rotate: [0, -9, 8, -4, 0] }, { duration: 0.7 });
+      el.addEventListener("mouseenter", wiggle); el.addEventListener("click", wiggle);
+    });
+    document.querySelectorAll(".total .usd").forEach((el) => {
+      new MutationObserver(() => animate(el, { scale: [1.06, 1] }, { duration: 0.3 })).observe(el, { childList: true });
+    });
+  } catch (e) { /* без анимаций страница работает так же */ }
+})();
+</script>
+</body>
+</html>
